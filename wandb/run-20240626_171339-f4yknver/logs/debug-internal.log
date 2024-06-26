@@ -1,0 +1,5 @@
+2024-06-26 17:13:39,612 INFO    StreamThr :2091546 [internal.py:wandb_internal():85] W&B internal server running at pid: 2091546, started at: 2024-06-26 17:13:39.611400
+2024-06-26 17:13:39,614 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: status
+2024-06-26 17:13:39,618 INFO    WriterThread:2091546 [datastore.py:open_for_write():87] open: /home/yongweic/hyperbolic/wandb/run-20240626_171339-f4yknver/run-f4yknver.wandb
+2024-06-26 17:13:39,619 DEBUG   SenderThread:2091546 [sender.py:send():379] send: header
+2024-06-26 17:13:39,620 DEBUG   SenderThread:2091546 [sender.py:send():379] send: run

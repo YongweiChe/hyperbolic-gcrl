@@ -1,0 +1,19 @@
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_setup.py:_flush():76] Current SDK version is 0.17.3
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_setup.py:_flush():76] Configure stats pid to 2091470
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_setup.py:_flush():76] Loading settings from /home/yongweic/.config/wandb/settings
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_setup.py:_flush():76] Loading settings from /home/yongweic/hyperbolic/wandb/settings
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'wandtest.py', 'program_abspath': '/home/yongweic/hyperbolic/wandtest.py', 'program': '/home/yongweic/hyperbolic/wandtest.py'}
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_init.py:_log_setup():520] Logging user logs to /home/yongweic/hyperbolic/wandb/run-20240626_171339-f4yknver/logs/debug.log
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_init.py:_log_setup():521] Logging internal logs to /home/yongweic/hyperbolic/wandb/run-20240626_171339-f4yknver/logs/debug-internal.log
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_init.py:init():560] calling init triggers
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.02, 'architecture': 'CNN', 'dataset': 'CIFAR-100', 'epochs': 10}
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_init.py:init():610] starting backend
+2024-06-26 17:13:39,608 INFO    MainThread:2091470 [wandb_init.py:init():614] setting up manager
+2024-06-26 17:13:39,610 INFO    MainThread:2091470 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-26 17:13:39,615 INFO    MainThread:2091470 [wandb_init.py:init():622] backend started and connected
+2024-06-26 17:13:39,616 INFO    MainThread:2091470 [wandb_init.py:init():711] updated telemetry
+2024-06-26 17:13:39,619 INFO    MainThread:2091470 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout

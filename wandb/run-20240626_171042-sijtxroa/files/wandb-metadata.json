@@ -1,0 +1,194 @@
+{
+    "os": "Linux-4.18.0-553.5.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "python": "3.10.14",
+    "heartbeatAt": "2024-06-26T21:10:42.800353",
+    "startedAt": "2024-06-26T21:10:42.296560",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/yongweic/hyperbolic/wandtest.py",
+    "codePathLocal": "wandtest.py",
+    "codePath": "wandtest.py",
+    "host": "della8.princeton.edu",
+    "username": "yongweic",
+    "executable": "/home/yongweic/.conda/envs/hypll/bin/python",
+    "cpu_count": 32,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 4.090624999999998,
+        "min": 4100.0,
+        "max": 4100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.0,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.0,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.0,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        },
+        {
+            "current": 4.1,
+            "min": 4100.0,
+            "max": 4100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 210.086669921875,
+            "used": 142.79002380371094
+        }
+    },
+    "memory": {
+        "total": 376.02907943725586
+    }
+}
