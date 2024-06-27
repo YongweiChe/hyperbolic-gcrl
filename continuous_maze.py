@@ -145,6 +145,8 @@ def get_trajectories(maze, num_trajectories, plot=False):
 
   return traj_ds
 
+def get_image(maze, player_pos):
+   
 
 class TrajectoryDataset(Dataset):
     def __init__(self, maze, num_trajectories, embedding_dim=2, num_negatives=10):

@@ -16,7 +16,7 @@ from pyramid import create_pyramid
 from continuous_maze import bfs, gen_traj, plot_traj, ContinuousGridEnvironment, TrajectoryDataset, LabelDataset
 from hyperbolic_networks import HyperbolicMLP, hyperbolic_infoNCE_loss, manifold_map
 from networks import StateActionEncoder, StateEncoder, infoNCE_loss
-
+import os
 
 import wandb
 
@@ -34,8 +34,8 @@ def evaluate(maze, num_trials, encoder1, encoder2, manifold, max_steps=100, hype
             end = tuple(valid_indices[end])
             
             goal = torch.tensor(end).to(torch.float32).to(device).unsqueeze(0)
-            if hyperbolic:
-                goal = manifold_map(goal, manifold=manifold)
+            # if hyperbolic:
+            #     goal = manifold_map(goal, manifold=manifold)
             goal = encoder2(goal)
             
             # print(start)
@@ -56,8 +56,8 @@ def evaluate(maze, num_trials, encoder1, encoder2, manifold, max_steps=100, hype
                 for a in angles:
                     action = torch.tensor([torch.sin(a), torch.cos(a)])
                     cur = torch.tensor([cur_pos[0], cur_pos[1], torch.sin(a), torch.cos(a)]).to(device, torch.float32)
-                    if hyperbolic:
-                        cur = manifold_map(cur, manifold)
+                    # if hyperbolic:
+                    #     cur = manifold_map(cur, manifold)
                     cur = encoder1(cur)
 
                     # MANIFOLD EVAL
@@ -100,12 +100,22 @@ def evaluate(maze, num_trials, encoder1, encoder2, manifold, max_steps=100, hype
     
     return results
 
+
+def save_models(encoder1, encoder2, best_encoder1, best_encoder2, epoch, best_epoch, name=''):
+    os.makedirs('models', exist_ok=True)
+    torch.save(encoder1.state_dict(), f'models/{name}_encoder1_epoch_{epoch}.pth')
+    torch.save(encoder2.state_dict(), f'models/{name}_encoder2_epoch_{epoch}.pth')
+    torch.save(best_encoder1.state_dict(), f'models/{name}_best_encoder1_epoch_{best_epoch}.pth')
+    torch.save(best_encoder2.state_dict(), f'models/{name}_best_encoder2_epoch_{best_epoch}.pth')
+
 def main():
     parser = argparse.ArgumentParser(description='Maze experiment parameters.')
     parser.add_argument('--hyperbolic', type=bool, default=False, help='Use hyperbolic embeddings')
     parser.add_argument('--num_epochs', type=int, default=8, help='Number of training epochs')
     parser.add_argument('--num_trajectories', type=int, default=10000, help='Number of trajectories')
     parser.add_argument('--maze_type', type=str, default='blank', help='Type of maze')
+    parser.add_argument('--embedding_dim', type=int, default=64, help='Dimension of the embeddings')
+
     args = parser.parse_args()
 
     if 'blank' in args.maze_type:
@@ -115,15 +125,15 @@ def main():
         maze = create_pyramid(np.zeros((2, 2)), 2)[0]
       # Modify this according to your maze_type logic if needed
 
-    experiment_name = f"experiment_hyperbolic_{args.hyperbolic}_epochs_{args.num_epochs}_trajectories_{args.num_trajectories}_maze_{args.maze_type}"
+    experiment_name = f"experiment_hyperbolic_{args.hyperbolic}_epochs_{args.num_epochs}_trajectories_{args.num_trajectories}_maze_{args.maze_type}_embeddingdim_{args.embedding_dim}"
 
     wandb.init(
-        project="hyperbolic-rl", 
+        project="network-tricks", 
         name=experiment_name, 
         # Track hyperparameters and run metadata
         config={
             "batch_size": 32,
-            "embedding_dim": 64,
+            "embedding_dim": args.embedding_dim,
             "eval_trials": 100,
             "max_steps": 100,
             "hyperbolic": args.hyperbolic,
@@ -155,6 +165,12 @@ def main():
         encoder2 = StateEncoder(config.embedding_dim).to(device)
         optimizer = optim.Adam(list(encoder1.parameters()) + list(encoder2.parameters()), lr=config.learning_rate)
 
+
+    best_spl = 0
+    best_encoder1 = encoder1.state_dict()
+    best_encoder2 = encoder2.state_dict()
+    best_epoch = 0
+
     # Training loop
     for epoch in range(config.num_epochs):
         total_loss = 0
@@ -164,18 +180,18 @@ def main():
             positive = torch.tensor(positive).to(device, torch.float32)
             negatives = torch.tensor(negatives).to(device, torch.float32)
             
-            if config.hyperbolic:
-                m_anchor = manifold_map(anchor, manifold)
-                m_positive = manifold_map(positive, manifold)
-                m_negatives = manifold_map(negatives, manifold)
-            else:
-                m_anchor = anchor
-                m_positive = positive
-                m_negatives = negatives
+            # if config.hyperbolic:
+            #     m_anchor = manifold_map(anchor, manifold)
+            #     m_positive = manifold_map(positive, manifold)
+            #     m_negatives = manifold_map(negatives, manifold)
+            # else:
+            #     m_anchor = anchor
+            #     m_positive = positive
+            #     m_negatives = negatives
             
-            anchor_enc = encoder1(m_anchor) # takes state, action tuple
-            positive_enc = encoder2(m_positive) # takes state
-            negatives_enc = encoder2(m_negatives)
+            anchor_enc = encoder1(anchor) # takes state, action tuple
+            positive_enc = encoder2(positive) # takes state
+            negatives_enc = encoder2(negatives)
 
             positive_action = anchor[:,[2,3]]
             cur_state = anchor[:,[0,1]]
@@ -187,13 +203,13 @@ def main():
             # print(negative_dirs.shape)
             negative_full = torch.cat((cur_state.unsqueeze(1).expand(-1, config.num_negatives, -1), negative_dirs), dim=-1).to(device)
             
-            if config.hyperbolic:
-                m_negative_full = manifold_map(negative_full, manifold)
-            else:
-                m_negative_full = negative_full
+            # if config.hyperbolic:
+            #     m_negative_full = manifold_map(negative_full, manifold)
+            # else:
+            #     m_negative_full = negative_full
 
             # print(negative_full.shape)
-            neg_action_enc = encoder1(m_negative_full)
+            neg_action_enc = encoder1(negative_full)
             # print(f'positive_enc: {positive_enc.shape}, anchor: {anchor_enc.shape}, neg_action_enc: {neg_action_enc.shape}')
             
             if config.hyperbolic:
@@ -223,8 +239,15 @@ def main():
         }
         wandb.log(metrics)
 
+        if acc > best_spl:
+            best_spl = acc
+            best_encoder1 = encoder1.state_dict()
+            best_encoder2 = encoder2.state_dict()
+            best_epoch = epoch + 1
+
         print(f'Epoch {epoch+1}, Loss: {loss}, SPL: {acc}, Failure %: {fail}')
 
+    save_models(encoder1, encoder2, best_encoder1, best_encoder2, epoch + 1, best_epoch, experiment_name)
 
 if __name__ == '__main__':
     main()

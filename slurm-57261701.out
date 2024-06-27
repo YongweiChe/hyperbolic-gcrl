@@ -9,16 +9,17 @@ wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
   return torch._dynamo.disable(fn, recursive)(*args, **kwargs)
 /home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
   warnings.warn(_create_warning_msg(
-blank maze
-{'batch_size': 32, 'embedding_dim': 64, 'eval_trials': 100, 'max_steps': 100, 'hyperbolic': True, 'num_epochs': 16, 'temperature': 0.1, 'num_negatives': 11, 'learning_rate': 0.001, 'architecture': 'MLP', 'maze': '[[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]', 'num_trajectories': 10000, 'maze_type': 'blank'}
-/home/yongweic/hyperbolic/train.py:163: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+{'batch_size': 32, 'embedding_dim': 32, 'eval_trials': 100, 'max_steps': 100, 'hyperbolic': True, 'num_epochs': 16, 'temperature': 0.1, 'num_negatives': 11, 'learning_rate': 0.001, 'architecture': 'MLP', 'maze': '[[1. 1. 1. ... 0. 0. 0.]\n [1. 1. 1. ... 0. 0. 0.]\n [1. 1. 0. ... 0. 0. 0.]\n ...\n [1. 1. 0. ... 0. 1. 1.]\n [1. 1. 1. ... 1. 1. 1.]\n [1. 1. 1. ... 1. 1. 1.]]', 'num_trajectories': 50000, 'maze_type': 'pyramid'}
+/home/yongweic/hyperbolic/train.py:179: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
   anchor = torch.tensor(anchor).to(device, torch.float32)
-/home/yongweic/hyperbolic/train.py:164: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+/home/yongweic/hyperbolic/train.py:180: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
   positive = torch.tensor(positive).to(device, torch.float32)
-/home/yongweic/hyperbolic/train.py:165: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+/home/yongweic/hyperbolic/train.py:181: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
   negatives = torch.tensor(negatives).to(device, torch.float32)
-Epoch 1, Loss: 4.59282323118216, SPL: 0.14520700752665364, Failure %: 0.79
-Epoch 2, Loss: 4.416483016821523, SPL: 0.25219948647154483, Failure %: 0.67
-Epoch 3, Loss: 4.273877682396398, SPL: 0.27951527419948474, Failure %: 0.69
-Epoch 4, Loss: 4.201390676224194, SPL: 0.3808205090979482, Failure %: 0.59
-Epoch 5, Loss: 4.131797052419985, SPL: 0.2012713252233376, Failure %: 0.75
+Epoch 1, Loss: 4.164414861304441, SPL: 0.018000000000000002, Failure %: 0.98
+Epoch 2, Loss: 3.7432475541542525, SPL: 0.0, Failure %: 1.0
+Epoch 3, Loss: 3.655794937032503, SPL: 0.02013838013838014, Failure %: 0.97
+Epoch 4, Loss: 3.6030602528357916, SPL: 0.012795698924731182, Failure %: 0.98
+Epoch 5, Loss: 3.5516208902201587, SPL: 0.015527950310559006, Failure %: 0.98
+Epoch 6, Loss: 3.5216385959739953, SPL: 0.01, Failure %: 0.99
+Epoch 7, Loss: 3.484695577651968, SPL: 0.04204191176470588, Failure %: 0.94

@@ -497,3 +497,1506 @@
 2024-06-26 21:23:40 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
 2024-06-26 21:23:41 INFO file stream finish called
 2024-06-26 21:23:41 INFO file stream finish is done
+2024-06-27 00:45:07 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_181834-thjk6cy2/run-thjk6cy2.wandb
+2024-06-27 00:45:07 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/run-8ph7u7ar.wandb
+2024-06-27 00:45:08 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 00:45:08 INFO run started: 8ph7u7ar with start time 1719440637.668318
+2024-06-27 00:45:08 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:08 INFO shutting down sender
+2024-06-27 00:45:08 INFO Uploaded file /tmp/tmp6dm9erxywandb/plealgde-wandb-metadata.json
+2024-06-27 00:45:09 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 00:45:11 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 00:45:12 INFO shutting down directory watcher
+2024-06-27 00:45:13 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 00:45:13 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 00:45:13 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:13 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:13 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml config.yaml
+2024-06-27 00:45:13 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log output.log
+2024-06-27 00:45:13 INFO shutting down file pusher
+2024-06-27 00:45:13 INFO waiting for file pusher
+2024-06-27 00:45:13 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml
+2024-06-27 00:45:13 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml
+2024-06-27 00:45:13 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 00:45:14 INFO file stream finish called
+2024-06-27 00:45:14 INFO file stream finish is done
+2024-06-27 00:45:14 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/run-vr54lx2q.wandb
+2024-06-27 00:45:14 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 00:45:14 INFO run started: vr54lx2q with start time 1719440750.312192
+2024-06-27 00:45:14 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:14 INFO shutting down sender
+2024-06-27 00:45:14 INFO Uploaded file /tmp/tmphtni229zwandb/ec9j8z2x-wandb-metadata.json
+2024-06-27 00:45:15 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 00:45:17 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 00:45:18 INFO shutting down directory watcher
+2024-06-27 00:45:19 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 00:45:19 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 00:45:19 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:19 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:19 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml config.yaml
+2024-06-27 00:45:19 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log output.log
+2024-06-27 00:45:19 INFO shutting down file pusher
+2024-06-27 00:45:19 INFO waiting for file pusher
+2024-06-27 00:45:19 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml
+2024-06-27 00:45:19 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 00:45:20 INFO file stream finish called
+2024-06-27 00:45:20 INFO file stream finish is done
+2024-06-27 00:45:20 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/run-3vpibv51.wandb
+2024-06-27 00:45:20 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 00:45:20 INFO run started: 3vpibv51 with start time 1719441048.112886
+2024-06-27 00:45:20 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:21 INFO shutting down sender
+2024-06-27 00:45:21 INFO Uploaded file /tmp/tmpnbpjl5_rwandb/xo0jtynv-wandb-metadata.json
+2024-06-27 00:45:21 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 00:45:23 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 00:45:24 INFO shutting down directory watcher
+2024-06-27 00:45:25 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 00:45:25 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 00:45:25 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:25 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:25 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml config.yaml
+2024-06-27 00:45:25 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log output.log
+2024-06-27 00:45:25 INFO shutting down file pusher
+2024-06-27 00:45:25 INFO waiting for file pusher
+2024-06-27 00:45:26 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml
+2024-06-27 00:45:26 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 00:45:26 INFO file stream finish called
+2024-06-27 00:45:27 INFO file stream finish is done
+2024-06-27 00:45:27 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/run-yaoue0z0.wandb
+2024-06-27 00:45:27 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 00:45:27 INFO run started: yaoue0z0 with start time 1719441168.709961
+2024-06-27 00:45:27 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:27 INFO shutting down sender
+2024-06-27 00:45:27 INFO Uploaded file /tmp/tmp56bx9qfiwandb/bzycee50-wandb-metadata.json
+2024-06-27 00:45:28 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 00:45:29 INFO shutting down directory watcher
+2024-06-27 00:45:30 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 00:45:30 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 00:45:30 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:30 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:30 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml config.yaml
+2024-06-27 00:45:30 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log output.log
+2024-06-27 00:45:30 INFO shutting down file pusher
+2024-06-27 00:45:30 INFO waiting for file pusher
+2024-06-27 00:45:30 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml
+2024-06-27 00:45:30 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 00:45:31 INFO file stream finish called
+2024-06-27 00:45:31 INFO file stream finish is done
+2024-06-27 00:45:31 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/run-o0ze7upt.wandb
+2024-06-27 00:45:32 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 00:45:32 INFO run started: o0ze7upt with start time 1719441218.50129
+2024-06-27 00:45:32 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:32 INFO shutting down sender
+2024-06-27 00:45:32 INFO Uploaded file /tmp/tmpol0hvk30wandb/ujtbzhmf-wandb-metadata.json
+2024-06-27 00:45:33 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 00:45:34 INFO shutting down directory watcher
+2024-06-27 00:45:35 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 00:45:35 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 00:45:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml config.yaml
+2024-06-27 00:45:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log output.log
+2024-06-27 00:45:35 INFO shutting down file pusher
+2024-06-27 00:45:35 INFO waiting for file pusher
+2024-06-27 00:45:35 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml
+2024-06-27 00:45:35 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 00:45:36 INFO file stream finish called
+2024-06-27 00:45:36 INFO file stream finish is done
+2024-06-27 00:45:36 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/run-5hz3zlhy.wandb
+2024-06-27 00:45:36 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 00:45:36 INFO run started: 5hz3zlhy with start time 1719441220.032116
+2024-06-27 00:45:36 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:36 INFO shutting down sender
+2024-06-27 00:45:36 INFO Uploaded file /tmp/tmpfpqmm7p2wandb/lfrm1unv-wandb-metadata.json
+2024-06-27 00:45:37 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 00:45:38 INFO shutting down directory watcher
+2024-06-27 00:45:39 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 00:45:39 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 00:45:39 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:39 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:39 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml config.yaml
+2024-06-27 00:45:39 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log output.log
+2024-06-27 00:45:39 INFO shutting down file pusher
+2024-06-27 00:45:39 INFO waiting for file pusher
+2024-06-27 00:45:39 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml
+2024-06-27 00:45:39 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml
+2024-06-27 00:45:40 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 00:45:40 INFO file stream finish called
+2024-06-27 00:45:40 INFO file stream finish is done
+2024-06-27 00:45:40 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/run-8mh9riqg.wandb
+2024-06-27 00:45:41 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files
+2024-06-27 00:45:41 INFO run started: 8mh9riqg with start time 1719456487.335897
+2024-06-27 00:45:41 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:41 INFO saving file wandb-summary.json with policy end
+2024-06-27 00:45:41 INFO handling exit code: 0
+2024-06-27 00:45:41 INFO handling runtime: 2074
+2024-06-27 00:45:41 INFO saving file wandb-summary.json with policy end
+2024-06-27 00:45:41 INFO send defer
+2024-06-27 00:45:41 INFO handle sender defer: 0
+2024-06-27 00:45:41 INFO send defer: 1
+2024-06-27 00:45:41 INFO handle sender defer: 1
+2024-06-27 00:45:41 INFO send defer: 2
+2024-06-27 00:45:41 INFO handle sender defer: 2
+2024-06-27 00:45:41 INFO send defer: 3
+2024-06-27 00:45:41 INFO handle sender defer: 3
+2024-06-27 00:45:41 INFO send defer: 4
+2024-06-27 00:45:41 INFO handle sender defer: 4
+2024-06-27 00:45:41 INFO send defer: 5
+2024-06-27 00:45:41 INFO handle sender defer: 5
+2024-06-27 00:45:41 INFO send defer: 6
+2024-06-27 00:45:41 INFO handle sender defer: 6
+2024-06-27 00:45:41 INFO send defer: 7
+2024-06-27 00:45:41 INFO handle sender defer: 7
+2024-06-27 00:45:41 INFO Uploaded file /tmp/tmpk8hfon3gwandb/290r6vsc-wandb-metadata.json
+2024-06-27 00:45:42 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/wandb-summary.json
+2024-06-27 00:45:42 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/config.yaml
+2024-06-27 00:45:42 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/output.log
+2024-06-27 00:45:44 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/output.log
+2024-06-27 00:45:45 INFO send defer: 8
+2024-06-27 00:45:45 INFO handle sender defer: 8
+2024-06-27 00:45:45 INFO Attempting to build job artifact
+2024-06-27 00:45:45 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 00:45:45 INFO send defer: 9
+2024-06-27 00:45:45 INFO handle sender defer: 9
+2024-06-27 00:45:45 INFO shutting down directory watcher
+2024-06-27 00:45:46 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/output.log
+2024-06-27 00:45:46 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files
+2024-06-27 00:45:46 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:46 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:46 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/wandb-summary.json wandb-summary.json
+2024-06-27 00:45:46 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/config.yaml config.yaml
+2024-06-27 00:45:46 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/output.log output.log
+2024-06-27 00:45:46 INFO send defer: 10
+2024-06-27 00:45:46 INFO handle sender defer: 10
+2024-06-27 00:45:46 INFO shutting down file pusher
+2024-06-27 00:45:46 INFO shutting down sender
+2024-06-27 00:45:46 INFO shutting down file pusher
+2024-06-27 00:45:46 INFO waiting for file pusher
+2024-06-27 00:45:46 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/wandb-summary.json
+2024-06-27 00:45:46 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/conda-environment.yaml
+2024-06-27 00:45:46 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/output.log
+2024-06-27 00:45:46 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-8mh9riqg/files/config.yaml
+2024-06-27 00:45:46 INFO send defer: 11
+2024-06-27 00:45:47 INFO file stream finish called
+2024-06-27 00:45:47 INFO file stream finish is done
+2024-06-27 00:45:47 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/run-hmxo1q3o.wandb
+2024-06-27 00:45:47 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files
+2024-06-27 00:45:47 INFO run started: hmxo1q3o with start time 1719456487.335874
+2024-06-27 00:45:47 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:47 INFO saving file wandb-summary.json with policy end
+2024-06-27 00:45:47 INFO handling exit code: 0
+2024-06-27 00:45:47 INFO handling runtime: 2056
+2024-06-27 00:45:47 INFO saving file wandb-summary.json with policy end
+2024-06-27 00:45:47 INFO send defer
+2024-06-27 00:45:47 INFO handle sender defer: 0
+2024-06-27 00:45:47 INFO send defer: 1
+2024-06-27 00:45:47 INFO handle sender defer: 1
+2024-06-27 00:45:47 INFO send defer: 2
+2024-06-27 00:45:47 INFO handle sender defer: 2
+2024-06-27 00:45:47 INFO send defer: 3
+2024-06-27 00:45:47 INFO handle sender defer: 3
+2024-06-27 00:45:47 INFO send defer: 4
+2024-06-27 00:45:47 INFO handle sender defer: 4
+2024-06-27 00:45:47 INFO send defer: 5
+2024-06-27 00:45:47 INFO handle sender defer: 5
+2024-06-27 00:45:47 INFO send defer: 6
+2024-06-27 00:45:47 INFO handle sender defer: 6
+2024-06-27 00:45:47 INFO send defer: 7
+2024-06-27 00:45:47 INFO handle sender defer: 7
+2024-06-27 00:45:48 INFO Uploaded file /tmp/tmpyhf5_vfawandb/h3hn4gs4-wandb-metadata.json
+2024-06-27 00:45:48 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/wandb-summary.json
+2024-06-27 00:45:48 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/config.yaml
+2024-06-27 00:45:48 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/output.log
+2024-06-27 00:45:50 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/output.log
+2024-06-27 00:45:51 INFO send defer: 8
+2024-06-27 00:45:51 INFO handle sender defer: 8
+2024-06-27 00:45:51 INFO Attempting to build job artifact
+2024-06-27 00:45:51 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 00:45:51 INFO send defer: 9
+2024-06-27 00:45:51 INFO handle sender defer: 9
+2024-06-27 00:45:51 INFO shutting down directory watcher
+2024-06-27 00:45:52 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/output.log
+2024-06-27 00:45:52 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files
+2024-06-27 00:45:52 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:52 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:52 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/wandb-summary.json wandb-summary.json
+2024-06-27 00:45:52 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/config.yaml config.yaml
+2024-06-27 00:45:52 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/output.log output.log
+2024-06-27 00:45:52 INFO send defer: 10
+2024-06-27 00:45:52 INFO handle sender defer: 10
+2024-06-27 00:45:52 INFO shutting down file pusher
+2024-06-27 00:45:52 INFO shutting down sender
+2024-06-27 00:45:52 INFO shutting down file pusher
+2024-06-27 00:45:52 INFO waiting for file pusher
+2024-06-27 00:45:53 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/conda-environment.yaml
+2024-06-27 00:45:53 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/wandb-summary.json
+2024-06-27 00:45:53 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/config.yaml
+2024-06-27 00:45:53 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_224807-hmxo1q3o/files/output.log
+2024-06-27 00:45:53 INFO send defer: 11
+2024-06-27 00:45:53 INFO file stream finish called
+2024-06-27 00:45:54 INFO file stream finish is done
+2024-06-27 00:45:54 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/run-x9yanucg.wandb
+2024-06-27 00:45:54 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files
+2024-06-27 00:45:54 INFO run started: x9yanucg with start time 1719457401.860241
+2024-06-27 00:45:54 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:45:54 INFO saving file wandb-summary.json with policy end
+2024-06-27 00:45:54 INFO handling exit code: 255
+2024-06-27 00:45:54 INFO handling runtime: 33
+2024-06-27 00:45:54 INFO saving file wandb-summary.json with policy end
+2024-06-27 00:45:54 INFO send defer
+2024-06-27 00:45:54 INFO handle sender defer: 0
+2024-06-27 00:45:54 INFO send defer: 1
+2024-06-27 00:45:54 INFO handle sender defer: 1
+2024-06-27 00:45:54 INFO send defer: 2
+2024-06-27 00:45:54 INFO handle sender defer: 2
+2024-06-27 00:45:54 INFO send defer: 3
+2024-06-27 00:45:54 INFO handle sender defer: 3
+2024-06-27 00:45:54 INFO send defer: 4
+2024-06-27 00:45:54 INFO handle sender defer: 4
+2024-06-27 00:45:54 INFO send defer: 5
+2024-06-27 00:45:54 INFO handle sender defer: 5
+2024-06-27 00:45:54 INFO send defer: 6
+2024-06-27 00:45:54 INFO handle sender defer: 6
+2024-06-27 00:45:54 INFO send defer: 7
+2024-06-27 00:45:54 INFO handle sender defer: 7
+2024-06-27 00:45:54 INFO Uploaded file /tmp/tmp6qe5dnbhwandb/4b0s65a5-wandb-metadata.json
+2024-06-27 00:45:55 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/wandb-summary.json
+2024-06-27 00:45:55 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/config.yaml
+2024-06-27 00:45:55 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/output.log
+2024-06-27 00:45:57 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/output.log
+2024-06-27 00:45:58 INFO send defer: 8
+2024-06-27 00:45:58 INFO handle sender defer: 8
+2024-06-27 00:45:58 INFO Attempting to build job artifact
+2024-06-27 00:45:58 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 00:45:58 INFO send defer: 9
+2024-06-27 00:45:58 INFO handle sender defer: 9
+2024-06-27 00:45:58 INFO shutting down directory watcher
+2024-06-27 00:45:59 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/output.log
+2024-06-27 00:45:59 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files
+2024-06-27 00:45:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:45:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:45:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/wandb-summary.json wandb-summary.json
+2024-06-27 00:45:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/config.yaml config.yaml
+2024-06-27 00:45:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/output.log output.log
+2024-06-27 00:45:59 INFO send defer: 10
+2024-06-27 00:45:59 INFO handle sender defer: 10
+2024-06-27 00:45:59 INFO shutting down file pusher
+2024-06-27 00:45:59 INFO shutting down sender
+2024-06-27 00:45:59 INFO shutting down file pusher
+2024-06-27 00:45:59 INFO waiting for file pusher
+2024-06-27 00:45:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/wandb-summary.json
+2024-06-27 00:45:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/conda-environment.yaml
+2024-06-27 00:45:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/config.yaml
+2024-06-27 00:45:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_230321-x9yanucg/files/output.log
+2024-06-27 00:45:59 INFO send defer: 11
+2024-06-27 00:46:00 INFO file stream finish called
+2024-06-27 00:46:00 INFO file stream finish is done
+2024-06-27 00:46:00 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230412-cnp0m1r2/run-cnp0m1r2.wandb
+2024-06-27 00:46:00 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230517-ufip4w4k/run-ufip4w4k.wandb
+2024-06-27 00:48:58 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_181834-thjk6cy2/run-thjk6cy2.wandb
+2024-06-27 00:48:58 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/run-8ph7u7ar.wandb
+2024-06-27 00:48:59 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 00:48:59 INFO run started: 8ph7u7ar with start time 1719440637.668318
+2024-06-27 00:48:59 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:48:59 INFO shutting down sender
+2024-06-27 00:48:59 INFO Uploaded file /tmp/tmp26cw8c1ywandb/xg7cuu5w-wandb-metadata.json
+2024-06-27 00:49:00 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 00:49:02 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 00:49:03 INFO shutting down directory watcher
+2024-06-27 00:49:04 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 00:49:04 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 00:49:04 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:49:04 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:49:04 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml config.yaml
+2024-06-27 00:49:04 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log output.log
+2024-06-27 00:49:04 INFO shutting down file pusher
+2024-06-27 00:49:04 INFO waiting for file pusher
+2024-06-27 00:49:04 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml
+2024-06-27 00:49:04 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 00:49:04 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml
+2024-06-27 00:49:05 INFO file stream finish called
+2024-06-27 00:49:05 INFO file stream finish is done
+2024-06-27 00:49:05 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/run-vr54lx2q.wandb
+2024-06-27 00:49:05 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 00:49:05 INFO run started: vr54lx2q with start time 1719440750.312192
+2024-06-27 00:49:05 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:49:05 INFO shutting down sender
+2024-06-27 00:49:06 INFO Uploaded file /tmp/tmpc3qrvk81wandb/jlhls256-wandb-metadata.json
+2024-06-27 00:49:06 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 00:49:07 INFO shutting down directory watcher
+2024-06-27 00:49:08 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 00:49:08 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 00:49:08 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:49:08 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:49:08 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml config.yaml
+2024-06-27 00:49:08 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log output.log
+2024-06-27 00:49:08 INFO shutting down file pusher
+2024-06-27 00:49:08 INFO waiting for file pusher
+2024-06-27 00:49:08 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml
+2024-06-27 00:49:08 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 00:49:09 INFO file stream finish called
+2024-06-27 00:49:09 INFO file stream finish is done
+2024-06-27 00:49:09 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/run-3vpibv51.wandb
+2024-06-27 00:49:10 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 00:49:10 INFO run started: 3vpibv51 with start time 1719441048.112886
+2024-06-27 00:49:10 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:49:10 INFO shutting down sender
+2024-06-27 00:49:10 INFO Uploaded file /tmp/tmphxhvi8juwandb/bllq6ycy-wandb-metadata.json
+2024-06-27 00:49:11 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 00:49:12 INFO shutting down directory watcher
+2024-06-27 00:49:13 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 00:49:13 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 00:49:13 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:49:13 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:49:13 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml config.yaml
+2024-06-27 00:49:13 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log output.log
+2024-06-27 00:49:13 INFO shutting down file pusher
+2024-06-27 00:49:13 INFO waiting for file pusher
+2024-06-27 00:49:13 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml
+2024-06-27 00:49:13 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 00:49:14 INFO file stream finish called
+2024-06-27 00:49:14 INFO file stream finish is done
+2024-06-27 00:49:14 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/run-yaoue0z0.wandb
+2024-06-27 00:49:14 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 00:49:14 INFO run started: yaoue0z0 with start time 1719441168.709961
+2024-06-27 00:49:14 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:49:14 INFO shutting down sender
+2024-06-27 00:49:14 INFO Uploaded file /tmp/tmpb2n2sw26wandb/cz0crou3-wandb-metadata.json
+2024-06-27 00:49:15 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 00:49:16 INFO shutting down directory watcher
+2024-06-27 00:49:17 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 00:49:17 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 00:49:17 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:49:17 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:49:17 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml config.yaml
+2024-06-27 00:49:17 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log output.log
+2024-06-27 00:49:17 INFO shutting down file pusher
+2024-06-27 00:49:17 INFO waiting for file pusher
+2024-06-27 00:49:17 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml
+2024-06-27 00:49:17 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 00:49:18 INFO file stream finish called
+2024-06-27 00:49:18 INFO file stream finish is done
+2024-06-27 00:49:18 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/run-o0ze7upt.wandb
+2024-06-27 00:49:18 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 00:49:18 INFO run started: o0ze7upt with start time 1719441218.50129
+2024-06-27 00:49:18 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:49:18 INFO shutting down sender
+2024-06-27 00:49:19 INFO Uploaded file /tmp/tmp0c5xfszgwandb/rc3d6sl3-wandb-metadata.json
+2024-06-27 00:49:19 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 00:49:20 INFO shutting down directory watcher
+2024-06-27 00:49:21 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 00:49:21 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 00:49:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:49:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:49:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml config.yaml
+2024-06-27 00:49:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log output.log
+2024-06-27 00:49:21 INFO shutting down file pusher
+2024-06-27 00:49:21 INFO waiting for file pusher
+2024-06-27 00:49:22 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml
+2024-06-27 00:49:22 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 00:49:22 INFO file stream finish called
+2024-06-27 00:49:23 INFO file stream finish is done
+2024-06-27 00:49:23 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/run-5hz3zlhy.wandb
+2024-06-27 00:49:23 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 00:49:23 INFO run started: 5hz3zlhy with start time 1719441220.032116
+2024-06-27 00:49:23 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:49:23 INFO shutting down sender
+2024-06-27 00:49:23 INFO Uploaded file /tmp/tmpme774izkwandb/uqmaxu3i-wandb-metadata.json
+2024-06-27 00:49:24 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 00:49:25 INFO shutting down directory watcher
+2024-06-27 00:49:26 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 00:49:26 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 00:49:26 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:49:26 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:49:26 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml config.yaml
+2024-06-27 00:49:26 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log output.log
+2024-06-27 00:49:26 INFO shutting down file pusher
+2024-06-27 00:49:26 INFO waiting for file pusher
+2024-06-27 00:49:26 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml
+2024-06-27 00:49:26 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 00:49:26 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml
+2024-06-27 00:49:27 INFO file stream finish called
+2024-06-27 00:49:27 INFO file stream finish is done
+2024-06-27 00:49:27 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230412-cnp0m1r2/run-cnp0m1r2.wandb
+2024-06-27 00:49:27 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230517-ufip4w4k/run-ufip4w4k.wandb
+2024-06-27 00:49:27 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/run-wl9f4rqw.wandb
+2024-06-27 00:49:27 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files
+2024-06-27 00:49:27 INFO run started: wl9f4rqw with start time 1719463527.768516
+2024-06-27 00:49:27 INFO saving file wandb-metadata.json with policy now
+2024-06-27 00:49:27 INFO saving file wandb-summary.json with policy end
+2024-06-27 00:49:27 INFO handling exit code: 0
+2024-06-27 00:49:27 INFO handling runtime: 170
+2024-06-27 00:49:27 INFO saving file wandb-summary.json with policy end
+2024-06-27 00:49:27 INFO send defer
+2024-06-27 00:49:27 INFO handle sender defer: 0
+2024-06-27 00:49:27 INFO send defer: 1
+2024-06-27 00:49:27 INFO handle sender defer: 1
+2024-06-27 00:49:27 INFO send defer: 2
+2024-06-27 00:49:27 INFO handle sender defer: 2
+2024-06-27 00:49:27 INFO send defer: 3
+2024-06-27 00:49:27 INFO handle sender defer: 3
+2024-06-27 00:49:27 INFO send defer: 4
+2024-06-27 00:49:27 INFO handle sender defer: 4
+2024-06-27 00:49:27 INFO send defer: 5
+2024-06-27 00:49:27 INFO handle sender defer: 5
+2024-06-27 00:49:27 INFO send defer: 6
+2024-06-27 00:49:27 INFO handle sender defer: 6
+2024-06-27 00:49:28 INFO send defer: 7
+2024-06-27 00:49:28 INFO handle sender defer: 7
+2024-06-27 00:49:28 INFO Uploaded file /tmp/tmp2jrld6sfwandb/o3z9evuh-wandb-metadata.json
+2024-06-27 00:49:28 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/config.yaml
+2024-06-27 00:49:28 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/wandb-summary.json
+2024-06-27 00:49:28 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/output.log
+2024-06-27 00:49:30 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/output.log
+2024-06-27 00:49:31 INFO send defer: 8
+2024-06-27 00:49:31 INFO handle sender defer: 8
+2024-06-27 00:49:31 INFO Attempting to build job artifact
+2024-06-27 00:49:31 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 00:49:31 INFO send defer: 9
+2024-06-27 00:49:31 INFO handle sender defer: 9
+2024-06-27 00:49:31 INFO shutting down directory watcher
+2024-06-27 00:49:32 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/output.log
+2024-06-27 00:49:32 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files
+2024-06-27 00:49:32 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 00:49:32 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 00:49:32 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/wandb-summary.json wandb-summary.json
+2024-06-27 00:49:32 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/config.yaml config.yaml
+2024-06-27 00:49:32 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/output.log output.log
+2024-06-27 00:49:32 INFO send defer: 10
+2024-06-27 00:49:32 INFO handle sender defer: 10
+2024-06-27 00:49:32 INFO shutting down file pusher
+2024-06-27 00:49:32 INFO shutting down sender
+2024-06-27 00:49:32 INFO shutting down file pusher
+2024-06-27 00:49:32 INFO waiting for file pusher
+2024-06-27 00:49:33 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/conda-environment.yaml
+2024-06-27 00:49:33 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/wandb-summary.json
+2024-06-27 00:49:33 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/output.log
+2024-06-27 00:49:33 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_004527-wl9f4rqw/files/config.yaml
+2024-06-27 00:49:33 INFO send defer: 11
+2024-06-27 00:49:33 INFO file stream finish called
+2024-06-27 00:49:34 INFO file stream finish is done
+2024-06-27 01:02:06 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_181834-thjk6cy2/run-thjk6cy2.wandb
+2024-06-27 01:02:06 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/run-8ph7u7ar.wandb
+2024-06-27 01:02:06 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 01:02:06 INFO run started: 8ph7u7ar with start time 1719440637.668318
+2024-06-27 01:02:06 INFO saving file wandb-metadata.json with policy now
+2024-06-27 01:02:06 INFO shutting down sender
+2024-06-27 01:02:06 INFO Uploaded file /tmp/tmpx7i9guynwandb/fxmuj476-wandb-metadata.json
+2024-06-27 01:02:07 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 01:02:08 INFO shutting down directory watcher
+2024-06-27 01:02:09 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 01:02:09 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 01:02:09 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 01:02:09 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 01:02:09 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml config.yaml
+2024-06-27 01:02:09 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log output.log
+2024-06-27 01:02:09 INFO shutting down file pusher
+2024-06-27 01:02:09 INFO waiting for file pusher
+2024-06-27 01:02:09 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml
+2024-06-27 01:02:09 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml
+2024-06-27 01:02:09 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 01:02:10 INFO file stream finish called
+2024-06-27 01:02:10 INFO file stream finish is done
+2024-06-27 01:02:10 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/run-vr54lx2q.wandb
+2024-06-27 01:02:10 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 01:02:10 INFO run started: vr54lx2q with start time 1719440750.312192
+2024-06-27 01:02:10 INFO saving file wandb-metadata.json with policy now
+2024-06-27 01:02:10 INFO shutting down sender
+2024-06-27 01:02:11 INFO Uploaded file /tmp/tmprue3yg9awandb/ydazfl09-wandb-metadata.json
+2024-06-27 01:02:11 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 01:02:13 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 01:02:14 INFO shutting down directory watcher
+2024-06-27 01:02:15 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 01:02:15 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 01:02:15 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 01:02:15 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 01:02:15 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml config.yaml
+2024-06-27 01:02:15 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log output.log
+2024-06-27 01:02:15 INFO shutting down file pusher
+2024-06-27 01:02:15 INFO waiting for file pusher
+2024-06-27 01:02:16 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml
+2024-06-27 01:02:16 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 01:02:16 INFO file stream finish called
+2024-06-27 01:02:17 INFO file stream finish is done
+2024-06-27 01:02:17 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/run-3vpibv51.wandb
+2024-06-27 01:02:17 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 01:02:17 INFO run started: 3vpibv51 with start time 1719441048.112886
+2024-06-27 01:02:17 INFO saving file wandb-metadata.json with policy now
+2024-06-27 01:02:17 INFO shutting down sender
+2024-06-27 01:02:17 INFO Uploaded file /tmp/tmpgwfa2criwandb/ctazd2k3-wandb-metadata.json
+2024-06-27 01:02:18 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 01:02:20 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 01:02:21 INFO shutting down directory watcher
+2024-06-27 01:02:22 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 01:02:22 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 01:02:22 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 01:02:22 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 01:02:22 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml config.yaml
+2024-06-27 01:02:22 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log output.log
+2024-06-27 01:02:22 INFO shutting down file pusher
+2024-06-27 01:02:22 INFO waiting for file pusher
+2024-06-27 01:02:22 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml
+2024-06-27 01:02:22 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 01:02:23 INFO file stream finish called
+2024-06-27 01:02:23 INFO file stream finish is done
+2024-06-27 01:02:23 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/run-yaoue0z0.wandb
+2024-06-27 01:02:23 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 01:02:23 INFO run started: yaoue0z0 with start time 1719441168.709961
+2024-06-27 01:02:23 INFO saving file wandb-metadata.json with policy now
+2024-06-27 01:02:23 INFO shutting down sender
+2024-06-27 01:02:24 INFO Uploaded file /tmp/tmpxcru60oawandb/vwlz3g41-wandb-metadata.json
+2024-06-27 01:02:24 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 01:02:25 INFO shutting down directory watcher
+2024-06-27 01:02:26 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 01:02:26 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 01:02:26 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 01:02:26 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 01:02:26 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml config.yaml
+2024-06-27 01:02:26 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log output.log
+2024-06-27 01:02:26 INFO shutting down file pusher
+2024-06-27 01:02:26 INFO waiting for file pusher
+2024-06-27 01:02:26 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml
+2024-06-27 01:02:27 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 01:02:27 INFO file stream finish called
+2024-06-27 01:02:28 INFO file stream finish is done
+2024-06-27 01:02:28 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/run-o0ze7upt.wandb
+2024-06-27 01:02:28 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 01:02:28 INFO run started: o0ze7upt with start time 1719441218.50129
+2024-06-27 01:02:28 INFO saving file wandb-metadata.json with policy now
+2024-06-27 01:02:28 INFO shutting down sender
+2024-06-27 01:02:28 INFO Uploaded file /tmp/tmp27tih386wandb/l67glnse-wandb-metadata.json
+2024-06-27 01:02:29 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 01:02:30 INFO shutting down directory watcher
+2024-06-27 01:02:31 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 01:02:31 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 01:02:31 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 01:02:31 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 01:02:31 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml config.yaml
+2024-06-27 01:02:31 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log output.log
+2024-06-27 01:02:31 INFO shutting down file pusher
+2024-06-27 01:02:31 INFO waiting for file pusher
+2024-06-27 01:02:31 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml
+2024-06-27 01:02:31 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 01:02:32 INFO file stream finish called
+2024-06-27 01:02:32 INFO file stream finish is done
+2024-06-27 01:02:32 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/run-5hz3zlhy.wandb
+2024-06-27 01:02:32 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 01:02:32 INFO run started: 5hz3zlhy with start time 1719441220.032116
+2024-06-27 01:02:32 INFO saving file wandb-metadata.json with policy now
+2024-06-27 01:02:32 INFO shutting down sender
+2024-06-27 01:02:33 INFO Uploaded file /tmp/tmp5mzjl8aowandb/act92vns-wandb-metadata.json
+2024-06-27 01:02:33 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 01:02:34 INFO shutting down directory watcher
+2024-06-27 01:02:35 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 01:02:35 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 01:02:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 01:02:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 01:02:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml config.yaml
+2024-06-27 01:02:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log output.log
+2024-06-27 01:02:35 INFO shutting down file pusher
+2024-06-27 01:02:35 INFO waiting for file pusher
+2024-06-27 01:02:35 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml
+2024-06-27 01:02:36 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 01:02:36 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml
+2024-06-27 01:02:36 INFO file stream finish called
+2024-06-27 01:02:36 INFO file stream finish is done
+2024-06-27 01:02:36 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230412-cnp0m1r2/run-cnp0m1r2.wandb
+2024-06-27 01:02:37 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230517-ufip4w4k/run-ufip4w4k.wandb
+2024-06-27 01:02:37 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/run-u1r8itpl.wandb
+2024-06-27 01:02:37 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files
+2024-06-27 01:02:37 INFO run started: u1r8itpl with start time 1719463961.30813
+2024-06-27 01:02:37 INFO saving file wandb-metadata.json with policy now
+2024-06-27 01:02:37 INFO saving file wandb-summary.json with policy end
+2024-06-27 01:02:37 INFO handling exit code: 255
+2024-06-27 01:02:37 INFO handling runtime: 87
+2024-06-27 01:02:37 INFO saving file wandb-summary.json with policy end
+2024-06-27 01:02:37 INFO send defer
+2024-06-27 01:02:37 INFO handle sender defer: 0
+2024-06-27 01:02:37 INFO send defer: 1
+2024-06-27 01:02:37 INFO handle sender defer: 1
+2024-06-27 01:02:37 INFO send defer: 2
+2024-06-27 01:02:37 INFO handle sender defer: 2
+2024-06-27 01:02:37 INFO send defer: 3
+2024-06-27 01:02:37 INFO handle sender defer: 3
+2024-06-27 01:02:37 INFO send defer: 4
+2024-06-27 01:02:37 INFO handle sender defer: 4
+2024-06-27 01:02:37 INFO send defer: 5
+2024-06-27 01:02:37 INFO handle sender defer: 5
+2024-06-27 01:02:37 INFO send defer: 6
+2024-06-27 01:02:37 INFO handle sender defer: 6
+2024-06-27 01:02:37 INFO send defer: 7
+2024-06-27 01:02:37 INFO handle sender defer: 7
+2024-06-27 01:02:37 INFO Uploaded file /tmp/tmpgajwn1scwandb/vg6z1bu9-wandb-metadata.json
+2024-06-27 01:02:38 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/wandb-summary.json
+2024-06-27 01:02:38 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/config.yaml
+2024-06-27 01:02:38 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/output.log
+2024-06-27 01:02:40 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/output.log
+2024-06-27 01:02:41 INFO send defer: 8
+2024-06-27 01:02:41 INFO handle sender defer: 8
+2024-06-27 01:02:41 INFO Attempting to build job artifact
+2024-06-27 01:02:41 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 01:02:41 INFO send defer: 9
+2024-06-27 01:02:41 INFO handle sender defer: 9
+2024-06-27 01:02:41 INFO shutting down directory watcher
+2024-06-27 01:02:42 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/output.log
+2024-06-27 01:02:42 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files
+2024-06-27 01:02:42 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 01:02:42 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 01:02:42 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/wandb-summary.json wandb-summary.json
+2024-06-27 01:02:42 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/config.yaml config.yaml
+2024-06-27 01:02:42 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/output.log output.log
+2024-06-27 01:02:42 INFO send defer: 10
+2024-06-27 01:02:42 INFO handle sender defer: 10
+2024-06-27 01:02:42 INFO shutting down file pusher
+2024-06-27 01:02:42 INFO shutting down sender
+2024-06-27 01:02:42 INFO shutting down file pusher
+2024-06-27 01:02:42 INFO waiting for file pusher
+2024-06-27 01:02:42 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/conda-environment.yaml
+2024-06-27 01:02:42 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/wandb-summary.json
+2024-06-27 01:02:42 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/config.yaml
+2024-06-27 01:02:42 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005241-u1r8itpl/files/output.log
+2024-06-27 01:02:42 INFO send defer: 11
+2024-06-27 01:02:43 INFO file stream finish called
+2024-06-27 01:02:43 INFO file stream finish is done
+2024-06-27 01:02:43 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/run-pywf291k.wandb
+2024-06-27 01:02:43 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files
+2024-06-27 01:02:43 INFO run started: pywf291k with start time 1719464237.493379
+2024-06-27 01:02:43 INFO saving file wandb-metadata.json with policy now
+2024-06-27 01:02:43 INFO saving file wandb-summary.json with policy end
+2024-06-27 01:02:43 INFO handling exit code: 1
+2024-06-27 01:02:43 INFO handling runtime: 261
+2024-06-27 01:02:43 INFO saving file wandb-summary.json with policy end
+2024-06-27 01:02:43 INFO send defer
+2024-06-27 01:02:43 INFO handle sender defer: 0
+2024-06-27 01:02:43 INFO send defer: 1
+2024-06-27 01:02:43 INFO handle sender defer: 1
+2024-06-27 01:02:43 INFO send defer: 2
+2024-06-27 01:02:43 INFO handle sender defer: 2
+2024-06-27 01:02:43 INFO send defer: 3
+2024-06-27 01:02:43 INFO handle sender defer: 3
+2024-06-27 01:02:43 INFO send defer: 4
+2024-06-27 01:02:43 INFO handle sender defer: 4
+2024-06-27 01:02:43 INFO send defer: 5
+2024-06-27 01:02:43 INFO handle sender defer: 5
+2024-06-27 01:02:43 INFO send defer: 6
+2024-06-27 01:02:43 INFO handle sender defer: 6
+2024-06-27 01:02:43 INFO send defer: 7
+2024-06-27 01:02:43 INFO handle sender defer: 7
+2024-06-27 01:02:44 INFO Uploaded file /tmp/tmpcmbtca15wandb/koz3qrcd-wandb-metadata.json
+2024-06-27 01:02:44 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/config.yaml
+2024-06-27 01:02:44 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/wandb-summary.json
+2024-06-27 01:02:44 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/output.log
+2024-06-27 01:02:46 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/output.log
+2024-06-27 01:02:47 INFO send defer: 8
+2024-06-27 01:02:47 INFO handle sender defer: 8
+2024-06-27 01:02:47 INFO Attempting to build job artifact
+2024-06-27 01:02:47 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 01:02:47 INFO send defer: 9
+2024-06-27 01:02:47 INFO handle sender defer: 9
+2024-06-27 01:02:47 INFO shutting down directory watcher
+2024-06-27 01:02:48 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/output.log
+2024-06-27 01:02:48 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files
+2024-06-27 01:02:48 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 01:02:48 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 01:02:48 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/wandb-summary.json wandb-summary.json
+2024-06-27 01:02:48 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/config.yaml config.yaml
+2024-06-27 01:02:48 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/output.log output.log
+2024-06-27 01:02:48 INFO send defer: 10
+2024-06-27 01:02:48 INFO handle sender defer: 10
+2024-06-27 01:02:48 INFO shutting down file pusher
+2024-06-27 01:02:48 INFO shutting down sender
+2024-06-27 01:02:48 INFO shutting down file pusher
+2024-06-27 01:02:48 INFO waiting for file pusher
+2024-06-27 01:02:48 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/wandb-summary.json
+2024-06-27 01:02:48 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/conda-environment.yaml
+2024-06-27 01:02:49 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/output.log
+2024-06-27 01:02:49 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005717-pywf291k/files/config.yaml
+2024-06-27 01:02:49 INFO send defer: 11
+2024-06-27 01:02:49 INFO file stream finish called
+2024-06-27 01:02:49 INFO file stream finish is done
+2024-06-27 01:02:49 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/run-7bdkvunp.wandb
+2024-06-27 11:56:39 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_181834-thjk6cy2/run-thjk6cy2.wandb
+2024-06-27 11:56:40 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/run-8ph7u7ar.wandb
+2024-06-27 11:56:40 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 11:56:40 INFO run started: 8ph7u7ar with start time 1719440637.668318
+2024-06-27 11:56:40 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:56:40 INFO shutting down sender
+2024-06-27 11:56:40 INFO Uploaded file /tmp/tmp_f6t1oi2wandb/j4qg92n8-wandb-metadata.json
+2024-06-27 11:56:41 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 11:56:42 INFO shutting down directory watcher
+2024-06-27 11:56:43 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 11:56:43 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 11:56:43 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:56:43 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:56:43 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml config.yaml
+2024-06-27 11:56:43 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log output.log
+2024-06-27 11:56:43 INFO shutting down file pusher
+2024-06-27 11:56:43 INFO waiting for file pusher
+2024-06-27 11:56:43 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml
+2024-06-27 11:56:43 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 11:56:43 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml
+2024-06-27 11:56:44 INFO file stream finish called
+2024-06-27 11:56:44 INFO file stream finish is done
+2024-06-27 11:56:44 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/run-vr54lx2q.wandb
+2024-06-27 11:56:44 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 11:56:44 INFO run started: vr54lx2q with start time 1719440750.312192
+2024-06-27 11:56:44 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:56:44 INFO shutting down sender
+2024-06-27 11:56:45 INFO Uploaded file /tmp/tmpgi6ly2r7wandb/tfunxlw9-wandb-metadata.json
+2024-06-27 11:56:45 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 11:56:47 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 11:56:48 INFO shutting down directory watcher
+2024-06-27 11:56:49 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 11:56:49 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 11:56:49 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:56:49 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:56:49 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml config.yaml
+2024-06-27 11:56:49 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log output.log
+2024-06-27 11:56:49 INFO shutting down file pusher
+2024-06-27 11:56:49 INFO waiting for file pusher
+2024-06-27 11:56:50 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml
+2024-06-27 11:56:50 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 11:56:50 INFO file stream finish called
+2024-06-27 11:56:50 INFO file stream finish is done
+2024-06-27 11:56:50 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/run-3vpibv51.wandb
+2024-06-27 11:56:51 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 11:56:51 INFO run started: 3vpibv51 with start time 1719441048.112886
+2024-06-27 11:56:51 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:56:51 INFO shutting down sender
+2024-06-27 11:56:51 INFO Uploaded file /tmp/tmpry9w8ub5wandb/fv5mwtgb-wandb-metadata.json
+2024-06-27 11:56:52 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 11:56:53 INFO shutting down directory watcher
+2024-06-27 11:56:54 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 11:56:54 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 11:56:54 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:56:54 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:56:54 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml config.yaml
+2024-06-27 11:56:54 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log output.log
+2024-06-27 11:56:54 INFO shutting down file pusher
+2024-06-27 11:56:54 INFO waiting for file pusher
+2024-06-27 11:56:54 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml
+2024-06-27 11:56:54 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 11:56:55 INFO file stream finish called
+2024-06-27 11:56:55 INFO file stream finish is done
+2024-06-27 11:56:55 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/run-yaoue0z0.wandb
+2024-06-27 11:56:55 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 11:56:55 INFO run started: yaoue0z0 with start time 1719441168.709961
+2024-06-27 11:56:55 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:56:55 INFO shutting down sender
+2024-06-27 11:56:56 INFO Uploaded file /tmp/tmpr3yivt2rwandb/0vbu4fat-wandb-metadata.json
+2024-06-27 11:56:56 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 11:56:57 INFO shutting down directory watcher
+2024-06-27 11:56:58 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 11:56:58 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 11:56:58 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:56:58 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:56:58 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml config.yaml
+2024-06-27 11:56:58 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log output.log
+2024-06-27 11:56:58 INFO shutting down file pusher
+2024-06-27 11:56:58 INFO waiting for file pusher
+2024-06-27 11:56:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml
+2024-06-27 11:56:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 11:56:59 INFO file stream finish called
+2024-06-27 11:56:59 INFO file stream finish is done
+2024-06-27 11:56:59 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/run-o0ze7upt.wandb
+2024-06-27 11:57:00 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 11:57:00 INFO run started: o0ze7upt with start time 1719441218.50129
+2024-06-27 11:57:00 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:00 INFO shutting down sender
+2024-06-27 11:57:00 INFO Uploaded file /tmp/tmp215av1w8wandb/8rcmds25-wandb-metadata.json
+2024-06-27 11:57:01 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 11:57:02 INFO shutting down directory watcher
+2024-06-27 11:57:03 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 11:57:03 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 11:57:03 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:03 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:03 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml config.yaml
+2024-06-27 11:57:03 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log output.log
+2024-06-27 11:57:03 INFO shutting down file pusher
+2024-06-27 11:57:03 INFO waiting for file pusher
+2024-06-27 11:57:03 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml
+2024-06-27 11:57:03 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 11:57:04 INFO file stream finish called
+2024-06-27 11:57:04 INFO file stream finish is done
+2024-06-27 11:57:04 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/run-5hz3zlhy.wandb
+2024-06-27 11:57:04 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 11:57:04 INFO run started: 5hz3zlhy with start time 1719441220.032116
+2024-06-27 11:57:04 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:04 INFO shutting down sender
+2024-06-27 11:57:05 INFO Uploaded file /tmp/tmpo28lu892wandb/hadq817r-wandb-metadata.json
+2024-06-27 11:57:05 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 11:57:06 INFO shutting down directory watcher
+2024-06-27 11:57:07 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 11:57:07 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 11:57:07 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:07 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:07 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml config.yaml
+2024-06-27 11:57:07 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log output.log
+2024-06-27 11:57:07 INFO shutting down file pusher
+2024-06-27 11:57:07 INFO waiting for file pusher
+2024-06-27 11:57:08 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml
+2024-06-27 11:57:08 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml
+2024-06-27 11:57:08 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 11:57:09 INFO file stream finish called
+2024-06-27 11:57:09 INFO file stream finish is done
+2024-06-27 11:57:09 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230412-cnp0m1r2/run-cnp0m1r2.wandb
+2024-06-27 11:57:09 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230517-ufip4w4k/run-ufip4w4k.wandb
+2024-06-27 11:57:09 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/run-7bdkvunp.wandb
+2024-06-27 11:57:09 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files
+2024-06-27 11:57:09 INFO run started: 7bdkvunp with start time 1719464239.862592
+2024-06-27 11:57:09 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:09 INFO shutting down sender
+2024-06-27 11:57:09 INFO Uploaded file /tmp/tmpxqmxv07uwandb/egf61r5i-wandb-metadata.json
+2024-06-27 11:57:10 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log
+2024-06-27 11:57:12 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log
+2024-06-27 11:57:13 INFO shutting down directory watcher
+2024-06-27 11:57:14 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log
+2024-06-27 11:57:14 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files
+2024-06-27 11:57:14 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:14 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:14 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/config.yaml config.yaml
+2024-06-27 11:57:14 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log output.log
+2024-06-27 11:57:14 INFO shutting down file pusher
+2024-06-27 11:57:14 INFO waiting for file pusher
+2024-06-27 11:57:14 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log
+2024-06-27 11:57:14 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/config.yaml
+2024-06-27 11:57:15 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/conda-environment.yaml
+2024-06-27 11:57:16 INFO file stream finish called
+2024-06-27 11:57:16 INFO file stream finish is done
+2024-06-27 11:57:16 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/run-c6br2j04.wandb
+2024-06-27 11:57:16 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files
+2024-06-27 11:57:16 INFO run started: c6br2j04 with start time 1719464748.861849
+2024-06-27 11:57:16 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:16 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:16 INFO handling exit code: 1
+2024-06-27 11:57:16 INFO handling runtime: 1210
+2024-06-27 11:57:16 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:16 INFO send defer
+2024-06-27 11:57:16 INFO handle sender defer: 0
+2024-06-27 11:57:16 INFO send defer: 1
+2024-06-27 11:57:16 INFO handle sender defer: 1
+2024-06-27 11:57:16 INFO send defer: 2
+2024-06-27 11:57:16 INFO handle sender defer: 2
+2024-06-27 11:57:16 INFO send defer: 3
+2024-06-27 11:57:16 INFO handle sender defer: 3
+2024-06-27 11:57:16 INFO send defer: 4
+2024-06-27 11:57:16 INFO handle sender defer: 4
+2024-06-27 11:57:16 INFO send defer: 5
+2024-06-27 11:57:16 INFO handle sender defer: 5
+2024-06-27 11:57:16 INFO send defer: 6
+2024-06-27 11:57:16 INFO handle sender defer: 6
+2024-06-27 11:57:17 INFO Uploaded file /tmp/tmpawcp01chwandb/cp9603vm-wandb-metadata.json
+2024-06-27 11:57:17 INFO send defer: 7
+2024-06-27 11:57:17 INFO handle sender defer: 7
+2024-06-27 11:57:17 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/wandb-summary.json
+2024-06-27 11:57:17 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/config.yaml
+2024-06-27 11:57:17 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/output.log
+2024-06-27 11:57:19 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/output.log
+2024-06-27 11:57:20 INFO send defer: 8
+2024-06-27 11:57:20 INFO handle sender defer: 8
+2024-06-27 11:57:20 INFO Attempting to build job artifact
+2024-06-27 11:57:20 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 11:57:20 INFO send defer: 9
+2024-06-27 11:57:20 INFO handle sender defer: 9
+2024-06-27 11:57:20 INFO shutting down directory watcher
+2024-06-27 11:57:21 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/output.log
+2024-06-27 11:57:21 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files
+2024-06-27 11:57:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/wandb-summary.json wandb-summary.json
+2024-06-27 11:57:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/config.yaml config.yaml
+2024-06-27 11:57:21 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/output.log output.log
+2024-06-27 11:57:21 INFO send defer: 10
+2024-06-27 11:57:21 INFO handle sender defer: 10
+2024-06-27 11:57:21 INFO shutting down file pusher
+2024-06-27 11:57:21 INFO shutting down sender
+2024-06-27 11:57:21 INFO shutting down file pusher
+2024-06-27 11:57:21 INFO waiting for file pusher
+2024-06-27 11:57:22 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/conda-environment.yaml
+2024-06-27 11:57:22 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/config.yaml
+2024-06-27 11:57:22 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/output.log
+2024-06-27 11:57:22 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010548-c6br2j04/files/wandb-summary.json
+2024-06-27 11:57:22 INFO send defer: 11
+2024-06-27 11:57:22 INFO file stream finish called
+2024-06-27 11:57:23 INFO file stream finish is done
+2024-06-27 11:57:23 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/run-5tuk5lfi.wandb
+2024-06-27 11:57:24 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files
+2024-06-27 11:57:24 INFO run started: 5tuk5lfi with start time 1719464879.483153
+2024-06-27 11:57:24 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:24 INFO Uploaded file /tmp/tmp5j2xr21bwandb/p0wt16ey-wandb-metadata.json
+2024-06-27 11:57:25 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:25 INFO handling exit code: 1
+2024-06-27 11:57:25 INFO handling runtime: 1067
+2024-06-27 11:57:25 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:25 INFO send defer
+2024-06-27 11:57:25 INFO handle sender defer: 0
+2024-06-27 11:57:25 INFO send defer: 1
+2024-06-27 11:57:25 INFO handle sender defer: 1
+2024-06-27 11:57:25 INFO send defer: 2
+2024-06-27 11:57:25 INFO handle sender defer: 2
+2024-06-27 11:57:25 INFO send defer: 3
+2024-06-27 11:57:25 INFO handle sender defer: 3
+2024-06-27 11:57:25 INFO send defer: 4
+2024-06-27 11:57:25 INFO handle sender defer: 4
+2024-06-27 11:57:25 INFO send defer: 5
+2024-06-27 11:57:25 INFO handle sender defer: 5
+2024-06-27 11:57:25 INFO send defer: 6
+2024-06-27 11:57:25 INFO handle sender defer: 6
+2024-06-27 11:57:25 INFO send defer: 7
+2024-06-27 11:57:25 INFO handle sender defer: 7
+2024-06-27 11:57:25 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/wandb-summary.json
+2024-06-27 11:57:25 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/config.yaml
+2024-06-27 11:57:25 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/output.log
+2024-06-27 11:57:27 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/output.log
+2024-06-27 11:57:28 INFO send defer: 8
+2024-06-27 11:57:28 INFO handle sender defer: 8
+2024-06-27 11:57:28 INFO Attempting to build job artifact
+2024-06-27 11:57:28 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 11:57:28 INFO send defer: 9
+2024-06-27 11:57:28 INFO handle sender defer: 9
+2024-06-27 11:57:28 INFO shutting down directory watcher
+2024-06-27 11:57:29 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/output.log
+2024-06-27 11:57:29 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files
+2024-06-27 11:57:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/wandb-summary.json wandb-summary.json
+2024-06-27 11:57:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/config.yaml config.yaml
+2024-06-27 11:57:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/output.log output.log
+2024-06-27 11:57:29 INFO send defer: 10
+2024-06-27 11:57:29 INFO handle sender defer: 10
+2024-06-27 11:57:29 INFO shutting down file pusher
+2024-06-27 11:57:29 INFO shutting down sender
+2024-06-27 11:57:29 INFO shutting down file pusher
+2024-06-27 11:57:29 INFO waiting for file pusher
+2024-06-27 11:57:29 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/conda-environment.yaml
+2024-06-27 11:57:29 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/output.log
+2024-06-27 11:57:29 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/config.yaml
+2024-06-27 11:57:29 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010759-5tuk5lfi/files/wandb-summary.json
+2024-06-27 11:57:30 INFO send defer: 11
+2024-06-27 11:57:30 INFO file stream finish called
+2024-06-27 11:57:30 INFO file stream finish is done
+2024-06-27 11:57:30 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/run-7os0uz5i.wandb
+2024-06-27 11:57:30 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files
+2024-06-27 11:57:30 INFO run started: 7os0uz5i with start time 1719464916.447533
+2024-06-27 11:57:30 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:31 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:31 INFO handling exit code: 1
+2024-06-27 11:57:31 INFO handling runtime: 6157
+2024-06-27 11:57:31 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:31 INFO send defer
+2024-06-27 11:57:31 INFO handle sender defer: 0
+2024-06-27 11:57:31 INFO send defer: 1
+2024-06-27 11:57:31 INFO handle sender defer: 1
+2024-06-27 11:57:31 INFO send defer: 2
+2024-06-27 11:57:31 INFO handle sender defer: 2
+2024-06-27 11:57:31 INFO send defer: 3
+2024-06-27 11:57:31 INFO handle sender defer: 3
+2024-06-27 11:57:31 INFO send defer: 4
+2024-06-27 11:57:31 INFO handle sender defer: 4
+2024-06-27 11:57:31 INFO send defer: 5
+2024-06-27 11:57:31 INFO handle sender defer: 5
+2024-06-27 11:57:31 INFO send defer: 6
+2024-06-27 11:57:31 INFO handle sender defer: 6
+2024-06-27 11:57:31 INFO send defer: 7
+2024-06-27 11:57:31 INFO handle sender defer: 7
+2024-06-27 11:57:31 INFO Uploaded file /tmp/tmpeft5tq2rwandb/w1rgzsfs-wandb-metadata.json
+2024-06-27 11:57:31 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/config.yaml
+2024-06-27 11:57:31 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/wandb-summary.json
+2024-06-27 11:57:31 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/output.log
+2024-06-27 11:57:33 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/output.log
+2024-06-27 11:57:34 INFO send defer: 8
+2024-06-27 11:57:34 INFO handle sender defer: 8
+2024-06-27 11:57:34 INFO Attempting to build job artifact
+2024-06-27 11:57:34 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 11:57:34 INFO send defer: 9
+2024-06-27 11:57:34 INFO handle sender defer: 9
+2024-06-27 11:57:34 INFO shutting down directory watcher
+2024-06-27 11:57:35 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/output.log
+2024-06-27 11:57:35 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files
+2024-06-27 11:57:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/wandb-summary.json wandb-summary.json
+2024-06-27 11:57:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/config.yaml config.yaml
+2024-06-27 11:57:35 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/output.log output.log
+2024-06-27 11:57:35 INFO send defer: 10
+2024-06-27 11:57:35 INFO handle sender defer: 10
+2024-06-27 11:57:35 INFO shutting down file pusher
+2024-06-27 11:57:35 INFO shutting down sender
+2024-06-27 11:57:35 INFO shutting down file pusher
+2024-06-27 11:57:35 INFO waiting for file pusher
+2024-06-27 11:57:36 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/wandb-summary.json
+2024-06-27 11:57:36 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/conda-environment.yaml
+2024-06-27 11:57:36 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/output.log
+2024-06-27 11:57:36 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_010836-7os0uz5i/files/config.yaml
+2024-06-27 11:57:36 INFO send defer: 11
+2024-06-27 11:57:36 INFO file stream finish called
+2024-06-27 11:57:37 INFO file stream finish is done
+2024-06-27 11:57:37 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/run-gtaqgici.wandb
+2024-06-27 11:57:37 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files
+2024-06-27 11:57:37 INFO run started: gtaqgici with start time 1719465335.89096
+2024-06-27 11:57:37 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:37 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:37 INFO handling exit code: 1
+2024-06-27 11:57:37 INFO handling runtime: 8965
+2024-06-27 11:57:37 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:37 INFO send defer
+2024-06-27 11:57:37 INFO handle sender defer: 0
+2024-06-27 11:57:37 INFO send defer: 1
+2024-06-27 11:57:37 INFO handle sender defer: 1
+2024-06-27 11:57:37 INFO send defer: 2
+2024-06-27 11:57:37 INFO handle sender defer: 2
+2024-06-27 11:57:37 INFO send defer: 3
+2024-06-27 11:57:37 INFO handle sender defer: 3
+2024-06-27 11:57:37 INFO send defer: 4
+2024-06-27 11:57:37 INFO handle sender defer: 4
+2024-06-27 11:57:37 INFO send defer: 5
+2024-06-27 11:57:37 INFO handle sender defer: 5
+2024-06-27 11:57:37 INFO send defer: 6
+2024-06-27 11:57:37 INFO handle sender defer: 6
+2024-06-27 11:57:37 INFO send defer: 7
+2024-06-27 11:57:37 INFO handle sender defer: 7
+2024-06-27 11:57:37 INFO Uploaded file /tmp/tmpqu7pb0xzwandb/o6i09fi1-wandb-metadata.json
+2024-06-27 11:57:38 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/config.yaml
+2024-06-27 11:57:38 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/wandb-summary.json
+2024-06-27 11:57:38 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/output.log
+2024-06-27 11:57:39 INFO send defer: 8
+2024-06-27 11:57:39 INFO handle sender defer: 8
+2024-06-27 11:57:39 INFO Attempting to build job artifact
+2024-06-27 11:57:39 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 11:57:39 INFO send defer: 9
+2024-06-27 11:57:39 INFO handle sender defer: 9
+2024-06-27 11:57:39 INFO shutting down directory watcher
+2024-06-27 11:57:40 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/output.log
+2024-06-27 11:57:40 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files
+2024-06-27 11:57:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/wandb-summary.json wandb-summary.json
+2024-06-27 11:57:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/config.yaml config.yaml
+2024-06-27 11:57:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/output.log output.log
+2024-06-27 11:57:40 INFO send defer: 10
+2024-06-27 11:57:40 INFO handle sender defer: 10
+2024-06-27 11:57:40 INFO shutting down file pusher
+2024-06-27 11:57:40 INFO shutting down sender
+2024-06-27 11:57:40 INFO shutting down file pusher
+2024-06-27 11:57:40 INFO waiting for file pusher
+2024-06-27 11:57:40 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/wandb-summary.json
+2024-06-27 11:57:40 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/conda-environment.yaml
+2024-06-27 11:57:40 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/output.log
+2024-06-27 11:57:40 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_011535-gtaqgici/files/config.yaml
+2024-06-27 11:57:41 INFO send defer: 11
+2024-06-27 11:57:41 INFO file stream finish called
+2024-06-27 11:57:41 INFO file stream finish is done
+2024-06-27 11:57:41 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/run-90o4apgs.wandb
+2024-06-27 11:57:42 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files
+2024-06-27 11:57:42 INFO run started: 90o4apgs with start time 1719501912.269645
+2024-06-27 11:57:42 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:42 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:42 INFO handling exit code: 1
+2024-06-27 11:57:42 INFO handling runtime: 1780
+2024-06-27 11:57:42 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:42 INFO send defer
+2024-06-27 11:57:42 INFO handle sender defer: 0
+2024-06-27 11:57:42 INFO send defer: 1
+2024-06-27 11:57:42 INFO handle sender defer: 1
+2024-06-27 11:57:42 INFO send defer: 2
+2024-06-27 11:57:42 INFO handle sender defer: 2
+2024-06-27 11:57:42 INFO send defer: 3
+2024-06-27 11:57:42 INFO handle sender defer: 3
+2024-06-27 11:57:42 INFO send defer: 4
+2024-06-27 11:57:42 INFO handle sender defer: 4
+2024-06-27 11:57:42 INFO send defer: 5
+2024-06-27 11:57:42 INFO handle sender defer: 5
+2024-06-27 11:57:42 INFO send defer: 6
+2024-06-27 11:57:42 INFO handle sender defer: 6
+2024-06-27 11:57:42 INFO send defer: 7
+2024-06-27 11:57:42 INFO handle sender defer: 7
+2024-06-27 11:57:42 INFO Uploaded file /tmp/tmpn1e58pnswandb/cnc05kce-wandb-metadata.json
+2024-06-27 11:57:43 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/config.yaml
+2024-06-27 11:57:43 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/wandb-summary.json
+2024-06-27 11:57:43 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/output.log
+2024-06-27 11:57:44 INFO send defer: 8
+2024-06-27 11:57:44 INFO handle sender defer: 8
+2024-06-27 11:57:44 INFO Attempting to build job artifact
+2024-06-27 11:57:44 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 11:57:44 INFO send defer: 9
+2024-06-27 11:57:44 INFO handle sender defer: 9
+2024-06-27 11:57:44 INFO shutting down directory watcher
+2024-06-27 11:57:45 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/output.log
+2024-06-27 11:57:45 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files
+2024-06-27 11:57:45 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:45 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:45 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/wandb-summary.json wandb-summary.json
+2024-06-27 11:57:45 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/config.yaml config.yaml
+2024-06-27 11:57:45 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/output.log output.log
+2024-06-27 11:57:45 INFO send defer: 10
+2024-06-27 11:57:45 INFO handle sender defer: 10
+2024-06-27 11:57:45 INFO shutting down file pusher
+2024-06-27 11:57:45 INFO shutting down sender
+2024-06-27 11:57:45 INFO shutting down file pusher
+2024-06-27 11:57:45 INFO waiting for file pusher
+2024-06-27 11:57:45 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/wandb-summary.json
+2024-06-27 11:57:45 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/conda-environment.yaml
+2024-06-27 11:57:45 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/config.yaml
+2024-06-27 11:57:45 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112512-90o4apgs/files/output.log
+2024-06-27 11:57:45 INFO send defer: 11
+2024-06-27 11:57:46 INFO file stream finish called
+2024-06-27 11:57:46 INFO file stream finish is done
+2024-06-27 11:57:46 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/run-3kb822xq.wandb
+2024-06-27 11:57:46 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files
+2024-06-27 11:57:46 INFO run started: 3kb822xq with start time 1719501940.433288
+2024-06-27 11:57:46 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:46 INFO shutting down sender
+2024-06-27 11:57:47 INFO Uploaded file /tmp/tmp6pnmix2twandb/aal77zgd-wandb-metadata.json
+2024-06-27 11:57:47 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/output.log
+2024-06-27 11:57:48 INFO shutting down directory watcher
+2024-06-27 11:57:49 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/output.log
+2024-06-27 11:57:49 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files
+2024-06-27 11:57:49 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:49 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:49 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/config.yaml config.yaml
+2024-06-27 11:57:49 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/output.log output.log
+2024-06-27 11:57:49 INFO shutting down file pusher
+2024-06-27 11:57:49 INFO waiting for file pusher
+2024-06-27 11:57:49 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/conda-environment.yaml
+2024-06-27 11:57:50 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/config.yaml
+2024-06-27 11:57:50 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/output.log
+2024-06-27 11:57:50 INFO file stream finish called
+2024-06-27 11:57:51 INFO file stream finish is done
+2024-06-27 11:57:51 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/run-7zsz97kj.wandb
+2024-06-27 11:57:51 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files
+2024-06-27 11:57:51 INFO run started: 7zsz97kj with start time 1719501940.41905
+2024-06-27 11:57:51 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:51 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:51 INFO handling exit code: 1
+2024-06-27 11:57:51 INFO handling runtime: 368
+2024-06-27 11:57:51 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:51 INFO send defer
+2024-06-27 11:57:51 INFO handle sender defer: 0
+2024-06-27 11:57:51 INFO send defer: 1
+2024-06-27 11:57:51 INFO handle sender defer: 1
+2024-06-27 11:57:51 INFO send defer: 2
+2024-06-27 11:57:51 INFO handle sender defer: 2
+2024-06-27 11:57:51 INFO send defer: 3
+2024-06-27 11:57:51 INFO handle sender defer: 3
+2024-06-27 11:57:51 INFO send defer: 4
+2024-06-27 11:57:51 INFO handle sender defer: 4
+2024-06-27 11:57:51 INFO send defer: 5
+2024-06-27 11:57:51 INFO handle sender defer: 5
+2024-06-27 11:57:51 INFO send defer: 6
+2024-06-27 11:57:51 INFO handle sender defer: 6
+2024-06-27 11:57:51 INFO send defer: 7
+2024-06-27 11:57:51 INFO handle sender defer: 7
+2024-06-27 11:57:51 INFO Uploaded file /tmp/tmpo0zw_2p8wandb/a5aket36-wandb-metadata.json
+2024-06-27 11:57:52 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/config.yaml
+2024-06-27 11:57:52 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/wandb-summary.json
+2024-06-27 11:57:52 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/output.log
+2024-06-27 11:57:54 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/output.log
+2024-06-27 11:57:55 INFO send defer: 8
+2024-06-27 11:57:55 INFO handle sender defer: 8
+2024-06-27 11:57:55 INFO Attempting to build job artifact
+2024-06-27 11:57:55 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 11:57:55 INFO send defer: 9
+2024-06-27 11:57:55 INFO handle sender defer: 9
+2024-06-27 11:57:55 INFO shutting down directory watcher
+2024-06-27 11:57:56 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/output.log
+2024-06-27 11:57:56 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files
+2024-06-27 11:57:56 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:57:56 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:57:56 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/wandb-summary.json wandb-summary.json
+2024-06-27 11:57:56 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/config.yaml config.yaml
+2024-06-27 11:57:56 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/output.log output.log
+2024-06-27 11:57:56 INFO send defer: 10
+2024-06-27 11:57:56 INFO handle sender defer: 10
+2024-06-27 11:57:56 INFO shutting down file pusher
+2024-06-27 11:57:56 INFO shutting down sender
+2024-06-27 11:57:56 INFO shutting down file pusher
+2024-06-27 11:57:56 INFO waiting for file pusher
+2024-06-27 11:57:56 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/wandb-summary.json
+2024-06-27 11:57:56 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/conda-environment.yaml
+2024-06-27 11:57:56 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/config.yaml
+2024-06-27 11:57:56 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-7zsz97kj/files/output.log
+2024-06-27 11:57:56 INFO send defer: 11
+2024-06-27 11:57:57 INFO file stream finish called
+2024-06-27 11:57:57 INFO file stream finish is done
+2024-06-27 11:57:57 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/run-otkvl9xs.wandb
+2024-06-27 11:57:57 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files
+2024-06-27 11:57:57 INFO run started: otkvl9xs with start time 1719501940.436454
+2024-06-27 11:57:57 INFO saving file wandb-metadata.json with policy now
+2024-06-27 11:57:57 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:57 INFO handling exit code: 1
+2024-06-27 11:57:57 INFO handling runtime: 1264
+2024-06-27 11:57:57 INFO saving file wandb-summary.json with policy end
+2024-06-27 11:57:57 INFO send defer
+2024-06-27 11:57:57 INFO handle sender defer: 0
+2024-06-27 11:57:57 INFO send defer: 1
+2024-06-27 11:57:57 INFO handle sender defer: 1
+2024-06-27 11:57:57 INFO send defer: 2
+2024-06-27 11:57:57 INFO handle sender defer: 2
+2024-06-27 11:57:57 INFO send defer: 3
+2024-06-27 11:57:57 INFO handle sender defer: 3
+2024-06-27 11:57:57 INFO send defer: 4
+2024-06-27 11:57:57 INFO handle sender defer: 4
+2024-06-27 11:57:57 INFO send defer: 5
+2024-06-27 11:57:57 INFO handle sender defer: 5
+2024-06-27 11:57:57 INFO send defer: 6
+2024-06-27 11:57:57 INFO handle sender defer: 6
+2024-06-27 11:57:57 INFO send defer: 7
+2024-06-27 11:57:57 INFO handle sender defer: 7
+2024-06-27 11:57:57 INFO Uploaded file /tmp/tmpnipox5_7wandb/znt29pu1-wandb-metadata.json
+2024-06-27 11:57:58 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/config.yaml
+2024-06-27 11:57:58 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/wandb-summary.json
+2024-06-27 11:57:58 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/output.log
+2024-06-27 11:58:00 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/output.log
+2024-06-27 11:58:01 INFO send defer: 8
+2024-06-27 11:58:01 INFO handle sender defer: 8
+2024-06-27 11:58:01 INFO Attempting to build job artifact
+2024-06-27 11:58:01 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 11:58:01 INFO send defer: 9
+2024-06-27 11:58:01 INFO handle sender defer: 9
+2024-06-27 11:58:01 INFO shutting down directory watcher
+2024-06-27 11:58:02 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/output.log
+2024-06-27 11:58:02 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files
+2024-06-27 11:58:02 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 11:58:02 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 11:58:02 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/wandb-summary.json wandb-summary.json
+2024-06-27 11:58:02 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/config.yaml config.yaml
+2024-06-27 11:58:02 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/output.log output.log
+2024-06-27 11:58:02 INFO send defer: 10
+2024-06-27 11:58:02 INFO handle sender defer: 10
+2024-06-27 11:58:02 INFO shutting down file pusher
+2024-06-27 11:58:02 INFO shutting down sender
+2024-06-27 11:58:02 INFO shutting down file pusher
+2024-06-27 11:58:02 INFO waiting for file pusher
+2024-06-27 11:58:02 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/wandb-summary.json
+2024-06-27 11:58:02 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/conda-environment.yaml
+2024-06-27 11:58:03 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/output.log
+2024-06-27 11:58:03 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs/files/config.yaml
+2024-06-27 11:58:03 INFO send defer: 11
+2024-06-27 11:58:03 INFO file stream finish called
+2024-06-27 11:58:03 INFO file stream finish is done
+2024-06-27 12:41:53 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_181834-thjk6cy2/run-thjk6cy2.wandb
+2024-06-27 12:41:53 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/run-8ph7u7ar.wandb
+2024-06-27 12:41:54 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 12:41:54 INFO run started: 8ph7u7ar with start time 1719440637.668318
+2024-06-27 12:41:54 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:41:54 INFO shutting down sender
+2024-06-27 12:41:54 INFO Uploaded file /tmp/tmpxq57geu_wandb/hakll7ni-wandb-metadata.json
+2024-06-27 12:41:55 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 12:41:57 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 12:41:58 INFO shutting down directory watcher
+2024-06-27 12:41:59 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 12:41:59 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files
+2024-06-27 12:41:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:41:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:41:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml config.yaml
+2024-06-27 12:41:59 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log output.log
+2024-06-27 12:41:59 INFO shutting down file pusher
+2024-06-27 12:41:59 INFO waiting for file pusher
+2024-06-27 12:41:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/conda-environment.yaml
+2024-06-27 12:41:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/output.log
+2024-06-27 12:41:59 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182357-8ph7u7ar/files/config.yaml
+2024-06-27 12:42:00 INFO file stream finish called
+2024-06-27 12:42:00 INFO file stream finish is done
+2024-06-27 12:42:00 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/run-vr54lx2q.wandb
+2024-06-27 12:42:00 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 12:42:00 INFO run started: vr54lx2q with start time 1719440750.312192
+2024-06-27 12:42:00 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:42:00 INFO shutting down sender
+2024-06-27 12:42:00 INFO Uploaded file /tmp/tmptd0l1y00wandb/gew65q40-wandb-metadata.json
+2024-06-27 12:42:01 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 12:42:03 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 12:42:04 INFO shutting down directory watcher
+2024-06-27 12:42:05 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 12:42:05 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files
+2024-06-27 12:42:05 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:42:05 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:42:05 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml config.yaml
+2024-06-27 12:42:05 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log output.log
+2024-06-27 12:42:05 INFO shutting down file pusher
+2024-06-27 12:42:05 INFO waiting for file pusher
+2024-06-27 12:42:05 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/config.yaml
+2024-06-27 12:42:05 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_182549-vr54lx2q/files/output.log
+2024-06-27 12:42:06 INFO file stream finish called
+2024-06-27 12:42:06 INFO file stream finish is done
+2024-06-27 12:42:06 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/run-3vpibv51.wandb
+2024-06-27 12:42:06 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 12:42:06 INFO run started: 3vpibv51 with start time 1719441048.112886
+2024-06-27 12:42:06 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:42:06 INFO shutting down sender
+2024-06-27 12:42:07 INFO Uploaded file /tmp/tmpo8wnd47ywandb/spibv2rg-wandb-metadata.json
+2024-06-27 12:42:07 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 12:42:08 INFO shutting down directory watcher
+2024-06-27 12:42:09 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 12:42:09 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files
+2024-06-27 12:42:09 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:42:09 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:42:09 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml config.yaml
+2024-06-27 12:42:09 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log output.log
+2024-06-27 12:42:09 INFO shutting down file pusher
+2024-06-27 12:42:09 INFO waiting for file pusher
+2024-06-27 12:42:10 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/config.yaml
+2024-06-27 12:42:10 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183047-3vpibv51/files/output.log
+2024-06-27 12:42:10 INFO file stream finish called
+2024-06-27 12:42:11 INFO file stream finish is done
+2024-06-27 12:42:11 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/run-yaoue0z0.wandb
+2024-06-27 12:42:11 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 12:42:11 INFO run started: yaoue0z0 with start time 1719441168.709961
+2024-06-27 12:42:11 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:42:11 INFO shutting down sender
+2024-06-27 12:42:11 INFO Uploaded file /tmp/tmpmxu_oegbwandb/59xa4afj-wandb-metadata.json
+2024-06-27 12:42:12 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 12:42:13 INFO shutting down directory watcher
+2024-06-27 12:42:14 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 12:42:14 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files
+2024-06-27 12:42:14 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:42:14 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:42:14 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml config.yaml
+2024-06-27 12:42:14 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log output.log
+2024-06-27 12:42:14 INFO shutting down file pusher
+2024-06-27 12:42:14 INFO waiting for file pusher
+2024-06-27 12:42:14 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/config.yaml
+2024-06-27 12:42:14 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183248-yaoue0z0/files/output.log
+2024-06-27 12:42:15 INFO file stream finish called
+2024-06-27 12:42:15 INFO file stream finish is done
+2024-06-27 12:42:15 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/run-o0ze7upt.wandb
+2024-06-27 12:42:15 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 12:42:15 INFO run started: o0ze7upt with start time 1719441218.50129
+2024-06-27 12:42:15 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:42:15 INFO shutting down sender
+2024-06-27 12:42:16 INFO Uploaded file /tmp/tmpz1anzi3kwandb/ovqrzqtv-wandb-metadata.json
+2024-06-27 12:42:16 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 12:42:17 INFO shutting down directory watcher
+2024-06-27 12:42:18 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 12:42:18 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files
+2024-06-27 12:42:18 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:42:18 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:42:18 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml config.yaml
+2024-06-27 12:42:18 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log output.log
+2024-06-27 12:42:18 INFO shutting down file pusher
+2024-06-27 12:42:18 INFO waiting for file pusher
+2024-06-27 12:42:19 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/config.yaml
+2024-06-27 12:42:19 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183338-o0ze7upt/files/output.log
+2024-06-27 12:42:19 INFO file stream finish called
+2024-06-27 12:42:20 INFO file stream finish is done
+2024-06-27 12:42:20 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/run-5hz3zlhy.wandb
+2024-06-27 12:42:20 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 12:42:20 INFO run started: 5hz3zlhy with start time 1719441220.032116
+2024-06-27 12:42:20 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:42:20 INFO shutting down sender
+2024-06-27 12:42:20 INFO Uploaded file /tmp/tmp1lpeqdoewandb/zc23xs9p-wandb-metadata.json
+2024-06-27 12:42:21 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 12:42:22 INFO shutting down directory watcher
+2024-06-27 12:42:23 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 12:42:23 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files
+2024-06-27 12:42:23 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:42:23 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:42:23 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml config.yaml
+2024-06-27 12:42:23 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log output.log
+2024-06-27 12:42:23 INFO shutting down file pusher
+2024-06-27 12:42:23 INFO waiting for file pusher
+2024-06-27 12:42:23 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/conda-environment.yaml
+2024-06-27 12:42:23 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/config.yaml
+2024-06-27 12:42:23 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240626_183340-5hz3zlhy/files/output.log
+2024-06-27 12:42:24 INFO file stream finish called
+2024-06-27 12:42:24 INFO file stream finish is done
+2024-06-27 12:42:24 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230412-cnp0m1r2/run-cnp0m1r2.wandb
+2024-06-27 12:42:24 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240626_230517-ufip4w4k/run-ufip4w4k.wandb
+2024-06-27 12:42:24 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/run-7bdkvunp.wandb
+2024-06-27 12:42:24 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files
+2024-06-27 12:42:24 INFO run started: 7bdkvunp with start time 1719464239.862592
+2024-06-27 12:42:24 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:42:24 INFO shutting down sender
+2024-06-27 12:42:25 INFO Uploaded file /tmp/tmp18db10r3wandb/esegrb69-wandb-metadata.json
+2024-06-27 12:42:25 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log
+2024-06-27 12:42:27 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log
+2024-06-27 12:42:28 INFO shutting down directory watcher
+2024-06-27 12:42:29 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log
+2024-06-27 12:42:29 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files
+2024-06-27 12:42:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:42:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:42:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/config.yaml config.yaml
+2024-06-27 12:42:29 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log output.log
+2024-06-27 12:42:29 INFO shutting down file pusher
+2024-06-27 12:42:29 INFO waiting for file pusher
+2024-06-27 12:42:30 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/conda-environment.yaml
+2024-06-27 12:42:30 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/output.log
+2024-06-27 12:42:30 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_005719-7bdkvunp/files/config.yaml
+2024-06-27 12:42:30 INFO file stream finish called
+2024-06-27 12:42:31 INFO file stream finish is done
+2024-06-27 12:42:31 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/run-3kb822xq.wandb
+2024-06-27 12:42:31 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files
+2024-06-27 12:42:31 INFO run started: 3kb822xq with start time 1719501940.433288
+2024-06-27 12:42:31 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:42:31 INFO shutting down sender
+2024-06-27 12:42:31 INFO Uploaded file /tmp/tmpdrcyzd5uwandb/wxgp40gm-wandb-metadata.json
+2024-06-27 12:42:32 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/output.log
+2024-06-27 12:42:33 INFO shutting down directory watcher
+2024-06-27 12:42:34 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/output.log
+2024-06-27 12:42:34 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files
+2024-06-27 12:42:34 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:42:34 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:42:34 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/config.yaml config.yaml
+2024-06-27 12:42:34 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/output.log output.log
+2024-06-27 12:42:34 INFO shutting down file pusher
+2024-06-27 12:42:34 INFO waiting for file pusher
+2024-06-27 12:42:34 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/conda-environment.yaml
+2024-06-27 12:42:34 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/config.yaml
+2024-06-27 12:42:34 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-3kb822xq/files/output.log
+2024-06-27 12:42:35 INFO file stream finish called
+2024-06-27 12:42:35 INFO file stream finish is done
+2024-06-27 12:42:35 INFO open for scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/run-laa3pm5s.wandb
+2024-06-27 12:42:35 INFO watching files in: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files
+2024-06-27 12:42:35 INFO run started: laa3pm5s with start time 1719505246.557702
+2024-06-27 12:42:35 INFO saving file wandb-metadata.json with policy now
+2024-06-27 12:42:35 INFO saving file wandb-summary.json with policy end
+2024-06-27 12:42:35 INFO handling exit code: 1
+2024-06-27 12:42:35 INFO handling runtime: 1002
+2024-06-27 12:42:35 INFO saving file wandb-summary.json with policy end
+2024-06-27 12:42:35 INFO send defer
+2024-06-27 12:42:35 INFO handle sender defer: 0
+2024-06-27 12:42:35 INFO send defer: 1
+2024-06-27 12:42:35 INFO handle sender defer: 1
+2024-06-27 12:42:35 INFO send defer: 2
+2024-06-27 12:42:35 INFO handle sender defer: 2
+2024-06-27 12:42:35 INFO send defer: 3
+2024-06-27 12:42:35 INFO handle sender defer: 3
+2024-06-27 12:42:35 INFO send defer: 4
+2024-06-27 12:42:35 INFO handle sender defer: 4
+2024-06-27 12:42:35 INFO send defer: 5
+2024-06-27 12:42:35 INFO handle sender defer: 5
+2024-06-27 12:42:35 INFO send defer: 6
+2024-06-27 12:42:35 INFO handle sender defer: 6
+2024-06-27 12:42:35 INFO send defer: 7
+2024-06-27 12:42:35 INFO handle sender defer: 7
+2024-06-27 12:42:36 INFO Uploaded file /tmp/tmp9j6e6fcwwandb/vp3e02gn-wandb-metadata.json
+2024-06-27 12:42:36 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/config.yaml
+2024-06-27 12:42:36 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/wandb-summary.json
+2024-06-27 12:42:36 INFO file/dir created: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/output.log
+2024-06-27 12:42:38 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/output.log
+2024-06-27 12:42:39 INFO send defer: 8
+2024-06-27 12:42:39 INFO handle sender defer: 8
+2024-06-27 12:42:39 INFO Attempting to build job artifact
+2024-06-27 12:42:39 WARNING No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-27 12:42:39 INFO send defer: 9
+2024-06-27 12:42:39 INFO handle sender defer: 9
+2024-06-27 12:42:39 INFO shutting down directory watcher
+2024-06-27 12:42:40 INFO file/dir modified: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/output.log
+2024-06-27 12:42:40 INFO scan: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files
+2024-06-27 12:42:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/conda-environment.yaml conda-environment.yaml
+2024-06-27 12:42:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/wandb-metadata.json wandb-metadata.json
+2024-06-27 12:42:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/wandb-summary.json wandb-summary.json
+2024-06-27 12:42:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/config.yaml config.yaml
+2024-06-27 12:42:40 INFO scan save: /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/output.log output.log
+2024-06-27 12:42:40 INFO send defer: 10
+2024-06-27 12:42:40 INFO handle sender defer: 10
+2024-06-27 12:42:40 INFO shutting down file pusher
+2024-06-27 12:42:40 INFO shutting down sender
+2024-06-27 12:42:40 INFO shutting down file pusher
+2024-06-27 12:42:40 INFO waiting for file pusher
+2024-06-27 12:42:40 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/conda-environment.yaml
+2024-06-27 12:42:41 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/wandb-summary.json
+2024-06-27 12:42:41 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/output.log
+2024-06-27 12:42:41 INFO Uploaded file /home/yongweic/hyperbolic/wandb/offline-run-20240627_122046-laa3pm5s/files/config.yaml
+2024-06-27 12:42:41 INFO send defer: 11
+2024-06-27 12:42:41 INFO file stream finish called
+2024-06-27 12:42:42 INFO file stream finish is done

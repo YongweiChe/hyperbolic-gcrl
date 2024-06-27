@@ -1,0 +1,52 @@
+wandb: Tracking run with wandb version 0.17.3
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/_compile.py:24: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  return torch._dynamo.disable(fn, recursive)(*args, **kwargs)
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+blank maze
+{'batch_size': 32, 'embedding_dim': 64, 'eval_trials': 100, 'max_steps': 100, 'hyperbolic': True, 'num_epochs': 8, 'temperature': 0.1, 'num_negatives': 11, 'learning_rate': 0.001, 'architecture': 'MLP', 'maze': '[[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]', 'num_trajectories': 10000, 'maze_type': 'blank'}
+/home/yongweic/hyperbolic/train.py:179: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  anchor = torch.tensor(anchor).to(device, torch.float32)
+/home/yongweic/hyperbolic/train.py:180: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  positive = torch.tensor(positive).to(device, torch.float32)
+/home/yongweic/hyperbolic/train.py:181: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  negatives = torch.tensor(negatives).to(device, torch.float32)
+Epoch 1, Loss: 3.7194392147917337, SPL: 0.5263232360029287, Failure %: 0.37
+Epoch 2, Loss: 3.1041436202990744, SPL: 0.9587003491535461, Failure %: 0.01
+Epoch 3, Loss: 3.0431621790693972, SPL: 0.7265186570773641, Failure %: 0.18
+Epoch 4, Loss: 3.009001085933405, SPL: 0.5898272267138546, Failure %: 0.34
+Epoch 5, Loss: 2.979870947024312, SPL: 0.8556020598452007, Failure %: 0.06
+Epoch 6, Loss: 2.9518885833386794, SPL: 0.7912518499174745, Failure %: 0.11
+Epoch 7, Loss: 2.979831189774096, SPL: 0.5566936317594707, Failure %: 0.31
+Epoch 8, Loss: 2.9339115010282866, SPL: 0.9204965946792573, Failure %: 0.03
+Traceback (most recent call last):
+  File "/home/yongweic/hyperbolic/train.py", line 253, in <module>
+    main()
+  File "/home/yongweic/hyperbolic/train.py", line 250, in main
+    save_models(encoder1, encoder2, best_encoder1, best_encoder2, epoch + 1, best_epoch, experiment_name)
+  File "/home/yongweic/hyperbolic/train.py", line 108, in save_models
+    torch.save(best_encoder1.state_dict(), f'models/{name}_best_encoder1_epoch_{best_epoch}.pth')
+AttributeError: 'collections.OrderedDict' object has no attribute 'state_dict'
+wandb: 
+wandb: Run history:
+wandb: epoch ▁▂▃▄▅▆▇█
+wandb:  fail █▁▄▇▂▃▇▁
+wandb:  loss █▃▂▂▁▁▁▁
+wandb:   spl ▁█▄▂▆▅▁▇
+wandb: 
+wandb: Run summary:
+wandb: epoch 8
+wandb:  fail 0.03
+wandb:  loss 2.93391
+wandb:   spl 0.9205
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/yongweic/hyperbolic/wandb/offline-run-20240627_112540-otkvl9xs
+wandb: Find logs at: ./wandb/offline-run-20240627_112540-otkvl9xs/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.
