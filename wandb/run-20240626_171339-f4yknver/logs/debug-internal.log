@@ -3,3 +3,88 @@
 2024-06-26 17:13:39,618 INFO    WriterThread:2091546 [datastore.py:open_for_write():87] open: /home/yongweic/hyperbolic/wandb/run-20240626_171339-f4yknver/run-f4yknver.wandb
 2024-06-26 17:13:39,619 DEBUG   SenderThread:2091546 [sender.py:send():379] send: header
 2024-06-26 17:13:39,620 DEBUG   SenderThread:2091546 [sender.py:send():379] send: run
+2024-06-26 17:13:43,170 INFO    SenderThread:2091546 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/connection.py", line 203, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x145c3ec84280>: Failed to resolve 'api.wandb.ai' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x145c3ec84280>: Failed to resolve 'api.wandb.ai' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 340, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x145c3ec84280>: Failed to resolve 'api.wandb.ai' ([Errno -2] Name or service not known)"))
+2024-06-26 17:13:44,621 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:13:49,622 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:13:54,623 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:13:59,624 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:04,625 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:09,626 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:14,627 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:19,628 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:24,630 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:29,631 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:34,632 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:39,634 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:44,635 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:49,636 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:54,637 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:14:59,638 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:15:04,639 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-26 17:15:09,641 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: cancel
+2024-06-26 17:15:09,641 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: cancel
+2024-06-26 17:15:09,641 DEBUG   SenderThread:2091546 [sender.py:send():388] Record cancelled: run
+2024-06-26 17:15:09,641 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: status_report
+2024-06-26 17:15:09,679 DEBUG   HandlerThread:2091546 [handler.py:handle_request():158] handle_request: shutdown
+2024-06-26 17:15:09,680 INFO    HandlerThread:2091546 [handler.py:finish():882] shutting down handler
+2024-06-26 17:15:10,641 INFO    SenderThread:2091546 [sender.py:finish():1608] shutting down sender
+2024-06-26 17:15:10,641 INFO    WriterThread:2091546 [datastore.py:close():296] close: /home/yongweic/hyperbolic/wandb/run-20240626_171339-f4yknver/run-f4yknver.wandb

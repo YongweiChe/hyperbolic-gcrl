@@ -13,4 +13,4 @@ module purge
 module load anaconda3/2023.3
 conda activate hypll 
 
-python train.py --hyperbolic False --num_epochs 16 --num_trajectories 10000 --maze_type "blank"
+python train.py --hyperbolic True --num_epochs 16 --num_trajectories 10000 --maze_type "blank"

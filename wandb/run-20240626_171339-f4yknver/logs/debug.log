@@ -17,3 +17,14 @@ config: {'learning_rate': 0.02, 'architecture': 'CNN', 'dataset': 'CIFAR-100', '
 2024-06-26 17:13:39,615 INFO    MainThread:2091470 [wandb_init.py:init():622] backend started and connected
 2024-06-26 17:13:39,616 INFO    MainThread:2091470 [wandb_init.py:init():711] updated telemetry
 2024-06-26 17:13:39,619 INFO    MainThread:2091470 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-26 17:15:09,640 ERROR   MainThread:2091470 [wandb_init.py:init():770] encountered error: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-06-26 17:15:09,644 ERROR   MainThread:2091470 [wandb_init.py:init():1181] error in wandb.init()
+Traceback (most recent call last):
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1171, in init
+    return wi.init()
+  File "/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 776, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-06-26 17:15:10,680 WARNING MsgRouterThr:2091470 [router.py:message_loop():77] message_loop has been closed
