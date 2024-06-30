@@ -9,32 +9,96 @@ from torch.utils.data import DataLoader, Dataset
 
 from continuous_maze import bfs, gen_traj, plot_traj, ContinuousGridEnvironment, TrajectoryDataset, LabelDataset
 
+class FlexibleCNN(nn.Module):
+    def __init__(self, input_channels, out_features, sample_input):
+        super(FlexibleCNN, self).__init__()
+        self.output_dim = out_features
+
+        # Convolutional layer 1
+        self.conv1 = nn.Conv2d(in_channels=input_channels, out_channels=16, kernel_size=3, stride=1, padding=1)
+        self.pool = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
+        
+        # Convolutional layer 2
+        self.conv2 = nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=1)
+
+        # Calculate the size of the output from the conv layers
+        self._conv_output_size = self._get_conv_output_size(sample_input.shape[1:])
+        self.fc1 = nn.Linear(self._conv_output_size, self.output_dim)
+
+        
+
+    def _get_conv_output_size(self, shape):
+        with torch.no_grad():
+            dummy_input = torch.zeros(1, *shape)
+            dummy_output = self.pool(F.relu(self.conv1(dummy_input)))
+            dummy_output = self.pool(F.relu(self.conv2(dummy_output)))
+            return int(torch.flatten(dummy_output, 1).size(1))
+
+    def forward(self, x):
+        # Convolutional layer 1
+        x = self.pool(F.relu(self.conv1(x)))
+        
+        # Convolutional layer 2
+        x = self.pool(F.relu(self.conv2(x)))
+        
+        # Flatten the tensor
+        x = x.reshape(x.size(0), -1)
+        
+        # Fully connected layer
+        x = self.fc1(x)
+        
+        return x
+
+
+class ActionNetwork(nn.Module):
+    def __init__(self, image_encoder, embedding_dim):
+        super(ActionNetwork, self).__init__()
+        self.image_encoder = image_encoder
+        self.intermed_dim = self.image_encoder.output_dim
+        self.fc1 = nn.Linear(2, self.intermed_dim)
+        self.fc2 = nn.Linear(2 * self.intermed_dim, 2 * self.intermed_dim)
+        self.fc3 = nn.Linear(2 * self.intermed_dim, self.intermed_dim)
+        self.fc4 = nn.Linear(self.intermed_dim, embedding_dim)
+
+    def forward(self, image, action): # action should be 2-dimensional
+        x1 = self.image_encoder(image)
+        x2 = self.fc1(action)
+        x = torch.cat([x1, x2], dim=-1)
+        x = F.relu(self.fc2(x))
+        x = F.relu(self.fc3(x))
+        x = self.fc4(x)
+        return x
+
 # Define the StateActionEncoder
 class StateActionEncoder(nn.Module):
     def __init__(self, embedding_dim):
         super(StateActionEncoder, self).__init__()
-        self.fc1 = nn.Linear(4, 64)  # Increased from 128 to 256
-        self.fc2 = nn.Linear(64, 64)  # Added an extra layer
-        self.fc3 = nn.Linear(64, embedding_dim)  # Increased from 128 to 512, then to embedding_dim
+        self.fc1 = nn.Linear(4, 64)
+        self.fc2 = nn.Linear(64, 64)
+        self.fc3 = nn.Linear(64, 64)  # New layer
+        self.fc4 = nn.Linear(64, embedding_dim)
 
     def forward(self, state_action):
         x = F.relu(self.fc1(state_action))
         x = F.relu(self.fc2(x))
-        x = self.fc3(x)
+        x = F.relu(self.fc3(x))  # New layer
+        x = self.fc4(x)
         return x
 
 # Define the StateEncoder
 class StateEncoder(nn.Module):
     def __init__(self, embedding_dim):
         super(StateEncoder, self).__init__()
-        self.fc1 = nn.Linear(2, 64)  # Increased from 128 to 256
-        self.fc2 = nn.Linear(64, 64)  # Added an extra layer
-        self.fc3 = nn.Linear(64, embedding_dim)  # Increased from 128 to 512, then to embedding_dim
+        self.fc1 = nn.Linear(2, 64)
+        self.fc2 = nn.Linear(64, 64)
+        self.fc3 = nn.Linear(64, 64)  # New layer
+        self.fc4 = nn.Linear(64, embedding_dim)
 
     def forward(self, state):
         x = F.relu(self.fc1(state))
         x = F.relu(self.fc2(x))
-        x = self.fc3(x)
+        x = F.relu(self.fc3(x))  # New layer
+        x = self.fc4(x)
         return x
 
 class CategoricalEncoder(nn.Module):

@@ -1,0 +1,82 @@
+wandb: Tracking run with wandb version 0.17.3
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'embedding_dim': 32, 'eval_trials': 100, 'max_steps': 500, 'hyperbolic': False, 'num_epochs': 1024, 'temperature': 0.1, 'batch_size': 128, 'num_negatives': 128, 'learning_rate': 0.001, 'architecture': 'MLP', 'maze': '[[1. 1. 1. ... 1. 1. 1.]\n [1. 1. 1. ... 1. 1. 1.]\n [1. 1. 0. ... 0. 1. 1.]\n ...\n [1. 1. 0. ... 0. 0. 0.]\n [1. 1. 1. ... 0. 0. 0.]\n [1. 1. 1. ... 0. 0. 0.]]', 'num_trajectories': 100000, 'maze_type': 'nested_pyramid', 'gamma': 0.01}
+gamma: 0.01
+/home/yongweic/hyperbolic/train.py:200: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  anchor = torch.tensor(anchor).to(device, torch.float32)
+/home/yongweic/hyperbolic/train.py:201: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  positive = torch.tensor(positive).to(device, torch.float32)
+/home/yongweic/hyperbolic/train.py:202: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  negatives = torch.tensor(negatives).to(device, torch.float32)
+Epoch 1, Loss: 7.7151767573393215, SPL: 0.04746619603963244, Failure %: 0.91
+Epoch 2, Loss: 6.049597947493844, SPL: 0.01968559823375645, Failure %: 0.93
+Epoch 3, Loss: 5.9312621693477, SPL: 0.0696906561624641, Failure %: 0.88
+Epoch 4, Loss: 5.799590387612658, SPL: 0.06390742097756064, Failure %: 0.87
+Epoch 5, Loss: 5.5972190049603165, SPL: 0.014956575532823422, Failure %: 0.93
+Epoch 6, Loss: 5.340364320198898, SPL: 0.02070215767545361, Failure %: 0.93
+Epoch 7, Loss: 5.194071813007755, SPL: 0.032116944071182624, Failure %: 0.94
+Epoch 8, Loss: 5.1205665522524155, SPL: 0.018990024680758295, Failure %: 0.93
+Epoch 9, Loss: 5.037739476889295, SPL: 0.026038798961866432, Failure %: 0.9
+Epoch 10, Loss: 4.997422268933348, SPL: 0.04008837038451998, Failure %: 0.89
+Epoch 11, Loss: 4.944027709838984, SPL: 0.03330007896589145, Failure %: 0.9
+Epoch 12, Loss: 4.874214522978839, SPL: 0.05343801710375712, Failure %: 0.86
+Epoch 13, Loss: 4.792001368749477, SPL: 0.04254646474785779, Failure %: 0.9
+Epoch 14, Loss: 4.746119357740787, SPL: 0.05834478366403461, Failure %: 0.84
+Epoch 15, Loss: 4.685234814348733, SPL: 0.06543501400580455, Failure %: 0.87
+Epoch 16, Loss: 4.634844180263217, SPL: 0.04800180583040399, Failure %: 0.87
+Epoch 17, Loss: 4.56454637928692, SPL: 0.08971108422816011, Failure %: 0.76
+Epoch 18, Loss: 4.499644548081986, SPL: 0.0489184722137839, Failure %: 0.86
+Epoch 19, Loss: 4.458146263266463, SPL: 0.09115710108561702, Failure %: 0.81
+Epoch 20, Loss: 4.421376163392421, SPL: 0.08882962625759742, Failure %: 0.77
+Epoch 21, Loss: 4.390777783625571, SPL: 0.12935884034287226, Failure %: 0.72
+Epoch 22, Loss: 4.31859521518278, SPL: 0.11098472986966686, Failure %: 0.7
+Epoch 23, Loss: 4.274000702001859, SPL: 0.09686062281984065, Failure %: 0.78
+Epoch 24, Loss: 4.223026464662284, SPL: 0.09313404827770931, Failure %: 0.76
+Epoch 25, Loss: 4.192604595742872, SPL: 0.10213847884442552, Failure %: 0.78
+Epoch 26, Loss: 4.159443029662228, SPL: 0.11380110411230161, Failure %: 0.71
+Epoch 27, Loss: 4.100882137218095, SPL: 0.17457315416600455, Failure %: 0.65
+Epoch 28, Loss: 4.101999670648209, SPL: 0.16081950357302982, Failure %: 0.68
+Epoch 29, Loss: 4.030349697298406, SPL: 0.1695115545212814, Failure %: 0.64
+Epoch 30, Loss: 4.02744993986681, SPL: 0.14415497719866752, Failure %: 0.61
+Epoch 31, Loss: 3.9752299800858166, SPL: 0.15080494240530967, Failure %: 0.63
+Epoch 32, Loss: 3.9614551225891503, SPL: 0.16273426724995546, Failure %: 0.65
+Epoch 33, Loss: 3.93548955149053, SPL: 0.14429050378091007, Failure %: 0.61
+Epoch 34, Loss: 3.9123231422565783, SPL: 0.15195147152840244, Failure %: 0.63
+Epoch 35, Loss: 3.900396672051276, SPL: 0.1542311334593619, Failure %: 0.63
+Epoch 36, Loss: 3.8904614091834144, SPL: 0.14324392456934365, Failure %: 0.69
+Epoch 37, Loss: 3.8504821565145115, SPL: 0.26238611569317055, Failure %: 0.47
+Epoch 38, Loss: 3.823297145421548, SPL: 0.19581629535833575, Failure %: 0.58
+Epoch 39, Loss: 3.8281999250202228, SPL: 0.246311478586091, Failure %: 0.46
+Epoch 40, Loss: 3.7908340607152877, SPL: 0.21110222108066223, Failure %: 0.54
+Epoch 41, Loss: 3.779726045210953, SPL: 0.1805426419107758, Failure %: 0.62
+Epoch 42, Loss: 3.763935009841724, SPL: 0.25250733385180707, Failure %: 0.49
+Epoch 43, Loss: 3.7463740357352644, SPL: 0.13902013129496865, Failure %: 0.61
+Epoch 44, Loss: 3.7489711576715457, SPL: 0.22691625781788768, Failure %: 0.44
+Epoch 45, Loss: 3.7361432957222394, SPL: 0.23371704650340497, Failure %: 0.51
+Epoch 46, Loss: 3.719496827296284, SPL: 0.2217565045560775, Failure %: 0.5
+Epoch 47, Loss: 3.716226704895039, SPL: 0.18746796065151472, Failure %: 0.61
+Epoch 48, Loss: 3.7057912803976736, SPL: 0.19795436893722107, Failure %: 0.56
+Epoch 49, Loss: 3.6742475947455677, SPL: 0.2490696125700136, Failure %: 0.43
+Epoch 50, Loss: 3.6961564782940215, SPL: 0.21790985869418933, Failure %: 0.53
+Epoch 51, Loss: 3.670217620747169, SPL: 0.23731029904788006, Failure %: 0.46
+Epoch 52, Loss: 3.6740413513939703, SPL: 0.17025447241055613, Failure %: 0.53
+Epoch 53, Loss: 3.6549038847389124, SPL: 0.22331752162723043, Failure %: 0.46
+Epoch 54, Loss: 3.646572616094214, SPL: 0.18732958924764365, Failure %: 0.59
+Epoch 55, Loss: 3.6444446403352195, SPL: 0.18100238637078406, Failure %: 0.59
+Epoch 56, Loss: 3.6475486520611113, SPL: 0.23348660181201325, Failure %: 0.47
+Epoch 57, Loss: 3.642983101822836, SPL: 0.19761791250109342, Failure %: 0.53
+Epoch 58, Loss: 3.6236932448413977, SPL: 0.22903424346969603, Failure %: 0.52
+Epoch 59, Loss: 3.63964629783045, SPL: 0.25250272937319324, Failure %: 0.44
+Epoch 60, Loss: 3.6234812824927327, SPL: 0.2025023204342211, Failure %: 0.49
+Epoch 61, Loss: 3.6046552648934562, SPL: 0.210577714266031, Failure %: 0.51
+Epoch 62, Loss: 3.6052677320397417, SPL: 0.2587752884903537, Failure %: 0.5
+Epoch 63, Loss: 3.593307442067529, SPL: 0.2835554598692313, Failure %: 0.42
+Epoch 64, Loss: 3.5936722349937615, SPL: 0.1824681172778627, Failure %: 0.53
+Epoch 65, Loss: 3.570299855888347, SPL: 0.1907402967081111, Failure %: 0.59

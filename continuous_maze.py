@@ -5,7 +5,7 @@ from collections import deque
 import random
 import torch
 from torch.utils.data import DataLoader, Dataset
-
+from PIL import Image, ImageDraw
 
 def get_dir(cur, next, eps=10.):
   dir = np.array(next) - np.array(cur)
@@ -145,15 +145,73 @@ def get_trajectories(maze, num_trajectories, plot=False):
 
   return traj_ds
 
-def get_image(maze, player_pos):
-   
+def get_maze_image(maze, player_position, image_height=512, image_width=512):
+    """
+    Generates an image of a maze with the player position.
+
+    Parameters:
+    - maze: 2D numpy array where 1 is a wall and 0 is a free space.
+    - player_position: Tuple of continuous player position (x, y).
+    - image_height: The height of the output image.
+    - image_width: The width of the output image.
+
+    Returns:
+    - img_array: The generated image as a numpy array.
+    """
+    # Define the size of each cell based on the desired image size
+    height, width = maze.shape
+    cell_size_height = image_height // height
+    cell_size_width = image_width // width
+    cell_size = min(cell_size_height, cell_size_width)
+    player_size_factor = 0.75  # Player radius is half of the cell size
+
+    # Calculate the size of the image based on the cell size
+    img_height = height * cell_size
+    img_width = width * cell_size
+
+    # Create a blank image with white background
+    img = Image.new('RGB', (img_width, img_height), 'white')
+    draw = ImageDraw.Draw(img)
+
+    # Draw the maze
+    for y in range(height):
+        for x in range(width):
+            if maze[y, x] == 1:
+                draw.rectangle(
+                    [x * cell_size, y * cell_size, (x + 1) * cell_size, (y + 1) * cell_size],
+                    fill='black'
+                )
+
+    # Draw the player
+    player_x, player_y = player_position
+    player_pixel_x = player_y * cell_size  # Convert continuous position to pixel position
+    player_pixel_y = player_x * cell_size  # Convert continuous position to pixel position
+    player_radius = cell_size * player_size_factor * 0.5  # Scale player size with cell size
+
+    draw.ellipse(
+        [
+            (player_pixel_x - player_radius, player_pixel_y - player_radius),
+            (player_pixel_x + player_radius, player_pixel_y + player_radius)
+        ],
+        fill='red'
+    )
+
+    # Resize the image to the desired output size
+    img = img.resize((image_width, image_height), Image.LANCZOS)
+
+    # Convert the image to a numpy array
+    img_array = np.moveaxis(np.array(img), -1, -3)
+    return img_array
+
 
 class TrajectoryDataset(Dataset):
-    def __init__(self, maze, num_trajectories, embedding_dim=2, num_negatives=10):
+    def __init__(self, maze, num_trajectories, embedding_dim=2, num_negatives=10, gamma=0.1):
         super().__init__()
         self.num_trajectories = num_trajectories
         self.num_negatives = num_negatives
         self.maze = maze
+        self.gamma = gamma
+        print(f'gamma: {self.gamma}')
 
         self.trajectories = get_trajectories(maze, num_trajectories)
 
@@ -163,7 +221,10 @@ class TrajectoryDataset(Dataset):
     def __getitem__(self, idx):
         # Anchor: the current data point
         traj = self.trajectories[idx]
-        start, end = np.sort(np.random.randint(0, len(traj), size=2))
+        # start, end = np.sort(np.random.randint(0, len(traj), size=2))
+        start = np.random.randint(0, len(traj))
+        end = min(start + np.random.geometric(p=self.gamma), len(traj) - 1)
+
         anchor = self.trajectories[idx][start]
         anchor = np.array([np.array(anchor[0]), np.array(anchor[1])]).flatten()
         # Label of the anchor
@@ -177,6 +238,44 @@ class TrajectoryDataset(Dataset):
 
         return anchor, np.array(positive_example), np.array(negative_examples)
     
+class TrajectoryImageDataset(Dataset):
+    def __init__(self, maze, num_trajectories, embedding_dim=2, num_negatives=10, image_height=512, image_width=51, gamma=0.1):
+        super().__init__()
+        self.num_trajectories = num_trajectories
+        self.num_negatives = num_negatives
+        self.maze = maze
+        self.image_height = image_height
+        self.image_width = image_width
+        self.gamma = gamma
+
+        self.trajectories = get_trajectories(maze, num_trajectories)
+
+    def __len__(self):
+        return len(self.trajectories)
+
+    def __getitem__(self, idx):
+        # Anchor: the current data point
+        traj = self.trajectories[idx]
+        # start, end = np.sort(np.random.randint(0, len(traj), size=2))
+
+        # sample geometrically instead
+        start = np.random.randint(0, len(traj))
+        end = min(start + np.random.geometric(p=self.gamma), len(traj) - 1)
+
+        anchor = self.trajectories[idx][start]
+        anchor = np.array([np.array(anchor[0]), np.array(anchor[1])]).flatten()
+        # Label of the anchor
+        positive_example = self.trajectories[idx][end][0]
+        pos_img = get_maze_image(self.maze, positive_example, self.image_height, self.image_width)
+
+        negative_examples = []
+        for i in range(self.num_negatives):
+          idy = np.random.randint(0, len(self.trajectories))
+          neg_state = self.trajectories[idy][np.random.randint(0, len(self.trajectories[idy]))][0]
+          img = get_maze_image(self.maze, neg_state, self.image_height, self.image_width)
+          negative_examples.append(img)
+
+        return anchor, np.array(pos_img), np.stack(negative_examples)
 
 class LabelDataset(Dataset):
     def __init__(self, maze, size=100, embedding_dim=2, num_negatives=10):

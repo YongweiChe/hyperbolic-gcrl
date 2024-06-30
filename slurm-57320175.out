@@ -1,0 +1,22 @@
+wandb: Tracking run with wandb version 0.17.3
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/_compile.py:24: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  return torch._dynamo.disable(fn, recursive)(*args, **kwargs)
+/home/yongweic/.conda/envs/hypll/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'embedding_dim': 8, 'eval_trials': 100, 'max_steps': 500, 'hyperbolic': True, 'num_epochs': 1024, 'temperature': 0.1, 'batch_size': 128, 'num_negatives': 128, 'learning_rate': 0.001, 'architecture': 'MLP', 'maze': '[[1. 1. 1. ... 1. 1. 1.]\n [1. 1. 1. ... 1. 1. 1.]\n [1. 1. 0. ... 0. 1. 1.]\n ...\n [1. 1. 0. ... 0. 0. 0.]\n [1. 1. 1. ... 0. 0. 0.]\n [1. 1. 1. ... 0. 0. 0.]]', 'num_trajectories': 100000, 'maze_type': 'nested_pyramid', 'gamma': 0.01}
+gamma: 0.01
+/home/yongweic/hyperbolic/train.py:200: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  anchor = torch.tensor(anchor).to(device, torch.float32)
+/home/yongweic/hyperbolic/train.py:201: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  positive = torch.tensor(positive).to(device, torch.float32)
+/home/yongweic/hyperbolic/train.py:202: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  negatives = torch.tensor(negatives).to(device, torch.float32)
+Epoch 1, Loss: 6.544048923360722, SPL: 0.019353389068023214, Failure %: 0.95
+Epoch 2, Loss: 6.088449631200727, SPL: 0.05779528868109246, Failure %: 0.85
+Epoch 3, Loss: 6.016541038327815, SPL: 0.017713596589934415, Failure %: 0.93
+Epoch 4, Loss: 5.983101075262669, SPL: 0.04711379341779914, Failure %: 0.89
+Epoch 5, Loss: 5.949792301563351, SPL: 0.06315715315483049, Failure %: 0.88

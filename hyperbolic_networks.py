@@ -20,34 +20,39 @@ def manifold_map(x, manifold):
     return manifold.expmap(tangents)
 
 class HyperbolicMLP(nn.Module):
-    def __init__(self, in_features, out_features, manifold):
+    def __init__(self, in_features, manifold, euc_widths, hyp_widths):
         super(HyperbolicMLP, self).__init__()
         self.manifold = manifold
+
         # Euclidean layers
-        self.fc1_euc = nn.Linear(in_features, 64)
-        self.fc2_euc = nn.Linear(64, 64)
-        self.fc3_euc = nn.Linear(64, 32)
+        euc_layers = []
+        prev_width = in_features
+        for width in euc_widths:
+            euc_layers.append(nn.Linear(prev_width, width))
+            euc_layers.append(nn.ReLU())
+            prev_width = width
+        self.euc_layers = nn.Sequential(*euc_layers)
 
         # Hyperbolic layers
-        self.fc1_hyp = hnn.HLinear(in_features=32, out_features=32, manifold=manifold)
-        self.fc2_hyp = hnn.HLinear(in_features=32, out_features=16, manifold=manifold)
-        self.fc3_hyp = hnn.HLinear(in_features=16, out_features=out_features, manifold=manifold)
-        self.relu_hyp = hnn.HReLU(manifold=manifold)
+        hyp_layers = []
+        prev_width = euc_widths[-1]
+        for i, width in enumerate(hyp_widths):
+            hyp_layers.append(hnn.HLinear(in_features=prev_width, out_features=width, manifold=manifold))
+            if i < len(hyp_widths) - 1:  # Don't add ReLU after the last layer
+                hyp_layers.append(hnn.HReLU(manifold=manifold))
+            prev_width = width
+        self.hyp_layers = nn.ModuleList(hyp_layers)
 
     def forward(self, x):
         # Pass through Euclidean layers
-        x = F.relu(self.fc1_euc(x))
-        x = F.relu(self.fc2_euc(x))
-        x = F.relu(self.fc3_euc(x))
+        x = self.euc_layers(x)
 
         x = manifold_map(x, self.manifold)
 
         # Pass through Hyperbolic layers
-        x = self.relu_hyp(self.fc1_hyp(x))
-        x = self.relu_hyp(self.fc2_hyp(x))
-        x = self.fc3_hyp(x)
+        for layer in self.hyp_layers:
+            x = layer(x)
         return x
-
 
 def hyperbolic_infoNCE_loss(anchor, positive, negatives, temperature, manifold):
     positive_scores = -manifold.dist(x=anchor, y=positive).unsqueeze(1) / temperature
