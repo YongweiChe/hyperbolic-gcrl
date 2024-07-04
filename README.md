@@ -1,3 +1,8 @@
+Install requirements:
+```
+pip install -r requirements.txt
+```
+
 Run
 ```
 kernprof -l train.py --config_file configs/hyperbolic_config.yaml
