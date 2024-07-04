@@ -7,6 +7,10 @@ import torch
 from torch.utils.data import DataLoader, Dataset
 from PIL import Image, ImageDraw
 
+"""
+Defines the continuous maze environment used for experiments.
+"""
+
 def get_dir(cur, next, eps=10.):
   dir = np.array(next) - np.array(cur)
   # return dir
@@ -15,7 +19,7 @@ def get_dir(cur, next, eps=10.):
 
 def bfs(grid, start, end):
     """
-    returns shortest path on a grid
+    returns shortest path on a grid. Discrete
     """
     rows, cols = grid.shape
     queue = deque([start])
@@ -131,19 +135,44 @@ def plot_traj(maze, path):
 
   plt.show()
 
-def get_trajectories(maze, num_trajectories, plot=False):
-  valid_indices = np.argwhere(maze == 0)
-  np.random.shuffle(valid_indices)
-  traj_ds = []
-  for _ in range(num_trajectories):
-    start, end = np.random.randint(0, len(valid_indices), size=2)
-    traj = gen_traj(maze, tuple(valid_indices[start]), tuple(valid_indices[end]))
-    if len(traj) > 0:
-      if plot:
-        plot_traj(maze, [x[0] for x in traj])
-      traj_ds.append(traj)
+# def get_trajectories(maze, num_trajectories, plot=False):
+#   valid_indices = np.argwhere(maze == 0)
+#   np.random.shuffle(valid_indices)
+#   traj_ds = []
+#   for _ in range(num_trajectories):
+#     start, end = np.random.randint(0, len(valid_indices), size=2)
+#     traj = gen_traj(maze, tuple(valid_indices[start]), tuple(valid_indices[end]))
+#     if len(traj) > 0:
+#       if plot:
+#         plot_traj(maze, [x[0] for x in traj])
+#       traj_ds.append(traj)
 
-  return traj_ds
+#   return traj_ds
+
+def get_trajectories(maze, num_trajectories, order_fn=None, plot=False):
+    if order_fn is not None:
+        print(f'using order fn')
+    valid_indices = np.argwhere(maze == 0)
+    np.random.shuffle(valid_indices)
+    traj_ds = []
+    
+    for _ in range(num_trajectories):
+        start_idx, end_idx = np.random.randint(0, len(valid_indices), size=2)
+        start = tuple(valid_indices[start_idx])
+        end = tuple(valid_indices[end_idx])
+        if order_fn is not None and order_fn(start, end) > 0:
+            # print(f'swapping')
+            start, end = end, start
+        # print(start, end)
+        
+        traj = gen_traj(maze, start, end)
+        # print(traj)
+        if len(traj) > 0:
+            if plot:
+                plot_traj(maze, [x[0] for x in traj])
+            traj_ds.append(traj)
+    
+    return traj_ds
 
 def get_maze_image(maze, player_position, image_height=512, image_width=512):
     """
@@ -205,7 +234,7 @@ def get_maze_image(maze, player_position, image_height=512, image_width=512):
 
 
 class TrajectoryDataset(Dataset):
-    def __init__(self, maze, num_trajectories, embedding_dim=2, num_negatives=10, gamma=0.1):
+    def __init__(self, maze, num_trajectories, embedding_dim=2, num_negatives=10, gamma=0.1, order_fn=None):
         super().__init__()
         self.num_trajectories = num_trajectories
         self.num_negatives = num_negatives
@@ -213,14 +242,16 @@ class TrajectoryDataset(Dataset):
         self.gamma = gamma
         print(f'gamma: {self.gamma}')
 
-        self.trajectories = get_trajectories(maze, num_trajectories)
+        self.trajectories = get_trajectories(maze, num_trajectories, order_fn=order_fn)
 
     def __len__(self):
         return len(self.trajectories)
 
     def __getitem__(self, idx):
         # Anchor: the current data point
+        
         traj = self.trajectories[idx]
+        # print(traj)
         # start, end = np.sort(np.random.randint(0, len(traj), size=2))
         start = np.random.randint(0, len(traj))
         end = min(start + np.random.geometric(p=self.gamma), len(traj) - 1)
@@ -236,46 +267,10 @@ class TrajectoryDataset(Dataset):
           neg_state = self.trajectories[idy][np.random.randint(0, len(self.trajectories[idy]))][0]
           negative_examples.append(neg_state)
 
+        # negative_examples = np.zeros(shape=(10, 2))
+
         return anchor, np.array(positive_example), np.array(negative_examples)
-    
-class TrajectoryImageDataset(Dataset):
-    def __init__(self, maze, num_trajectories, embedding_dim=2, num_negatives=10, image_height=512, image_width=51, gamma=0.1):
-        super().__init__()
-        self.num_trajectories = num_trajectories
-        self.num_negatives = num_negatives
-        self.maze = maze
-        self.image_height = image_height
-        self.image_width = image_width
-        self.gamma = gamma
 
-        self.trajectories = get_trajectories(maze, num_trajectories)
-
-    def __len__(self):
-        return len(self.trajectories)
-
-    def __getitem__(self, idx):
-        # Anchor: the current data point
-        traj = self.trajectories[idx]
-        # start, end = np.sort(np.random.randint(0, len(traj), size=2))
-
-        # sample geometrically instead
-        start = np.random.randint(0, len(traj))
-        end = min(start + np.random.geometric(p=self.gamma), len(traj) - 1)
-
-        anchor = self.trajectories[idx][start]
-        anchor = np.array([np.array(anchor[0]), np.array(anchor[1])]).flatten()
-        # Label of the anchor
-        positive_example = self.trajectories[idx][end][0]
-        pos_img = get_maze_image(self.maze, positive_example, self.image_height, self.image_width)
-
-        negative_examples = []
-        for i in range(self.num_negatives):
-          idy = np.random.randint(0, len(self.trajectories))
-          neg_state = self.trajectories[idy][np.random.randint(0, len(self.trajectories[idy]))][0]
-          img = get_maze_image(self.maze, neg_state, self.image_height, self.image_width)
-          negative_examples.append(img)
-
-        return anchor, np.array(pos_img), np.stack(negative_examples)
 
 class LabelDataset(Dataset):
     def __init__(self, maze, size=100, embedding_dim=2, num_negatives=10):
@@ -284,6 +279,7 @@ class LabelDataset(Dataset):
         self.num_examples = 2 * maze.shape[0] * maze.shape[1]
         self.embedding_dim = embedding_dim
         self.num_negatives = num_negatives
+        self.maze = maze
         pairs = []
         for i in range(maze.shape[0]):
             for j in range(maze.shape[1]):
@@ -297,6 +293,10 @@ class LabelDataset(Dataset):
 
     def __len__(self):
         return len(self.pairs)
+    
+    def get_rowcol(self, point):
+       point = (int(point[0]), int(point[1]))
+       return point[0], point[1] + self.maze.shape[0]
 
     def __getitem__(self, idx):
         negatives = []
@@ -305,7 +305,17 @@ class LabelDataset(Dataset):
           if self.pairs[i][0] != self.pairs[idx][0]:
             negatives.append(self.pairs[i][1])
 
-        return self.pairs[idx][0], self.pairs[idx][1], np.array(negatives)
+        target_row, target_col = self.get_rowcol(self.pairs[idx][1])
+            
+        all_categories = list(range(self.num_categories))
+        
+        all_categories.remove(target_row)
+        if target_col != target_row: 
+            all_categories.remove(target_col)
+        
+        negative_categories = np.random.choice(all_categories, size=self.num_negatives, replace=True)
+
+        return self.pairs[idx][0], self.pairs[idx][1], np.array(negatives), negative_categories
 
 
 

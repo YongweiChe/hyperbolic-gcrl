@@ -9,7 +9,14 @@ from torch.utils.data import DataLoader, Dataset
 
 from continuous_maze import bfs, gen_traj, plot_traj, ContinuousGridEnvironment, TrajectoryDataset, LabelDataset
 
+"""
+Euclidean networks
+"""
+
 class FlexibleCNN(nn.Module):
+    """
+    Unused currently
+    """
     def __init__(self, input_channels, out_features, sample_input):
         super(FlexibleCNN, self).__init__()
         self.output_dim = out_features
@@ -51,6 +58,12 @@ class FlexibleCNN(nn.Module):
 
 
 class ActionNetwork(nn.Module):
+    """
+    Takes in state and action and encodes it
+    ---
+    image_encoder: shared state encoder
+    embedding_dim: latent vector dimension 
+    """
     def __init__(self, image_encoder, embedding_dim):
         super(ActionNetwork, self).__init__()
         self.image_encoder = image_encoder
@@ -71,6 +84,9 @@ class ActionNetwork(nn.Module):
 
 # Define the StateActionEncoder
 class StateActionEncoder(nn.Module):
+    """
+    Encodes state into a vector of size embedding_dim
+    """
     def __init__(self, embedding_dim):
         super(StateActionEncoder, self).__init__()
         self.fc1 = nn.Linear(4, 64)
@@ -102,6 +118,9 @@ class StateEncoder(nn.Module):
         return x
 
 class CategoricalEncoder(nn.Module):
+    """
+    Unused.
+    """
     def __init__(self, num_categories, embedding_dim):
         super(CategoricalEncoder, self).__init__()
         self.embedding = nn.Embedding(num_categories, embedding_dim)
@@ -119,6 +138,11 @@ class CategoricalEncoder(nn.Module):
     
 
 def infoNCE_loss(anchor, positive, negatives, temperature, metric_type=1):
+    """
+    InfoNCE Loss, not the typical loss with batching along different dimensions to construct negatives.
+    
+    Takes a more explicit approach so that we can avoid false negatives during training (if needed).
+    """
     if metric_type == 1:
         # Compute negative L2 distance for the positive pairs
         positive_distances = torch.sum((anchor - positive) ** 2, dim=1, keepdim=True)

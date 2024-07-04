@@ -1,0 +1,27 @@
+# Project settings
+project: "efficient_blocker"
+custom: '1'
+
+# Model parameters
+hyperbolic: true
+embedding_dim: 4
+hyp_layers: 2
+
+# Training parameters
+num_epochs: 64
+num_trajectories: 5000
+batch_size: 128
+num_negatives: 32
+max_steps: 50
+num_workers: 24
+learning_rate: 0.001
+
+# Maze settings
+maze_type: "nested_pyramid"
+gamma: 0.1
+
+# Experiment tracking
+order_name: ''
+eval_trials: 10
+temperature: 0.1
+architecture: MLP

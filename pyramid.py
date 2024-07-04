@@ -1,6 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+"""
+Creates Pyramid pattern in a recurse manner
+"""
+
 def create_pattern(patterns, gap, random=False):
     pattern = patterns[0]
     new_pattern = np.zeros((2 * pattern.shape[0] + 7 * gap, 2 * pattern.shape[1] + 7 * gap))

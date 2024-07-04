@@ -15,11 +15,26 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
+"""
+Hyperbolic Networks!
+"""
+
 def manifold_map(x, manifold):
+    """
+    Maps a tensor in Euclidean space onto a Riemannian Manifold
+    """
     tangents = TangentTensor(x, man_dim=-1, manifold=manifold)
     return manifold.expmap(tangents)
 
 class HyperbolicMLP(nn.Module):
+    """
+    MLP but outputs a vector on a Riemannian Manifold
+    in_features: input dimension
+    manifold: Desired manifold (e.g. Poincare Disc)
+    euc_width: How long the euclidean layers are
+    hyp_widths: how long the hyperbolic layers are
+    """
     def __init__(self, in_features, manifold, euc_widths, hyp_widths):
         super(HyperbolicMLP, self).__init__()
         self.manifold = manifold
@@ -55,6 +70,10 @@ class HyperbolicMLP(nn.Module):
         return x
 
 def hyperbolic_infoNCE_loss(anchor, positive, negatives, temperature, manifold):
+    """
+    InfoNCE but with manifold dist.
+    TODO: Can probably coalesce with the euclidean infoNCE with a conditional branch
+    """
     positive_scores = -manifold.dist(x=anchor, y=positive).unsqueeze(1) / temperature
     negative_scores = -manifold.dist(x=anchor.unsqueeze(1), y=negatives) / temperature
     # print(f'positive scores shape: {positive_scores.shape}; negative_scores shape: {negative_scores.shape}')

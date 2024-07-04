@@ -12,17 +12,23 @@ import hypll.nn as hnn
 from hypll.tensors import TangentTensor
 from matplotlib.animation import FuncAnimation
 import argparse
+import yaml
+import math
 from pyramid import create_pyramid
 from continuous_maze import bfs, gen_traj, plot_traj, ContinuousGridEnvironment, TrajectoryDataset, LabelDataset
 from hyperbolic_networks import HyperbolicMLP, hyperbolic_infoNCE_loss, manifold_map
 from networks import StateActionEncoder, StateEncoder, infoNCE_loss
 import os
+import time
 
 import wandb
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 def evaluate(maze, num_trials, encoder1, encoder2, manifold, max_steps=100, hyperbolic=False, eps=10., step_size=0.5, verbose=False):
+    """
+    Run policy on maze, collect failure metrics
+    """
     valid_indices = np.argwhere(maze == 0)
     np.random.shuffle(valid_indices)
     
@@ -102,6 +108,9 @@ def evaluate(maze, num_trials, encoder1, encoder2, manifold, max_steps=100, hype
 
 
 def get_maze(name):
+    """
+    Pre-set mazes
+    """
     maze = np.zeros((10, 10))
     
     if 'blank' in name:
@@ -118,60 +127,68 @@ def get_maze(name):
         maze[3, 10] = 0
     elif 'nested_pyramid' in name:
         maze = create_pyramid(np.zeros((2, 2)), 2)[0]
+    elif 'island' in name:
+        maze = np.zeros((11, 11))
+        maze[3:8, 5:7] = 1
     else:
         maze = create_pyramid(np.zeros((2, 2)), 1)[0]
 
     return maze
 
-def save_models(encoder1, encoder2, best_encoder1, best_encoder2, epoch, best_epoch, name=''):
+def get_order_function(name):
+    """
+    order trajectories by some arbitrary metric. (e.g.) horizontal is where trajectories can only end to the right of the start
+    """
+    def order_by_second_coordinate(point1, point2):
+        return point1[1] - point2[1]
+    
+    def order_by_first_coordinate(point1, point2):
+        return point1[0] - point2[0]
+    
+    def order_by_distance_from_origin(point1, point2):
+        dist1 = math.sqrt(point1[0]**2 + point1[1]**2)
+        dist2 = math.sqrt(point2[0]**2 + point2[1]**2)
+        return dist1 - dist2
+    
+    name = name.lower()
+    if 'horizontal' in name:
+        print(f'horizontal order fn')
+        return order_by_second_coordinate
+    elif 'vertical' in name:
+        print(f'vertical order fn')
+        return order_by_first_coordinate
+    elif 'origin' in name:
+        print(f'dist order fn')
+        return order_by_distance_from_origin
+    else:
+        print(f'no order')
+        return None
+
+
+def save_models(encoder1, encoder2,epoch, name=''):
     os.makedirs('models', exist_ok=True)
     torch.save(encoder1.state_dict(), f'models/{name}_encoder1_epoch_{epoch}.pth')
     torch.save(encoder2.state_dict(), f'models/{name}_encoder2_epoch_{epoch}.pth')
-    torch.save(best_encoder1, f'models/{name}_best_encoder1_epoch_{best_epoch}.pth')
-    torch.save(best_encoder2, f'models/{name}_best_encoder2_epoch_{best_epoch}.pth')
 
+@profile
 def main():
-    parser = argparse.ArgumentParser(description='Maze experiment parameters.')
-    parser.add_argument('--project', type=str, default='default', help='Project name')
-    parser.add_argument('--custom', type=str, default='1', help='Project name')
-    parser.add_argument('--hyperbolic', type=bool, default=False, help='Use hyperbolic embeddings')
-    parser.add_argument('--num_epochs', type=int, default=8, help='Number of training epochs')
-    parser.add_argument('--num_trajectories', type=int, default=10000, help='Number of trajectories')
-    parser.add_argument('--maze_type', type=str, default='blank', help='Type of maze')
-    parser.add_argument('--embedding_dim', type=int, default=64, help='Dimension of the embeddings')
-    parser.add_argument('--gamma', type=float, default=0.1, help='Geometric Distribution factor')
-    parser.add_argument('--num_workers', type=int, default=8, help='Num Workers')
-    parser.add_argument('--batch_size', type=int, default=64, help='batch size')
-    parser.add_argument('--max_steps', type=int, default=100, help='max steps')
-    parser.add_argument('--hyp_layers', type=int, default=2, help='max steps')
-
+    parser = argparse.ArgumentParser(description='Run experiment with config file.')
+    parser.add_argument('--config_file', type=str, default='config.yaml', help='Path to the YAML config file')
     args = parser.parse_args()
 
-    maze = get_maze(args.maze_type)
-      # Modify this according to your maze_type logic if needed
+    # Load the config file
+    with open(args.config_file, 'r') as file:
+        config = yaml.safe_load(file)
 
-    experiment_name = f"experiment{args.custom}_hyperbolic_{args.hyperbolic}_epochs_{args.num_epochs}_trajectories_{args.num_trajectories}_maze_{args.maze_type}_embeddingdim_{args.embedding_dim}_gamma_{args.gamma}_batch_{args.batch_size}_hyp_layers_{args.hyp_layers}"
+    maze = get_maze(config['maze_type'])
+    experiment_name = f"experiment{config['custom']}_hyperbolic_{config['hyperbolic']}_epochs_{config['num_epochs']}_trajectories_{config['num_trajectories']}_order_{config['order_name']}_maze_{config['maze_type']}_embeddingdim_{config['embedding_dim']}_gamma_{config['gamma']}_batch_{config['batch_size']}_hyp_layers_{config['hyp_layers']}"
 
+    # Initialize wandb
     wandb.init(
-        project=args.project, 
-        name=experiment_name, 
-        # Track hyperparameters and run metadata
+        project=config['project'],
+        name=experiment_name,
         config={
-            "embedding_dim": args.embedding_dim,
-            "eval_trials": 100,
-            "max_steps": args.max_steps,
-            "hyperbolic": args.hyperbolic,
-            "num_epochs": args.num_epochs,
-            "temperature": 0.1,
-            "batch_size": args.batch_size,
-            "num_negatives": args.batch_size,
-            "learning_rate": 0.001,
-            "architecture": "MLP",
-            "maze": maze,
-            "num_trajectories": args.num_trajectories,
-            "maze_type": args.maze_type,
-            "gamma": args.gamma,
-            "hyp_layers": args.hyp_layers
+            **config
         }
     )
 
@@ -179,11 +196,22 @@ def main():
     config = wandb.config
     print(config)
     manifold = PoincareBall(c=Curvature(value=0.1, requires_grad=True))
+    order_fn = get_order_function(config.order_name)
+    dataset = TrajectoryDataset(maze, 
+                                config.num_trajectories, 
+                                embedding_dim=config.embedding_dim, 
+                                num_negatives=config.num_negatives, 
+                                gamma=config.gamma,
+                                order_fn=order_fn
+                                )
+    
+    for i in range(10): # make sure order is functioning correctly :)
+        print(f'{dataset[i][0][:2]} -> {dataset[i][1]}')
 
-    dataset = TrajectoryDataset(maze, config.num_trajectories, embedding_dim=config.embedding_dim, num_negatives=10, gamma=config.gamma)
-    dataloader = DataLoader(dataset, batch_size=config.batch_size, shuffle=True, num_workers=args.num_workers)
+    dataloader = DataLoader(dataset, batch_size=config.batch_size, shuffle=True, num_workers=config.num_workers, pin_memory=True)
     
     if config.hyperbolic:
+        # weird math for experimenting with number of hyperbolic layers. Need to make more modular
         euc_layers = 4 - config.hyp_layers
         hyp_widths = [64 for _ in range(config.hyp_layers)]
         hyp_widths.append(config.embedding_dim)
@@ -198,19 +226,22 @@ def main():
         optimizer = optim.Adam(list(encoder1.parameters()) + list(encoder2.parameters()), lr=config.learning_rate)
 
 
-    best_spl = 0
-    best_encoder1 = encoder1.state_dict()
-    best_encoder2 = encoder2.state_dict()
-    best_epoch = 0
-
     # Training loop
+    total_batches = 0
+    start_time = time.time()
+    
+    print('starting...')
     for epoch in range(config.num_epochs):
         total_loss = 0
+
+        acc = 0
+        fail = 0
+
         for anchor, positive, negatives in dataloader:
             # (s,a) <-> (s)
-            anchor = torch.tensor(anchor).to(device, torch.float32)
-            positive = torch.tensor(positive).to(device, torch.float32)
-            negatives = torch.tensor(negatives).to(device, torch.float32)
+            anchor = torch.as_tensor(anchor, dtype=torch.float32, device=device)
+            positive = torch.as_tensor(positive, dtype=torch.float32, device=device)
+            negatives = torch.as_tensor(negatives, dtype=torch.float32, device=device)
 
             anchor_enc = encoder1(anchor) # takes state, action tuple
             positive_enc = encoder2(positive) # takes state
@@ -219,60 +250,66 @@ def main():
             cur_state = anchor[:,[0,1]]
             angle = torch.arctan2(anchor[:,2], anchor[:,3])
 
+            # Symmetric, InfoNCE with actions as the negative now, (s, a) <-> (a)
             negative_actions = (angle + torch.pi)[:,None] + (torch.rand(config.num_negatives)[None,:].to(device) - 0.5) * (3 * torch.pi / 2)
             negative_dirs = torch.stack([torch.sin(negative_actions), torch.cos(negative_actions)]).moveaxis(0, -1)
-            # print(f'negative actions shape: {negative_actions.shape}')
-            # print(negative_dirs.shape)
             negative_full = torch.cat((cur_state.unsqueeze(1).expand(-1, config.num_negatives, -1), negative_dirs), dim=-1).to(device)
-            
-            # if config.hyperbolic:
-            #     m_negative_full = manifold_map(negative_full, manifold)
-            # else:
-            #     m_negative_full = negative_full
 
-            # print(negative_full.shape)
             neg_action_enc = encoder1(negative_full)
-            # print(f'positive_enc: {positive_enc.shape}, anchor: {anchor_enc.shape}, neg_action_enc: {neg_action_enc.shape}')
-            
+
             if config.hyperbolic:
                 action_loss = hyperbolic_infoNCE_loss(positive_enc, anchor_enc, neg_action_enc, config.temperature, manifold=manifold)
                 future_loss = hyperbolic_infoNCE_loss(anchor_enc, positive_enc, negatives_enc, config.temperature, manifold=manifold)
             else:
                 action_loss = infoNCE_loss(positive_enc, anchor_enc, neg_action_enc, config.temperature, metric_type=1)
                 future_loss = infoNCE_loss(anchor_enc, positive_enc, negatives_enc, config.temperature, metric_type=1)
-            
-            loss = action_loss + future_loss
 
+            loss = future_loss + action_loss
+            
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
             total_loss += loss.item()
+            
+            total_batches += 1
+            
+            if total_batches % 100 == 0:
+                elapsed_time = time.time() - start_time
+                batches_per_second = total_batches / elapsed_time
+                print(f"Epoch {epoch}, Batch {total_batches}: {batches_per_second:.2f} batches/second")
+
+        epoch_time = time.time() - start_time
+        epoch_batches_per_second = total_batches / epoch_time
+        print(f"Epoch {epoch} complete. Average: {epoch_batches_per_second:.2f} batches/second")
 
         loss = total_loss / len(dataloader)
-        evals = evaluate(maze, config.eval_trials, encoder1, encoder2, manifold, max_steps=config.max_steps, hyperbolic=config.hyperbolic, eps=50.)
-        acc = np.mean([x[2] for x in evals])
-        fail = np.mean([x[0] for x in evals])
 
-        metrics = {
-            "epoch": epoch + 1,
-            "loss": loss,
-            "spl": acc,
-            "fail": fail
-        }
-        wandb.log(metrics)
+        if epoch % 32 == 0 and epoch != 0:
+            # Runs agent in environment, collects failure and path length metrics
+            evals = evaluate(maze, config.eval_trials, encoder1, encoder2, manifold, max_steps=config.max_steps, hyperbolic=config.hyperbolic, eps=50.)
+            acc = np.mean([x[2] for x in evals])
+            fail = np.mean([x[0] for x in evals])
 
-        if acc > best_spl:
-            best_spl = acc
-            best_encoder1 = encoder1.state_dict()
-            best_encoder2 = encoder2.state_dict()
-            best_epoch = epoch + 1
-    
-        if epoch % 32 == 0:
-            save_models(encoder1, encoder2, best_encoder1, best_encoder2, epoch + 1, best_epoch, experiment_name)
+            metrics = {
+                "epoch": epoch + 1,
+                "loss": loss,
+                "spl": acc,
+                "fail": fail
+            }
+            wandb.log(metrics)
 
-        print(f'Epoch {epoch+1}, Loss: {loss}, SPL: {acc}, Failure %: {fail}')
+            print(f'Epoch {epoch+1}, Loss: {loss}, SPL: {acc}, Failure %: {fail}')
 
-    save_models(encoder1, encoder2, best_encoder1, best_encoder2, epoch + 1, best_epoch, experiment_name)
+            save_models(encoder1, encoder2, epoch + 1, experiment_name)
+        else:
+            metrics = {
+                    "epoch": epoch + 1,
+                    "loss": loss
+                }
+            wandb.log(metrics)  
+            print(f'Epoch {epoch+1}, Loss: {loss}')
+
+    save_models(encoder1, encoder2, epoch + 1, experiment_name)
 
 if __name__ == '__main__':
     main()
