@@ -91,3 +91,102 @@ Epoch 29 complete. Average: 16.33 batches/second
 Epoch 30, Loss: 5.488342726230622
 Epoch 30 complete. Average: 16.33 batches/second
 Epoch 31, Loss: 5.452576839923859
+Epoch 31 complete. Average: 16.33 batches/second
+Epoch 32, Loss: 5.575002443790436
+Epoch 32, Batch 1300: 16.30 batches/second
+Epoch 32 complete. Average: 16.32 batches/second
+Epoch 33, Loss: 5.45626300573349, SPL: 0.1, Failure %: 0.9
+Epoch 33 complete. Average: 12.91 batches/second
+Epoch 34, Loss: 5.4062375664711
+Epoch 34, Batch 1400: 13.00 batches/second
+Epoch 34 complete. Average: 12.99 batches/second
+Epoch 35, Loss: 5.277810204029083
+Epoch 35 complete. Average: 13.04 batches/second
+Epoch 36, Loss: 5.1676253318786625
+Epoch 36 complete. Average: 13.12 batches/second
+Epoch 37, Loss: 5.3371902227401735
+Epoch 37, Batch 1500: 13.13 batches/second
+Epoch 37 complete. Average: 13.18 batches/second
+Epoch 38, Loss: 5.163038754463196
+Epoch 38 complete. Average: 13.27 batches/second
+Epoch 39, Loss: 5.1076079368591305
+Epoch 39, Batch 1600: 13.34 batches/second
+Epoch 39 complete. Average: 13.33 batches/second
+Epoch 40, Loss: 5.095702588558197
+Epoch 40 complete. Average: 13.39 batches/second
+Epoch 41, Loss: 5.059131753444672
+Epoch 41 complete. Average: 13.45 batches/second
+Epoch 42, Loss: 5.032745623588562
+Epoch 42, Batch 1700: 13.46 batches/second
+Epoch 42 complete. Average: 13.50 batches/second
+Epoch 43, Loss: 4.845728719234467
+Epoch 43 complete. Average: 13.53 batches/second
+Epoch 44, Loss: 4.87790732383728
+Epoch 44, Batch 1800: 13.59 batches/second
+Epoch 44 complete. Average: 13.58 batches/second
+Epoch 45, Loss: 4.904401957988739
+Epoch 45 complete. Average: 13.63 batches/second
+Epoch 46, Loss: 4.805541694164276
+Epoch 46 complete. Average: 13.70 batches/second
+Epoch 47, Loss: 5.148516607284546
+Epoch 47, Batch 1900: 13.71 batches/second
+Epoch 47 complete. Average: 13.76 batches/second
+Epoch 48, Loss: 4.730689036846161
+Epoch 48 complete. Average: 13.80 batches/second
+Epoch 49, Loss: 4.663903093338012
+Epoch 49, Batch 2000: 13.87 batches/second
+Epoch 49 complete. Average: 13.86 batches/second
+Epoch 50, Loss: 4.6402682900428776
+Epoch 50 complete. Average: 13.91 batches/second
+Epoch 51, Loss: 4.607728147506714
+Epoch 51 complete. Average: 13.95 batches/second
+Epoch 52, Loss: 4.6227888584136965
+Epoch 52, Batch 2100: 13.96 batches/second
+Epoch 52 complete. Average: 13.99 batches/second
+Epoch 53, Loss: 4.588647985458374
+Epoch 53 complete. Average: 14.02 batches/second
+Epoch 54, Loss: 4.554710793495178
+Epoch 54, Batch 2200: 14.07 batches/second
+Epoch 54 complete. Average: 14.06 batches/second
+Epoch 55, Loss: 4.615765917301178
+Epoch 55 complete. Average: 14.11 batches/second
+Epoch 56, Loss: 4.429114067554474
+Epoch 56 complete. Average: 14.14 batches/second
+Epoch 57, Loss: 4.583606427907943
+Epoch 57, Batch 2300: 14.14 batches/second
+Epoch 57 complete. Average: 14.17 batches/second
+Epoch 58, Loss: 4.347880858182907
+Epoch 58 complete. Average: 14.22 batches/second
+Epoch 59, Loss: 4.441833436489105
+Epoch 59, Batch 2400: 14.25 batches/second
+Epoch 59 complete. Average: 14.25 batches/second
+Epoch 60, Loss: 4.457787173986435
+Epoch 60 complete. Average: 14.28 batches/second
+Epoch 61, Loss: 4.472867047786712
+Epoch 61 complete. Average: 14.32 batches/second
+Epoch 62, Loss: 4.576128607988357
+Epoch 62, Batch 2500: 14.32 batches/second
+Epoch 62 complete. Average: 14.35 batches/second
+Epoch 63, Loss: 4.486363798379898
+Epoch 63 complete. Average: 14.38 batches/second
+Epoch 64, Loss: 4.327476781606674
+Wrote profile results to train.py.lprof
+Inspect results with:
+python -m line_profiler -rmt "train.py.lprof"
+wandb: 
+wandb: Run history:
+wandb: epoch ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:  fail ▁
+wandb:  loss █▆▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▄▄▄▄▄▃▃▃▃▂▃▂▂▂▂▂▂▁▁▂▁
+wandb:   spl ▁
+wandb: 
+wandb: Run summary:
+wandb: epoch 64
+wandb:  fail 0.9
+wandb:  loss 4.32748
+wandb:   spl 0.1
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/yongweic/hyperbolic/wandb/offline-run-20240704_142630-g7510f7a
+wandb: Find logs at: ./wandb/offline-run-20240704_142630-g7510f7a/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.
