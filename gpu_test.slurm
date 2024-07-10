@@ -13,5 +13,4 @@ module purge
 module load anaconda3/2023.3
 conda activate hypll
 
-
-kernprof -l train.py --config_file configs/hyperbolic_config.yaml
+kernprof -l train.py --config_file configs/config.yaml

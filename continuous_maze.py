@@ -317,6 +317,43 @@ class LabelDataset(Dataset):
 
         return self.pairs[idx][0], self.pairs[idx][1], np.array(negatives), negative_categories
 
+class SetDataset(Dataset):
+    def __init__(self, maze, num_trajectories, embedding_dim=2, num_negatives=10, gamma=0.1, order_fn=None):
+        super().__init__()
+        self.num_trajectories = num_trajectories
+        self.num_negatives = num_negatives
+        self.maze = maze
+        self.gamma = gamma
+        print(f'gamma: {self.gamma}')
+
+        self.trajectories = get_trajectories(maze, num_trajectories, order_fn=order_fn)
+
+    def __len__(self):
+        return len(self.trajectories)
+
+    def __getitem__(self, idx):
+        # Anchor: the current data point
+        
+        traj = self.trajectories[idx]
+        # print(traj)
+        # start, end = np.sort(np.random.randint(0, len(traj), size=2))
+        start = np.random.randint(0, len(traj))
+        end = min(start + np.random.geometric(p=self.gamma), len(traj) - 1)
+
+        anchor = self.trajectories[idx][start]
+        anchor = np.array([np.array(anchor[0]), np.array(anchor[1])]).flatten()
+        # Label of the anchor
+        positive_example = self.trajectories[idx][end][0]
+
+        negative_examples = []
+        for i in range(self.num_negatives):
+          idy = np.random.randint(0, len(self.trajectories))
+          neg_state = self.trajectories[idy][np.random.randint(0, len(self.trajectories[idy]))][0]
+          negative_examples.append(neg_state)
+
+        # negative_examples = np.zeros(shape=(10, 2))
+
+        return anchor, np.array(positive_example), np.array(negative_examples)
 
 
 class ContinuousGridEnvironment:

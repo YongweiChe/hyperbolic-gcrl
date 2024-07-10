@@ -1,23 +1,23 @@
 # Project settings
-project: default
+project: temp
 custom: '1' # string appended to experiment name
 
 # Model parameters
 hyperbolic: false
-embedding_dim: 2
+embedding_dim: 8
 hyp_layers: 2
 
 # Training parameters
-num_epochs: 8
-num_trajectories: 10000 
-batch_size: 64
+num_epochs: 512
+num_trajectories: 50000
+batch_size: 512
 num_negatives: 64
 max_steps: 100
-num_workers: 8
+num_workers: 24
 learning_rate: 0.001
 
 # Maze settings
-maze_type: blank 
+maze_type: blocker
 gamma: 0.1
 
 # Experiment tracking
