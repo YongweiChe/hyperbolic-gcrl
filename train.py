@@ -10,7 +10,7 @@ import numpy as np
 from torch.utils.data import DataLoader
 
 from environments.maze.data import TrajectoryDataset
-from losses import explicit_InfoNCE
+from networks.losses import explicit_InfoNCE
 from utils import save_models, evaluate, get_maze, get_order_function, load_model
 
 device = "cuda" if torch.cuda.is_available() else "cpu"

@@ -10,7 +10,7 @@ import numpy as np
 from torch.utils.data import DataLoader
 
 from environments.maze.data import SetDataset, set_collate_fn
-from losses import symmetrized_InfoNCE
+from networks.losses import symmetrized_InfoNCE
 from utils import save_models, evaluate, get_maze, get_order_function, load_model, load_street_model
 
 import wandb
