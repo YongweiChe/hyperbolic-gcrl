@@ -6,6 +6,7 @@ custom: '2' # string appended to experiment name
 hyperbolic: false
 embedding_dim: 8
 curvature: 1.0
+learnable_curvature: false
 
 # Training parameters
 num_epochs: 128

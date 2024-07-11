@@ -1,16 +1,15 @@
+
+### How to Run Hyperbolic Experiments
 Install requirements:
 ```
 pip install -r requirements.txt
 ```
 
-Run
+Run train.py to train Contrastive RL:
 ```
-kernprof -l train.py --config_file configs/hyperbolic_config.yaml
+kernprof -l train.py --config_file configs/config_hyp.yaml
 ```
-with the desired config file to run experiments.
+or run `scripts/train_hyperbolic.slurm`.
 
-Or run
-```
-python train.py --config_file configs/hyperbolic_config.yaml
-```
-for no line profiling.
+You can visualize the results on the Poincare disc (if you use embedding_dim=2) using `notebooks/HyperbolicVisualizations.ipynb`
+

@@ -30,7 +30,7 @@ def main():
     with open(args.config_file, "r") as file:
         config = yaml.safe_load(file)
 
-    experiment_name = f"experiment{config['custom']}_hyperbolic_{config['hyperbolic']}_curvature_{config['curvature']}_epochs_{config['num_epochs']}_trajectories_{config['num_trajectories']}_order_{config['order_name']}_maze_{config['maze_type']}_embeddingdim_{config['embedding_dim']}_gamma_{config['gamma']}_batch_{config['batch_size']}"
+    experiment_name = f"experiment{config['custom']}_hyperbolic_{config['hyperbolic']}_curvature_{config['curvature']}_learnable_{config['learnable_curvature']}_epochs_{config['num_epochs']}_trajectories_{config['num_trajectories']}_order_{config['order_name']}_maze_{config['maze_type']}_embeddingdim_{config['embedding_dim']}_gamma_{config['gamma']}_batch_{config['batch_size']}"
 
     # Initialize wandb
     wandb.init(project=config["project"], name=experiment_name, config={**config})

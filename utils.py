@@ -173,7 +173,8 @@ def save_models(config, encoder1, encoder2, epoch, name='', street_encoder=None)
 def load_model(config, device, pretrained_path='', epoch=0):
     config = dict(config)
 
-    manifold = PoincareBall(c=Curvature(value=config['curvature'], requires_grad=False))
+    curvature = Curvature(value=config['curvature'], requires_grad=config['learnable_curvature'])
+    manifold = PoincareBall(c=curvature)
     if config['architecture'] == 'MLP':
         if config['hyperbolic']:
             encoder1 = HyperbolicMLP(in_features=4, out_features=config['embedding_dim'], euc_width=64, hyp_width=64, manifold=manifold).to(device)
