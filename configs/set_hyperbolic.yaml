@@ -4,7 +4,7 @@ custom: '3' # string appended to experiment name
 
 # Model parameters
 hyperbolic: true
-embedding_dim: 2
+embedding_dim: 16
 hyp_layers: 2
 
 # Training parameters

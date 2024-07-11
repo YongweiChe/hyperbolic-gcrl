@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=24
 #SBATCH --mem-per-cpu=2G
 #SBATCH --gres=gpu:1
-#SBATCH --time=00:15:00
+#SBATCH --time=00:05:00
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=end
 
@@ -17,4 +17,4 @@ conda activate hypll
 
 
 # Run the main script with temperature argument
-kernprof -l train_streets.py --config_file configs/fork.yaml --temperature 1.0
+kernprof -l train_streets.py --config_file configs/streets.yaml
