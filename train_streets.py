@@ -125,6 +125,10 @@ def get_maze(name):
         maze = np.zeros((11, 11))
         maze[1,:] = 1
         maze[1, 10] = 0
+    elif 'fork' in name:
+        maze = np.zeros((15, 15))
+        for i in range(1, 14, 2):
+            maze[i, :maze.shape[1] - 5] = 1
     elif 'blocker' in name:
         maze = np.zeros((11, 11))
         maze[3,:] = 1

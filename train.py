@@ -170,7 +170,7 @@ def save_models(encoder1, encoder2,epoch, name=''):
     torch.save(encoder1.state_dict(), f'models/{name}_encoder1_epoch_{epoch}.pth')
     torch.save(encoder2.state_dict(), f'models/{name}_encoder2_epoch_{epoch}.pth')
 
-@profile
+# @profile
 def main():
     parser = argparse.ArgumentParser(description='Run experiment with config file.')
     parser.add_argument('--config_file', type=str, default='config.yaml', help='Path to the YAML config file')
@@ -181,7 +181,7 @@ def main():
         config = yaml.safe_load(file)
 
     maze = get_maze(config['maze_type'])
-    experiment_name = f"experiment{config['custom']}_hyperbolic_{config['hyperbolic']}_epochs_{config['num_epochs']}_trajectories_{config['num_trajectories']}_order_{config['order_name']}_maze_{config['maze_type']}_embeddingdim_{config['embedding_dim']}_gamma_{config['gamma']}_batch_{config['batch_size']}_hyp_layers_{config['hyp_layers']}"
+    experiment_name = f"experiment{config['custom']}_hyperbolic_{config['hyperbolic']}_curvature_{config['curvature']}_epochs_{config['num_epochs']}_trajectories_{config['num_trajectories']}_order_{config['order_name']}_maze_{config['maze_type']}_embeddingdim_{config['embedding_dim']}_gamma_{config['gamma']}_batch_{config['batch_size']}_hyp_layers_{config['hyp_layers']}"
 
     # Initialize wandb
     wandb.init(
@@ -195,7 +195,7 @@ def main():
     # configs
     config = wandb.config
     print(config)
-    manifold = PoincareBall(c=Curvature(value=0.1, requires_grad=True))
+    manifold = PoincareBall(c=Curvature(value=config.curvature, requires_grad=False))
     order_fn = get_order_function(config.order_name)
     dataset = TrajectoryDataset(maze, 
                                 config.num_trajectories, 

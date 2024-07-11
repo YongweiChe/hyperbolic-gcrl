@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=24
 #SBATCH --mem-per-cpu=1G
 #SBATCH --gres=gpu:1
-#SBATCH --time=00:10:00
+#SBATCH --time=00:20:00
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=end
 
@@ -14,4 +14,4 @@ module load anaconda3/2023.3
 conda activate hypll
 
 # Run the main script with temperature argument
-kernprof -l train_set.py --config_file configs/setconfig.yaml --temperature 0.1
+kernprof -l train_set.py --config_file configs/set_hyperbolic.yaml --temperature 0.1

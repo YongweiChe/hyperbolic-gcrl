@@ -1,0 +1,28 @@
+# Project settings
+project: "radial_origin"
+custom: '1'
+
+# Model parameters
+hyperbolic: true
+embedding_dim: 2
+hyp_layers: 2
+
+# Training parameters
+num_epochs: 128
+num_trajectories: 10000
+batch_size: 128
+num_negatives: 32
+max_steps: 50
+num_workers: 24
+learning_rate: 0.001
+
+# Maze settings
+maze_type: "blank"
+gamma: 0.1
+
+# Experiment tracking
+order_name: 'horizontal'
+eval_trials: 10
+temperature: 1.0
+architecture: MLP
+curvature: 1.0
