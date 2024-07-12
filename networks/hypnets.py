@@ -86,13 +86,14 @@ class HyperbolicCategoricalMLP(nn.Module):
 
 class HyperbolicDeepSet(nn.Module):
     """
-    DeepSet architecture for set-valued inputs. Final layers transform input into hyperbolic space
+    DeepSet architecture for set-valued inputs with customizable phi function. 
+    Final layers transform input into hyperbolic space.
     See: https://arxiv.org/abs/1703.06114
     """
-    def __init__(self, input_dim, hidden_dim, output_dim, manifold):
+    def __init__(self, input_dim, hidden_dim, output_dim, manifold, phi=None):
         super(HyperbolicDeepSet, self).__init__()
 
-        self.deepset = DeepSet(input_dim, hidden_dim, hidden_dim)
+        self.deepset = DeepSet(input_dim, hidden_dim, hidden_dim, phi=phi)
         self.manifold = manifold
 
         # Hyperbolic layers

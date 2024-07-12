@@ -91,18 +91,21 @@ class LabelEncoder(nn.Module):
     
 class DeepSet(nn.Module):
     """
-    DeepSet architecture for set-valued inputs.
+    DeepSet architecture for set-valued inputs with customizable phi function.
     See: https://arxiv.org/abs/1703.06114
     """
-    def __init__(self, input_dim, hidden_dim, output_dim):
+    def __init__(self, input_dim, hidden_dim, output_dim, phi=None):
         super(DeepSet, self).__init__()
 
-        self.phi = nn.Sequential(
-            nn.Linear(input_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, hidden_dim),
-            nn.ReLU(),
-        )
+        if phi is None:
+            self.phi = nn.Sequential(
+                nn.Linear(input_dim, hidden_dim),
+                nn.ReLU(),
+                nn.Linear(hidden_dim, hidden_dim),
+                nn.ReLU(),
+            )
+        else:
+            self.phi = phi
 
         # Correct calculation for upper triangle size
         cov_dim = (hidden_dim * (hidden_dim + 1)) // 2
@@ -124,7 +127,7 @@ class DeepSet(nn.Module):
     def forward(self, x, mask):
         # x shape: (batch_size, max_set_size, input_dim)
         # mask shape: (batch_size, max_set_size)
-        # print(f'x shape: {x.shape}, mask shape: {mask.shape}')
+        
         # Apply phi to each element
         x = self.phi(x)  # Shape: (batch_size, max_set_size, hidden_dim)
 

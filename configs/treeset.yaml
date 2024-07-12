@@ -10,7 +10,7 @@ learnable_curvature: false
 
 # Training parameters
 num_epochs: 256
-num_trajectories: 10000
+num_trajectories: 1000
 batch_size: 128
 num_negatives: 64
 max_steps: 100 
@@ -26,4 +26,4 @@ gamma: 0.1
 order_name: ''
 eval_trials: 10
 temperature: 0.1
-architecture: MLP
+architecture: DeepSet

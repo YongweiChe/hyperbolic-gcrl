@@ -13,3 +13,11 @@ or run `scripts/train_hyperbolic.slurm`.
 
 You can visualize the results on the Poincare disc (if you use embedding_dim=2) using `notebooks/HyperbolicVisualizations.ipynb`
 
+### Simplified Instructions when running on Della
+```
+module load anaconda3/2023.3
+conda create -n hyp python=3.10
+conda activate hyp
+pip install torch hypll wandb graphviz ipython matplotlib
+```
+if you haven't used wandb, export WANDB_MODE=offline when running slurm scripts

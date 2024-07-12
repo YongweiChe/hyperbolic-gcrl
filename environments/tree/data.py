@@ -51,3 +51,39 @@ class TrajectoryDataset(Dataset):
           negative_examples.append(neg_state)
 
         return anchor, np.array([positive_example]), np.array(negative_examples)[:,None]
+
+class SetDataset(Dataset):
+    """
+    Returns positive pairs of set-valued outputs from the same trajectory
+    """
+    def __init__(self, depth, branching_factor, num_trajectories, num_negatives=10, gamma=0.1, order_fn=None, num_splits=4):
+        super().__init__()
+        self.num_trajectories = num_trajectories
+        self.num_negatives = num_negatives
+        self.tree = NaryTreeEnvironment(depth=depth, branching_factor=branching_factor)
+        self.gamma = gamma
+        self.num_splits=num_splits
+        print(f'gamma: {self.gamma}')
+
+        self.trajectories = get_trajectories(self.tree, num_trajectories)
+
+    def __len__(self):
+        return len(self.trajectories)
+
+    def __getitem__(self, idx):
+        # Anchor: the current data point
+
+        traj = self.trajectories[idx]
+        split_traj = np.split(
+            traj, np.random.randint(0, len(traj), size=self.num_splits)
+        )
+        split_traj = list(filter(lambda x: x.shape[0] != 0, split_traj))
+        # print(split_traj)
+
+        i, j = np.random.randint(0, len(split_traj), 2)
+        # print(i, j)
+
+        set1 = np.stack([x[0] for x in split_traj[i]])
+        set2 = np.stack([x[0] for x in split_traj[j]])
+
+        return set1[:,None], set2[:,None]
