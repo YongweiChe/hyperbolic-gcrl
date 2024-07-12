@@ -2,7 +2,7 @@ import torch.nn as nn
 import hypll.nn as hnn
 from hypll.tensors import TangentTensor
 
-from networks.nets import DeepSet
+from networks.nets import DeepSet, CategoricalMLP
 
 
 def manifold_map(x, manifold):
@@ -51,6 +51,38 @@ class HyperbolicMLP(nn.Module):
         x = self.hyp_layer2(x)
         return x
     
+
+class HyperbolicCategoricalMLP(nn.Module):
+    def __init__(self, cat_features, embedding_dims, euc_hidden_dims, hyp_hidden_dims, output_dim, manifold):
+        super(HyperbolicCategoricalMLP, self).__init__()
+        
+        self.manifold = manifold
+        
+        # Use the CategoricalMLP for Euclidean part
+        self.euc_mlp = CategoricalMLP(cat_features, embedding_dims, euc_hidden_dims, hyp_hidden_dims[0])
+        
+        # Hyperbolic layers
+        hyp_layers = []
+        for i in range(1, len(hyp_hidden_dims)):
+            hyp_layers.append(hnn.HLinear(hyp_hidden_dims[i-1], hyp_hidden_dims[i], manifold=manifold))
+            hyp_layers.append(hnn.HReLU(manifold=manifold))
+        
+        hyp_layers.append(hnn.HLinear(hyp_hidden_dims[-1], output_dim, manifold=manifold))
+        
+        self.hyp_mlp = nn.Sequential(*hyp_layers)
+    
+    def forward(self, x):
+        # Pass through Euclidean layers
+        euc_output = self.euc_mlp(x)
+        
+        # Map to hyperbolic space
+        hyp_input = manifold_map(euc_output, self.manifold)
+        
+        # Pass through Hyperbolic layers
+        output = self.hyp_mlp(hyp_input)
+        
+        return output
+
 
 class HyperbolicDeepSet(nn.Module):
     """

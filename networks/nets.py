@@ -24,6 +24,49 @@ class SmallEncoder(nn.Module):
         x = self.fc4(x)
         return x
 
+class CategoricalMLP(nn.Module):
+    def __init__(self, cat_features, embedding_dims, hidden_dims, output_dim):
+        super(CategoricalMLP, self).__init__()
+        
+        # Embedding layers
+        self.embeddings = nn.ModuleList([
+            nn.Embedding(num_categories, emb_dim) 
+            for num_categories, emb_dim in zip(cat_features, embedding_dims)
+        ])
+        
+        # Calculate total embedding dimension
+        total_emb_dim = sum(embedding_dims)
+        
+        # Fully connected layers
+        layers = []
+        input_dim = total_emb_dim
+        for hidden_dim in hidden_dims:
+            layers.append(nn.Linear(input_dim, hidden_dim))
+            layers.append(nn.ReLU())
+            input_dim = hidden_dim
+        
+        layers.append(nn.Linear(input_dim, output_dim))
+        
+        self.mlp = nn.Sequential(*layers)
+    
+    def forward(self, x):
+        # x shape: [..., num_features]
+        original_shape = x.shape
+        num_features = original_shape[-1]
+        
+        # Reshape to [-1, num_features]
+        x_flat = x.view(-1, num_features)
+        
+        # Apply embeddings
+        embeddings = [emb_layer(x_flat[:, i]) for i, emb_layer in enumerate(self.embeddings)]
+        concat_embeddings = torch.cat(embeddings, dim=1)
+        
+        # Pass through MLP
+        output = self.mlp(concat_embeddings)
+        
+        # Reshape output back to original batch shape + [output_dim]
+        return output.view(*original_shape[:-1], -1)
+
 class LabelEncoder(nn.Module):
     """
     Encodes a categorical input into a vector of size embedding_dim

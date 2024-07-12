@@ -1,0 +1,29 @@
+# Project settings
+project: tree
+custom: '2' # string appended to experiment name
+
+# Model parameters
+hyperbolic: true
+embedding_dim: 2
+curvature: 1.0 # absolute value of curvature (always negative)
+learnable_curvature: false
+
+# Training parameters
+num_epochs: 128
+num_trajectories: 1000
+batch_size: 128
+num_negatives: 64
+max_steps: 100 
+num_workers: 24
+learning_rate: 0.01
+
+# Tree settings
+depth: 4
+branching_factor: 2
+gamma: 0.1
+
+# Experiment tracking
+order_name: ''
+eval_trials: 10
+temperature: 0.1
+architecture: MLP

@@ -1,0 +1,28 @@
+# Project settings
+project: temp
+custom: 'street' # string appended to experiment name
+
+# Model parameters
+hyperbolic: false
+embedding_dim: 8
+curvature: 1.0
+learnable_curvature: false
+
+# Training parameters
+num_epochs: 256
+num_trajectories: 20000
+batch_size: 256
+num_negatives: 64
+max_steps: 100 
+num_workers: 24
+learning_rate: 0.01
+
+# Maze settings
+maze_type: fork
+gamma: 0.1
+
+# Experiment tracking
+order_name: ''
+eval_trials: 10
+temperature: 0.5
+architecture: MLP
