@@ -52,7 +52,6 @@ def main():
         pin_memory=True,
     )
     print(f"finished dataloading...")
-    print(dataset.trajectories)
     model_dict = load_tree_model(config, device, pretrained_path='')
 
     encoder1 = model_dict['encoder1']

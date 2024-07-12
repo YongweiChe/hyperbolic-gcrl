@@ -185,6 +185,7 @@ def get_order_function(name):
 
 
 def save_models(config, encoder1, encoder2, epoch, name="", street_encoder=None):
+    print(f'saved model to {name}')
     # Create the main models directory if it doesn't exist
     config = dict(config)
     os.makedirs("saved_models", exist_ok=True)

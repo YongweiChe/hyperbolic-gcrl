@@ -10,8 +10,8 @@ learnable_curvature: true
 
 # Training parameters
 num_epochs: 128
-num_trajectories: 1000
-batch_size: 128
+num_trajectories: 10000
+batch_size: 256
 num_negatives: 64
 max_steps: 100 
 num_workers: 24
