@@ -3,9 +3,10 @@ import torch
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import Dataset
 from environments.tree.tree import NaryTreeEnvironment
+import math
+import random
 
-
-def get_trajectories(tree, num_trajectories):
+def get_tree_trajectories(tree, num_trajectories):
     l = []
 
     for _ in range(num_trajectories):
@@ -14,6 +15,62 @@ def get_trajectories(tree, num_trajectories):
         l.append(tree.get_action_path(start_node, end_node))
 
     return l
+
+
+def get_maze_trajectories(maze_env, num_trajectories):
+    trajectories = []
+
+    for _ in range(num_trajectories):
+        # Get all valid positions (non-wall cells)
+        valid_positions = [maze_env.flatten_state(pos) for pos in zip(*np.where(maze_env.maze != 1))]
+        
+        # Randomly choose start and end positions
+        start_pos = random.choice(valid_positions)
+        end_pos = random.choice(valid_positions)
+        
+        # Get the action path between these positions
+        action_path = maze_env.get_action_path(start_pos, end_pos)
+        
+        # If a valid path exists, add it to the trajectories
+        if action_path:
+            trajectories.append(action_path)
+        
+    return trajectories
+
+
+
+import numpy as np
+from torch.utils.data import Dataset
+
+class GeneralTrajectoryDataset(Dataset):
+    def __init__(self, trajectories, valid_indices, num_negatives=10, gamma=0.1):
+        super().__init__()
+        self.trajectories = trajectories
+        self.num_trajectories = len(trajectories)
+        self.num_negatives = num_negatives
+        self.gamma = gamma
+        self.valid_indices = set(valid_indices)  # Convert to set for faster lookup
+        print(f'gamma: {self.gamma}')
+
+    def __len__(self):
+        return self.num_trajectories
+
+    def __getitem__(self, idx):
+        traj = self.trajectories[idx]
+        start = np.random.randint(0, len(traj))
+        end = min(start + np.random.geometric(p=self.gamma), len(traj) - 1)
+
+        anchor = np.array(traj[start])  # Keep as state-action pair
+        positive_example = traj[end][0]  # Just the state for positive example
+
+        # Use valid_indices to determine valid negative examples
+        traj_states = set(state for state, _ in traj)
+        valid_negatives = list(self.valid_indices - traj_states)
+        
+        negative_examples = np.random.choice(valid_negatives, size=self.num_negatives, replace=True)
+
+        return anchor, np.array([positive_example]), negative_examples[:, None]
+    
 
 class TrajectoryDataset(Dataset):
     def __init__(self, depth, branching_factor, num_trajectories, num_negatives=10, gamma=0.1, order_fn=None):
@@ -24,7 +81,7 @@ class TrajectoryDataset(Dataset):
         self.gamma = gamma
         print(f'gamma: {self.gamma}')
 
-        self.trajectories = get_trajectories(self.tree, num_trajectories)
+        self.trajectories = get_tree_trajectories(self.tree, num_trajectories)
 
     def __len__(self):
         return len(self.trajectories)
@@ -73,17 +130,21 @@ class SetDataset(Dataset):
     def __getitem__(self, idx):
         # Anchor: the current data point
 
-        traj = self.trajectories[idx]
-        split_traj = np.split(
-            traj, np.random.randint(0, len(traj), size=self.num_splits)
-        )
-        split_traj = list(filter(lambda x: x.shape[0] != 0, split_traj))
-        # print(split_traj)
+        # print(self.trajectories[idx])
+        traj = np.array(self.trajectories[idx])
 
-        i, j = np.random.randint(0, len(split_traj), 2)
-        # print(i, j)
-
-        set1 = np.stack([x[0] for x in split_traj[i]])
-        set2 = np.stack([x[0] for x in split_traj[j]])
+        traj_len = len(traj)
+        if traj_len == 1:
+            log_size = 0
+        else:
+            log_size = np.random.randint(0, math.ceil(math.log2(traj_len)))
+        size1 = int(math.pow(2, log_size))
+        size2 = int(math.pow(2, max(log_size - 1, 0)))
+        # print(f'size1: {size1}, size2: {size2}')
+        i1 = np.random.randint(0, max(traj_len - size1, 1))
+        i2 = np.random.randint(0, max(traj_len - size2, 1))
+        
+        set1 = traj[i1:(i1 + size1),0]
+        set2 = traj[i2:(i2 + size2),0] 
 
         return set1[:,None], set2[:,None]

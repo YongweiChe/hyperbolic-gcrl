@@ -66,7 +66,7 @@ def main():
 
     if config.hyperbolic:
         optimizer = RiemannianAdam(
-                list(encoder1.parameters()) + list(encoder2.parameters()),
+                list(encoder2.parameters()),
                 lr=config.learning_rate,
             )
     else:

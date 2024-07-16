@@ -3,8 +3,7 @@ import math
 import torch
 import json
 import numpy as np
-
-import numpy as np
+import random
 
 from hypll.manifolds.poincare_ball import Curvature, PoincareBall
 from networks.hypnets import HyperbolicMLP, HyperbolicDeepSet, HyperbolicCategoricalMLP
@@ -13,6 +12,7 @@ from networks.nets import SmallEncoder, DeepSet, LabelEncoder, CategoricalMLP
 from environments.maze.pyramid import create_pyramid
 from environments.maze.continuous_maze import bfs, ContinuousGridEnvironment
 from environments.tree.tree import NaryTreeEnvironment
+from environments.tree.discrete_maze import GridMazeEnvironment
 
 
 def evaluate(
@@ -119,6 +119,178 @@ def evaluate(
 
     return results
 
+def eval_tree(
+    depth,
+    branching_factor,
+    num_trials,
+    encoder1,
+    encoder2,
+    manifold,
+    device,
+    max_steps=100,
+    hyperbolic=False,
+    verbose=False,
+):
+    """
+    Run policy on maze, collect failure metrics
+    """
+    
+
+    results = []
+    for i in range(num_trials):
+        with torch.no_grad():
+            env = NaryTreeEnvironment(depth=depth, branching_factor=branching_factor)
+            
+            start, end = np.random.randint(0, env.num_nodes, size=2)
+            
+            goal = torch.tensor(end).to(device).unsqueeze(0)
+            # if hyperbolic:
+            #     goal = manifold_map(goal, manifold=manifold)
+            goal = encoder2(goal)
+
+            # print(f'start: {start}, goal: {goal}')
+
+            def reached(cur_pos, goal_pos):
+                return cur_pos == goal_pos
+
+            def step():
+                cur_pos = env.agent_position
+                if verbose:
+                    print(f"cur_pos: {cur_pos}, goal: {goal}")
+                activations = []
+                
+                actions = [i for i in range(branching_factor + 2)]
+                for a in actions:
+                    cur = torch.tensor(
+                        [env.agent_position, a]
+                    ).to(device)
+
+                    cur = encoder1(cur)
+
+                    # MANIFOLD EVAL
+                    if hyperbolic:
+                        activations.append((a, -manifold.dist(x=cur, y=goal)))
+                    else:
+                        activations.append((a, -torch.norm(cur - goal)))
+
+                best_action = activations[np.argmax([x[1].cpu() for x in activations])][
+                    0
+                ]
+                env.move_agent(best_action)
+                if verbose:
+                    print(f'agent position: {env.agent_position}')
+
+            def SPL(
+                start, end, num_steps, success
+            ):  # Success weighted by (normalized inverse) Path Length
+                if not success:
+                    return 0
+                else:
+                    p = num_steps
+                    l = len(env.get_action_path(start, end))
+                    return l / max(p, l)
+
+            steps = 0
+            while not reached(env.agent_position, end):
+                if steps > max_steps:
+                    break
+                step()
+                steps += 1
+
+            result = (
+                not reached(env.agent_position, end),
+                steps,
+                SPL(start, end, steps, reached(env.agent_position, end)),
+            )
+            if verbose:
+                print(reached(env.agent_position, end))
+                print(
+                    f"start: {start}, goal: {end}, end_pos: {env.agent_position}, steps: {steps}"
+                )
+                print(results)
+
+            results.append(result)
+
+    return results
+
+
+def eval_maze(
+    maze,
+    num_trials,
+    encoder1,
+    encoder2,
+    manifold,
+    device,
+    max_steps=100,
+    hyperbolic=False,
+    verbose=False
+):
+    """
+    Run policy on maze, collect failure metrics
+    """
+    results = []
+    for i in range(num_trials):
+        with torch.no_grad():
+            env = GridMazeEnvironment(maze)
+            valid_positions = [env.flatten_state(pos) for pos in env.valid_indices]
+            start, end = random.sample(valid_positions, 2)
+            
+            env.agent_position = start
+            goal = torch.tensor(end).to(device).unsqueeze(0)
+            goal = encoder2(goal)
+
+            def reached(cur_pos, goal_pos):
+                return cur_pos == goal_pos
+
+            def step():
+                cur_pos = env.agent_position
+                if verbose:
+                    print(f"cur_pos: {cur_pos}, goal: {end}")
+                activations = []
+                
+                actions = [i for i in range(5)]
+                for a in actions:
+                    cur = torch.tensor([env.agent_position, a]).to(device)
+                    cur = encoder1(cur)
+
+                    if hyperbolic:
+                        activations.append((a, -manifold.dist(x=cur, y=goal)))
+                    else:
+                        activations.append((a, -torch.norm(cur - goal)))
+
+                best_action = activations[np.argmax([x[1].cpu() for x in activations])][0]
+                env.move_agent(best_action)
+                if verbose:
+                    print(f'agent position: {env.agent_position}')
+
+            def SPL(start, end, num_steps, success):
+                if not success:
+                    return 0
+                else:
+                    p = num_steps
+                    l = len(env.get_action_path(start, end))
+                    return l / max(p, l)
+
+            steps = 0
+            while not reached(env.agent_position, end):
+                if steps > max_steps:
+                    break
+                step()
+                steps += 1
+
+            result = (
+                not reached(env.agent_position, end),
+                steps,
+                SPL(start, end, steps, reached(env.agent_position, end)),
+            )
+            if verbose:
+                print(reached(env.agent_position, end))
+                print(f"start: {start}, goal: {end}, end_pos: {env.agent_position}, steps: {steps}")
+                print(result)
+
+            results.append(result)
+
+    return results
 
 def get_maze(name):
     """
@@ -279,7 +451,7 @@ def load_model(config, device, pretrained_path="", epoch=0):
         manifold = None
 
     if len(pretrained_path) > 0:
-        print("loading pretrained...")
+        # print("loading pretrained...")
         encoder1.load_state_dict(
             torch.load(
                 os.path.join(pretrained_path, f"encoder1_epoch_{epoch}.pth"),
@@ -296,44 +468,54 @@ def load_model(config, device, pretrained_path="", epoch=0):
     return {"encoder1": encoder1, "encoder2": encoder2, "manifold": manifold}
 
 
-def load_tree_model(config, device, pretrained_path="", epoch=0):
+def load_tree_model(config, state_dim, action_dim, device, pretrained_path="", epoch=0):
     config = dict(config)
-
-    tree = NaryTreeEnvironment(config["depth"], config["branching_factor"])
 
     curvature = Curvature(
         value=config["curvature"], requires_grad=config["learnable_curvature"]
     )
     manifold = PoincareBall(c=curvature)
 
+    if config['embedding_dim'] > 16:
+        e = config['embedding_dim']
+        
+        euc_hidden_dims = [2 * e, 2 * e, e]
+        hyp_hidden_dims = [e, e]
+        
+    else:
+        euc_hidden_dims = [64, 64, 32]
+        hyp_hidden_dims = [32, 32]
+
+    first_dim = 2 * euc_hidden_dims[0] 
     if config["hyperbolic"] and config['architecture'] != 'DeepSet':
         encoder1 = HyperbolicCategoricalMLP(
-            cat_features=[tree.num_nodes, tree.branching_factor + 2],
-            embedding_dims=[tree.num_nodes, tree.branching_factor + 2],
-            euc_hidden_dims=[64, 64, 32],
-            hyp_hidden_dims=[32, 32],
+            cat_features=[state_dim, action_dim],
+            embedding_dims=[first_dim, first_dim],
+            euc_hidden_dims=euc_hidden_dims,
+            hyp_hidden_dims=hyp_hidden_dims,
             output_dim=config["embedding_dim"],
             manifold=manifold
         ).to(device)
         encoder2 = HyperbolicCategoricalMLP(
-            cat_features=[tree.num_nodes],
-            embedding_dims=[tree.num_nodes],
-            euc_hidden_dims=[64, 64, 32],
-            hyp_hidden_dims=[32, 32],
+            cat_features=[state_dim],
+            embedding_dims=[first_dim],
+            euc_hidden_dims=euc_hidden_dims,
+            hyp_hidden_dims=hyp_hidden_dims,
             output_dim=config["embedding_dim"],
             manifold=manifold
         ).to(device)
     else:
+        
         encoder1 = CategoricalMLP(
-            cat_features=[tree.num_nodes, tree.branching_factor + 2],
-            embedding_dims=[tree.num_nodes, tree.branching_factor + 2],
-            hidden_dims=[64, 64, 32],
+            cat_features=[state_dim, action_dim],
+            embedding_dims=[first_dim, first_dim],
+            hidden_dims=euc_hidden_dims,
             output_dim=config["embedding_dim"],
         ).to(device)
         encoder2 = CategoricalMLP(
-            cat_features=[tree.num_nodes],
-            embedding_dims=[tree.num_nodes],
-            hidden_dims=[64, 64, 32],
+            cat_features=[state_dim],
+            embedding_dims=[first_dim],
+            hidden_dims=euc_hidden_dims,
             output_dim=config["embedding_dim"],
         ).to(device)
 
@@ -363,6 +545,7 @@ def load_tree_model(config, device, pretrained_path="", epoch=0):
         )
 
     return {"encoder1": encoder1, "encoder2": encoder2, "manifold": manifold}
+
 
 
 def load_street_model(config, device, pretrained_path="", epoch=0):

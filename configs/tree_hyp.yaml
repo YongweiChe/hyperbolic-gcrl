@@ -1,29 +1,31 @@
 # Project settings
-project: tree
-custom: '2' # string appended to experiment name
+project: tree_arr
+custom: 'array' # string appended to experiment name
 
 # Model parameters
+env: 'tree'
 hyperbolic: true
-embedding_dim: 2
+embedding_dim: 4
 curvature: 1.0 # absolute value of curvature (always negative)
-learnable_curvature: false
+learnable_curvature: true
 
 # Training parameters
-num_epochs: 256
-num_trajectories: 10000
-batch_size: 128
-num_negatives: 64
+num_epochs: 512
+num_trajectories: 25000
+batch_size: 512
+num_negatives: 128
 max_steps: 100 
 num_workers: 24
 learning_rate: 0.01
 
 # Tree settings
-depth: 6
-branching_factor: 3
+depth: 7
+branching_factor: 2
 gamma: 0.1
 
 # Experiment tracking
 order_name: ''
-eval_trials: 10
+eval_trials: 100
 temperature: 0.1
 architecture: MLP
+symmetric: false

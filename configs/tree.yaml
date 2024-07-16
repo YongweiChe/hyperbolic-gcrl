@@ -3,6 +3,7 @@ project: tree
 custom: '2' # string appended to experiment name
 
 # Model parameters
+env: 'tree'
 hyperbolic: false
 embedding_dim: 2
 curvature: 1.0 # absolute value of curvature (always negative)
@@ -24,6 +25,6 @@ gamma: 0.1
 
 # Experiment tracking
 order_name: ''
-eval_trials: 10
+eval_trials: 50
 temperature: 0.1
 architecture: MLP

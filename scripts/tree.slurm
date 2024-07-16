@@ -11,6 +11,6 @@
 
 module purge
 module load anaconda3/2023.3
-conda activate myenv
+conda activate hypll
 
 python train_tree.py --config_file configs/tree_hyp.yaml
