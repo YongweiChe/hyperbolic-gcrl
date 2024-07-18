@@ -26,3 +26,8 @@ You can run discrete_maze experiments with scripts/discrete_maze.slurm
 
 ### Set experiments
 Run set experiments with scripts/train_set.slurm. Code is in early-stages for these experiments. You can find the code for training experiments in train_tree_set.py. Network parameters are defined in nets. Environments are defined in environments.
+
+### Notebooks
+Notebooks SetViz.ipynb can be used for visualizing the set experiments
+
+GeodesicInterpolation,ipynb, HyperbolicVisualization.ipynb, and TreevsEuclidean.ipynb for visualizing discrete experiments tree/maze experiments
