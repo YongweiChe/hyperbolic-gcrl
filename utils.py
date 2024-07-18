@@ -520,13 +520,27 @@ def load_tree_model(config, state_dim, action_dim, device, pretrained_path="", e
         ).to(device)
 
         if config['architecture'] == 'DeepSet':
+            intermed_dim = 3 * config["embedding_dim"]
+            encoder1 = CategoricalMLP(
+                cat_features=[state_dim, action_dim],
+                embedding_dims=[first_dim, first_dim],
+                hidden_dims=euc_hidden_dims,
+                output_dim=intermed_dim,
+            ).to(device)
+            encoder2 = CategoricalMLP(
+                cat_features=[state_dim],
+                embedding_dims=[first_dim],
+                hidden_dims=euc_hidden_dims,
+                output_dim=intermed_dim,
+            ).to(device)
+
             if config['hyperbolic']:
-                encoder1 = HyperbolicDeepSet(input_dim=2, hidden_dim=config["embedding_dim"], output_dim=config["embedding_dim"], manifold=manifold, phi=encoder1).to(device)
-                encoder2 = HyperbolicDeepSet(input_dim=1, hidden_dim=config["embedding_dim"], output_dim=config["embedding_dim"], manifold=manifold, phi=encoder2).to(device)
+                encoder1 = HyperbolicDeepSet(input_dim=2, hidden_dim=intermed_dim, output_dim=config["embedding_dim"], manifold=manifold, phi=encoder1).to(device)
+                encoder2 = HyperbolicDeepSet(input_dim=1, hidden_dim=intermed_dim, output_dim=config["embedding_dim"], manifold=manifold, phi=encoder2).to(device)
             else:
                 print('constructing non-hyperbolic Deep Set')
-                encoder1 = DeepSet(input_dim=2, hidden_dim=config["embedding_dim"], output_dim=config["embedding_dim"], phi=encoder1).to(device)
-                encoder2 = DeepSet(input_dim=1, hidden_dim=config["embedding_dim"], output_dim=config["embedding_dim"], phi=encoder2).to(device)
+                encoder1 = DeepSet(input_dim=2, hidden_dim=intermed_dim, output_dim=config["embedding_dim"], phi=encoder1).to(device)
+                encoder2 = DeepSet(input_dim=1, hidden_dim=intermed_dim, output_dim=config["embedding_dim"], phi=encoder2).to(device)
 
 
     if len(pretrained_path) > 0:

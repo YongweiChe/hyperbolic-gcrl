@@ -135,25 +135,41 @@ class GridMazeEnvironment:
 
         return list(zip(path, actions + [4]))  # Add 'stay' action at the end
 
-    def display(self, highlight_path=None):
-        plt.figure(figsize=(10, 10))
-        plt.imshow(self.maze, cmap='binary')
-        plt.title("Grid Maze Environment")
-        plt.axis('off')
-
+    def display(self, highlight_path=None, ax=None, start=None, end=None, display_agent=True):
+        if ax is None:
+            fig, ax = plt.subplots(figsize=(10, 10))
+        
+        # Create a copy of the maze for highlighting
+        highlighted_maze = self.maze.copy()
+        
         # Highlight the path
         if highlight_path:
-            path_y, path_x = zip(*[self.unflatten_state(state) for state in highlight_path])
-            plt.plot(path_x, path_y, color='blue', linewidth=3, alpha=0.7)
+            for state in highlight_path:
+                y, x = self.unflatten_state(state)
+                highlighted_maze[y, x] = 0.5  # Use a value between 0 and 1 for highlighting
 
-        # Mark agent position
-        agent_y, agent_x = self.unflatten_state(self.agent_position)
-        print(f'agent: {agent_y}, {agent_x}')
-        plt.plot(agent_x, agent_y, 'ro', markersize=15, alpha=0.7)
+        ax.imshow(highlighted_maze, cmap='binary')
+        ax.set_title("Grid Maze Environment")
 
-        display(plt.gcf())
-        clear_output(wait=True)
-        plt.close()
+        if display_agent:
+            # Mark agent position
+            agent_y, agent_x = self.unflatten_state(self.agent_position)
+            print(f'agent: {agent_y}, {agent_x}')
+            ax.plot(agent_x, agent_y, 'ro', markersize=15, alpha=0.7)
+
+        # Plot start point
+        if start is not None:
+            start_y, start_x = self.unflatten_state(start)
+            ax.plot(start_x, start_y, 'go', markersize=15, alpha=0.7)
+
+        # Plot end point
+        if end is not None:
+            end_y, end_x = self.unflatten_state(end)
+            ax.plot(end_x, end_y, 'r^', markersize=15, alpha=0.7)
+
+        if ax is None:
+            plt.show()
+            plt.close()
 
 def get_trajectories(maze_env, num_trajectories):
     trajectories = []

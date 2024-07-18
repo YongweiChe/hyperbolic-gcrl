@@ -1,6 +1,9 @@
 import numpy as np
 import graphviz
 from IPython.display import display
+import networkx as nx
+import matplotlib.pyplot as plt
+import io
 
 
 class NaryTreeEnvironment:
@@ -123,7 +126,8 @@ class NaryTreeEnvironment:
         actions.append(self.branching_factor + 1) # Stay
         return list(zip(node_path, actions))
 
-    def display(self, highlight_path=None):
+
+    def display(self, highlight_path=None, ax=None, start=None, end=None):
         dot = graphviz.Graph()  # Changed to Graph for undirected edges
         dot.attr(rankdir="TB")
 
@@ -131,8 +135,10 @@ class NaryTreeEnvironment:
             if node >= self.num_nodes or depth >= self.depth:
                 return
 
-            # Node attributes
-            if node == self.agent_position:
+            # print(f'node: {node}, start: {start}')
+            if start and node == start:
+                dot.node(str(node), str(node), style="filled", color="red")
+            elif end and node == end:
                 dot.node(str(node), str(node), style="filled", color="green")
             elif highlight_path and node in highlight_path:
                 dot.node(str(node), str(node), style="filled", color="lightblue")
@@ -154,7 +160,20 @@ class NaryTreeEnvironment:
                     add_nodes_edges(child, depth + 1)
 
         add_nodes_edges(0)
-        display(dot)
+        
+        if ax is None:
+            display(dot)
+        else:
+            # Render the graph to a PNG image
+            png_data = dot.pipe(format='png')
+            
+            # Create a new figure if one doesn't exist
+            if plt.gcf().number == 0:
+                plt.figure(figsize=(12, 8))
+            
+            # Display the image on the given axis
+            ax.imshow(plt.imread(io.BytesIO(png_data)))
+            ax.axis('off')
 
 
 def main():

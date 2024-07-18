@@ -88,40 +88,27 @@ class LabelEncoder(nn.Module):
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
         return x
-    
+
 class DeepSet(nn.Module):
-    """
-    DeepSet architecture for set-valued inputs with customizable phi function.
-    See: https://arxiv.org/abs/1703.06114
-    """
     def __init__(self, input_dim, hidden_dim, output_dim, phi=None):
         super(DeepSet, self).__init__()
-
+        
+        # Use provided phi or create a default one
         if phi is None:
             self.phi = nn.Sequential(
                 nn.Linear(input_dim, hidden_dim),
                 nn.ReLU(),
                 nn.Linear(hidden_dim, hidden_dim),
-                nn.ReLU(),
+                nn.ReLU()
             )
         else:
             self.phi = phi
 
-        # Correct calculation for upper triangle size
-        cov_dim = (hidden_dim * (hidden_dim + 1)) // 2
-        
-        # Separate network for processing covariance
-        self.cov_network = nn.Sequential(
-            nn.Linear(cov_dim, hidden_dim),
-            nn.ReLU(),
+        # Rho network
+        self.rho = nn.Sequential(
             nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(),
-        )
-
-        self.rho = nn.Sequential(
-            nn.Linear(hidden_dim * 2, hidden_dim),  # Now 2 * hidden_dim due to mean and processed covariance
-            nn.ReLU(),
-            nn.Linear(hidden_dim, output_dim),
+            nn.Linear(hidden_dim, output_dim)
         )
 
     def forward(self, x, mask):
@@ -134,33 +121,53 @@ class DeepSet(nn.Module):
         # Apply mask to zero out padding
         x = x * mask.unsqueeze(-1)
 
-        # Compute mean
+        # Compute mean (sum pooling)
         x_sum = torch.sum(x, dim=1)
         set_sizes = torch.sum(mask, dim=1, keepdim=True)
-        x_mean = x_sum / set_sizes  # Shape: (batch_size, hidden_dim)
+        x_mean = x_sum / set_sizes.clamp(min=1)  # Shape: (batch_size, hidden_dim)
 
-        # Compute covariance
-        x_centered = x - x_mean.unsqueeze(1)
-        x_centered = x_centered * mask.unsqueeze(-1)  # Apply mask again
-        cov = torch.bmm(x_centered.transpose(1, 2), x_centered) / (
-            set_sizes - 1
-        ).unsqueeze(-1).clamp(min=1)
-
-        # Extract upper triangular part of covariance (including diagonal)
-        batch_size, hidden_dim, _ = cov.shape
-        triu_indices = torch.triu_indices(hidden_dim, hidden_dim)
-        cov_vector = cov[:, triu_indices[0], triu_indices[1]]
-
-        # Process covariance vector through its own network
-        processed_cov = self.cov_network(cov_vector)  # Shape: (batch_size, hidden_dim)
-
-        # Concatenate mean and processed covariance information
-        x_combined = torch.cat([x_mean, processed_cov], dim=1)
-
-        # Apply rho to the combined representation
-        output = self.rho(x_combined)
+        # Apply rho to the pooled representation
+        output = self.rho(x_mean)
 
         return output
+
+# class DeepSet(nn.Module):
+#     def __init__(self, input_dim, hidden_dim, output_dim, phi=None):
+#         super(DeepSet, self).__init__()
+        
+#         self.phi = phi if phi else nn.Sequential(
+#             nn.Linear(input_dim, hidden_dim),
+#             nn.ReLU(),
+#             nn.Linear(hidden_dim, hidden_dim),
+#             nn.ReLU()
+#         )
+
+#         self.post_pool = nn.Sequential(
+#             nn.Linear(hidden_dim * 2, hidden_dim),
+#             nn.ReLU()
+#         )
+
+#         self.rho = nn.Sequential(
+#             nn.Linear(hidden_dim, hidden_dim),
+#             nn.ReLU(),
+#             nn.Linear(hidden_dim, output_dim)
+#         )
+
+#     def forward(self, x, mask):
+#         x = self.phi(x)
+#         x = x * mask.unsqueeze(-1)
+
+#         x_max, _ = torch.max(x, dim=1)
+#         x_sum = torch.sum(x, dim=1)
+#         set_sizes = torch.sum(mask, dim=1, keepdim=True)
+#         x_mean = x_sum / set_sizes.clamp(min=1)
+        
+#         x_global = torch.cat([x_max, x_mean], dim=-1)
+#         x_global = self.post_pool(x_global)
+
+#         output = self.rho(x_global)
+
+#         return output
 
 class PointCloudEncoder(nn.Module):
     """

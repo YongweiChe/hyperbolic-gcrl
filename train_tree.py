@@ -55,7 +55,11 @@ def main():
     if args.embedding_dim is not None:
         config['embedding_dim'] = args.embedding_dim
 
-    experiment_name = f"env_{config['env']}_experiment{config['custom']}_hyperbolic_{config['hyperbolic']}_symmetric_{config['symmetric']}_curvature_{config['curvature']}_learnable_{config['learnable_curvature']}_epochs_{config['num_epochs']}_trajectories_{config['num_trajectories']}_depth_{config['depth']}_branch_{config['branching_factor']}_embeddingdim_{config['embedding_dim']}_gamma_{config['gamma']}_batch_{config['batch_size']}"
+    maze_type = ''
+    if config['maze_type']:
+        maze_type = config['maze_type']
+    
+    experiment_name = f"env_{config['env']}_experiment{config['custom']}__maze_type_{maze_type}_hyperbolic_{config['hyperbolic']}_symmetric_{config['symmetric']}_curvature_{config['curvature']}_learnable_{config['learnable_curvature']}_epochs_{config['num_epochs']}_trajectories_{config['num_trajectories']}_depth_{config['depth']}_branch_{config['branching_factor']}_embeddingdim_{config['embedding_dim']}_gamma_{config['gamma']}_batch_{config['batch_size']}"
 
     # Initialize wandb
     wandb.init(project=config["project"], name=experiment_name, config={**config})

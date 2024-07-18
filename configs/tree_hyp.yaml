@@ -5,27 +5,30 @@ custom: 'array' # string appended to experiment name
 # Model parameters
 env: 'tree'
 hyperbolic: true
-embedding_dim: 4
+embedding_dim: 2
 curvature: 1.0 # absolute value of curvature (always negative)
 learnable_curvature: true
+maze_type: 'none'
 
 # Training parameters
-num_epochs: 512
-num_trajectories: 25000
-batch_size: 512
+num_epochs: 128
+num_trajectories: 10000
+batch_size: 256
 num_negatives: 128
 max_steps: 100 
 num_workers: 24
 learning_rate: 0.01
+lr_scheduler_step_size: 32
+lr_scheduler_gamma: 0.5
 
 # Tree settings
-depth: 7
+depth: 5
 branching_factor: 2
-gamma: 0.1
+gamma: 0.3
 
 # Experiment tracking
 order_name: ''
 eval_trials: 100
 temperature: 0.1
 architecture: MLP
-symmetric: false
+symmetric: true

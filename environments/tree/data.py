@@ -120,31 +120,44 @@ class SetDataset(Dataset):
         self.tree = NaryTreeEnvironment(depth=depth, branching_factor=branching_factor)
         self.gamma = gamma
         self.num_splits=num_splits
-        print(f'gamma: {self.gamma}')
+        print(f'set dataset gamma: {self.gamma}')
 
-        self.trajectories = get_trajectories(self.tree, num_trajectories)
+        self.trajectories = get_tree_trajectories(self.tree, num_trajectories)
 
     def __len__(self):
         return len(self.trajectories)
 
     def __getitem__(self, idx):
-        # Anchor: the current data point
-
-        # print(self.trajectories[idx])
         traj = np.array(self.trajectories[idx])
-
         traj_len = len(traj)
+
         if traj_len == 1:
             log_size = 0
         else:
-            log_size = np.random.randint(0, math.ceil(math.log2(traj_len)))
-        size1 = int(math.pow(2, log_size))
-        size2 = int(math.pow(2, max(log_size - 1, 0)))
-        # print(f'size1: {size1}, size2: {size2}')
-        i1 = np.random.randint(0, max(traj_len - size1, 1))
-        i2 = np.random.randint(0, max(traj_len - size2, 1))
-        
-        set1 = traj[i1:(i1 + size1),0]
-        set2 = traj[i2:(i2 + size2),0] 
+            log_size = min(np.random.geometric(p=self.gamma) - 1, math.floor(math.log2(traj_len)))
 
-        return set1[:,None], set2[:,None]
+        size1 = int(math.pow(2, log_size))
+        size2 = int(math.pow(2, max(log_size - 1, 0)))  # Keep the original size2 calculation
+
+        # Decide whether set2 comes before or after set1
+        before = np.random.choice([True, False])
+
+        if before:
+            # set2 comes before set1
+            i2 = max(0, traj_len - size1 - size2)  # Ensure we have enough space for both sets
+            i1 = i2 + size2
+
+            if i1 + size1 >= traj_len:
+                i1 = i2
+        else:
+            # set2 comes after set1
+            i1 = np.random.randint(0, max(traj_len - size1 - size2 + 1, 1))
+            i2 = i1 + size1
+
+            if i2 + size2 >= traj_len:
+                i2 = i1
+        
+        set1 = traj[i1:(i1 + size1), 0]
+        set2 = traj[i2:(i2 + size2), 0]
+
+        return set1[:, None], set2[:, None]

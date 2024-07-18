@@ -5,19 +5,21 @@ import wandb
 import torch
 import torch.optim as optim
 from hypll.optim import RiemannianAdam
+from torch.optim.lr_scheduler import StepLR
 
 import numpy as np
 from torch.utils.data import DataLoader
+from torch.nn.utils import clip_grad_norm_
 
 from environments.maze.data import set_collate_fn
 from environments.tree.data import SetDataset
+from environments.tree.tree import NaryTreeEnvironment
 from networks.losses import symmetrized_InfoNCE
-from utils import save_models, evaluate, get_maze, get_order_function, load_model, load_tree_model
+from utils import save_models, load_tree_model
 
 import wandb
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# @profile
 def main():
     parser = argparse.ArgumentParser(description="Run experiment with config file.")
     parser.add_argument(
@@ -55,10 +57,10 @@ def main():
         pin_memory=True,
     )
 
-    # load model
-    # config.architecture = 'DeepSet'
-    # print(f'architecture: {config.architecture}')
-    model_dict = load_tree_model(config, device, pretrained_path='')
+    tree = NaryTreeEnvironment(depth=config.depth, branching_factor=config.branching_factor)
+    num_states = tree.num_nodes
+    num_actions = tree.branching_factor + 2
+    model_dict = load_tree_model(config, num_states, num_actions, device, pretrained_path='')
 
     encoder1 = model_dict['encoder1']
     encoder2 = model_dict['encoder2']
@@ -66,15 +68,17 @@ def main():
 
     if config.hyperbolic:
         optimizer = RiemannianAdam(
-                list(encoder2.parameters()),
+                list(encoder1.parameters()) + list(encoder2.parameters()),
                 lr=config.learning_rate,
             )
     else:
         optimizer = torch.optim.Adam(
-                list(encoder2.parameters()),
+                list(encoder1.parameters()) + list(encoder2.parameters()),
                 lr=config.learning_rate,
             )
 
+    # Add the scheduler here
+    scheduler = StepLR(optimizer, step_size=config.lr_scheduler_step_size, gamma=config.lr_scheduler_gamma)
 
     for name, param in encoder2.named_parameters():
         print(name)
@@ -84,33 +88,50 @@ def main():
     total_batches = 0
     start_time = time.time()
 
+    def check_nan_inf(model):
+        for name, param in model.named_parameters():
+            if torch.isnan(param.data).any() or torch.isinf(param.data).any():
+                print(f"NaN or Inf detected in {name}")
+
+    encoder2.train()  # Set model to training mode
+
     for epoch in range(config.num_epochs):
         total_loss = 0
+        total_batches = 0
 
         for batch in dataloader:
             s1 = torch.as_tensor(batch['set1'], dtype=torch.int64, device=device)
             s2 = torch.as_tensor(batch['set2'], dtype=torch.int64, device=device)
 
-            mask1 = torch.as_tensor(batch['set1_mask'], dtype=torch.int64, device=device)
-            mask2 = torch.as_tensor(batch['set2_mask'], dtype=torch.int64, device=device)
-            # print(f's1 shape: {s1.shape}, s2 shape: {s2.shape}')
-            # print(f's1 shape: {s1.shape}, mask shape: {mask1.shape}')
-            # print(mask1)
+            mask1 = torch.as_tensor(batch['set1_mask'], dtype=torch.bool, device=device)
+            mask2 = torch.as_tensor(batch['set2_mask'], dtype=torch.bool, device=device)
+
             s1_enc = encoder2(s1, mask1)
             s2_enc = encoder2(s2, mask2)
 
-            loss = symmetrized_InfoNCE(s1_enc, s2_enc, config.temperature, device, hyperbolic=config.hyperbolic, manifold=manifold)
+            try:
+                loss = symmetrized_InfoNCE(s1_enc, s2_enc, config.temperature, device, hyperbolic=config.hyperbolic, manifold=manifold)
 
-            optimizer.zero_grad()
-            loss.backward()
+                optimizer.zero_grad()
+                loss.backward()
 
-            # for name, param in encoder2.named_parameters():
-            #     print(f"{name}: {param.grad}")
+                # Check for NaN or Inf gradients
+                for name, param in encoder2.named_parameters():
+                    if param.grad is not None:
+                        if torch.isnan(param.grad).any() or torch.isinf(param.grad).any():
+                            print(f"NaN or Inf gradient detected in {name}")
+                            # You might want to skip this batch or take other corrective action
 
-            optimizer.step()
-            total_loss += loss.item()
+                # Gradient clipping
+                clip_grad_norm_(encoder2.parameters(), max_norm=1.0)
+                check_nan_inf(encoder2)
+                optimizer.step()
+                total_loss += loss.item()
+                total_batches += 1
 
-            total_batches += 1
+            except RuntimeError as e:
+                print(f"Error in batch: {e}")
+                continue
 
             if total_batches % 100 == 0:
                 elapsed_time = time.time() - start_time
@@ -127,12 +148,15 @@ def main():
 
         loss = total_loss / len(dataloader)
 
-        metrics = {"epoch": epoch + 1, "loss": loss}
+        metrics = {"epoch": epoch + 1, "loss": loss, "lr": scheduler.get_last_lr()[0]}
         wandb.log(metrics)
-        print(f"Epoch {epoch+1}, Loss: {loss}")
+        print(f"Epoch {epoch+1}, Loss: {loss}, LR: {scheduler.get_last_lr()[0]}")
 
         if epoch % 32 == 0 and epoch != 0:
             save_models(config, encoder1, encoder2, epoch, experiment_name)
+
+        scheduler.step()  # Step the scheduler at the end of each epoch
+
     save_models(config, encoder1, encoder2, epoch + 1, experiment_name)
 
 

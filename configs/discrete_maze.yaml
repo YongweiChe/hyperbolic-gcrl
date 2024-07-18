@@ -1,10 +1,10 @@
 # Project settings
-project: discrete_maze
+project: pyramid1
 custom: '' # string appended to experiment name
 
 # Model parameters
 env: 'maze'
-maze_type: 'nested_pyramid'
+maze_type: 'pyramid'
 hyperbolic: true
 embedding_dim: 4
 curvature: 1.0 # absolute value of curvature (always negative)
@@ -12,7 +12,7 @@ learnable_curvature: true
 
 # Training parameters
 num_epochs: 512
-num_trajectories: 25000
+num_trajectories: 50000
 batch_size: 512
 num_negatives: 128
 max_steps: 100 
@@ -22,7 +22,7 @@ learning_rate: 0.01
 # Tree settings
 depth: 7
 branching_factor: 2
-gamma: 0.1
+gamma: 0.04
 
 # Experiment tracking
 order_name: ''
